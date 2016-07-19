@@ -16,3 +16,15 @@ binary sequence.(which needs extraspace)
 Unlike Huffmans code LZW dont need an extra dictionary to be saved. Also
 LZW does not create a mapping to byte to bin sequence. It creates mapping
 of multiple byte to binary sequence.
+
+
+## Running Instruction:
+```
+java -jar FileCompression.jar
+```
+
+to zip a file:
+file>open>click zip>the zipped file will be created on the same folder
+
+to unzip a file:
+file>open>click unzip>the unzipped file will be created on the same folder

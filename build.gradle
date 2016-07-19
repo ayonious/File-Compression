@@ -1,0 +1,16 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'application'
+
+mainClassName = "prog.Main"
+
+//this will help to create the fatjar
+//if you dont need fatjar just remove this block
+jar {
+    manifest {
+        attributes 'Main-Class': 'prog.Main'
+    } 
+    doFirst {
+        from { configurations.runtime.collect { it.isDirectory() ? it : zipTree(it) } }
+    }
+}

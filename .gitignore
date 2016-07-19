@@ -1,0 +1,19 @@
+# these 3 are required if this is not a gradle project
+
+# this is for telling about dependency without this you dont get any jre system .jar files
+**/*.classpath
+
+# without this eclipse cant detect this as a project
+.project
+
+# this is required for eclipse I think
+.settings/
+
+
+.gradle/
+bin/
+build/
+gen/
+
+# these are for java
+*.class
