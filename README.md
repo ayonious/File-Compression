@@ -17,6 +17,10 @@ Unlike Huffmans code LZW dont need an extra dictionary to be saved. Also
 LZW does not create a mapping to byte to bin sequence. It creates mapping
 of multiple byte to binary sequence.
 
+##testing environment:
+
+I tested this project in:
+Linux Mint
 
 ## Running Instruction:
 ```
