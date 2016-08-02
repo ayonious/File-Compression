@@ -1,19 +1,20 @@
-# these 3 are required if this is not a gradle project
+#these 3 are required if this is not a gradle project
 
 # this is for telling about dependency without this you dont get any jre system .jar files
 **/*.classpath
 
-# without this eclipse cant detect this as a project
+#without this eclipse cant detect this as a project
 .project
 
-# this is required for eclipse I think
+#this is required for eclipse I think
 .settings/
 
+
+# this is for mac
+*.DS_Store
+**/.DS_Store
 
 .gradle/
 bin/
 build/
 gen/
-
-# these are for java
-*.class
