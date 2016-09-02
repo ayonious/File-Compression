@@ -1,12 +1,8 @@
-#these 3 are required if this is not a gradle project
-
-# this is for telling about dependency without this you dont get any jre system .jar files
-**/*.classpath
-
-#without this eclipse cant detect this as a project
+# These 3 are required if this is not a gradle project (but you want to import the project into eclipse)
+# These are created by eclipse so that it can understand some configurations for this project(for example which is source directory )
+.classpath
 .project
-
-#this is required for eclipse I think
+#This one is needed by eclipse only when you have special configurations setup in eclipse for this project
 .settings/
 
 
