@@ -1,7 +1,5 @@
 A File Compression software that helps zip/Unzip files using these 2 algorihtms:
 
-<script src="https://gist.github.com/ayonious/198c737dc5fc8782d2bf623a1593d09c.js"></script>
-
 1. Huffmans Code
 2. Lempel-Ziv-Wells algorithm
 
@@ -23,12 +21,14 @@ of multiple byte to binary sequence.
 java -jar FileCompression.jar
 ```
 
+![Outlook](/git_resource/outlook.png?raw=true "Optional Title")
+
 to zip a file:
 file>open>click zip>the zipped file will be created on the same folder
 
+
 to unzip a file:
 file>open>click unzip>the unzipped file will be created on the same folder
-
 
 
 ##Testing environment:
