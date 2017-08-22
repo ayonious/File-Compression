@@ -23,7 +23,7 @@ of multiple byte to binary sequence.
 java -jar FileCompression.jar
 ```
 
-![Outlook](/git_resource/outlook.png?raw=true "Optional Title")
+![Outlook](/git_resource/outlook.png?raw=true "File Compression GUI")
 
 ## Zip a file
 file>open>click zip>the zipped file will be created on the same folder
