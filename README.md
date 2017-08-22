@@ -1,3 +1,5 @@
+# File Compression
+
 A File Compression software that helps zip/Unzip files using these 2 algorihtms:
 
 1. Huffmans Code
@@ -23,15 +25,15 @@ java -jar FileCompression.jar
 
 ![Outlook](/git_resource/outlook.png?raw=true "Optional Title")
 
-to zip a file:
+## Zip a file
 file>open>click zip>the zipped file will be created on the same folder
 
 
-to unzip a file:
+## Unzip a file
 file>open>click unzip>the unzipped file will be created on the same folder
 
 
-##Testing environment:
+## Testing environment:
 
 I tested this project in:
 Linux Mint, OS X El Capitan (version 10.11.6)
