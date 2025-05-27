@@ -25,7 +25,7 @@ of multiple byte to binary sequence.
 - Maven (for building)
 
 <details>
-<summary>### Installing Maven (click to expand)</summary>
+<summary> ### Installing Maven (click to expand)</summary>
 
 On macOS:
 ```bash
