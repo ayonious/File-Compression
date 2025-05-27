@@ -1,0 +1,21 @@
+coverage:
+  status:
+    project:
+      default:
+        target: 80%    # the required coverage value
+        threshold: 1%  # the leniency in hitting the target
+    patch:
+      default:
+        target: 80%
+        threshold: 1%
+
+comment:
+  layout: "reach, diff, flags, files"
+  behavior: default
+  require_changes: false
+  require_base: no
+  require_head: yes
+
+ignore:
+  - "**/Main.java"       # Ignore main class
+  - "**/*Test.java"      # Ignore test files 
