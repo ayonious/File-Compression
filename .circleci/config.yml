@@ -7,8 +7,11 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Build with Maven
-          command: mvn -B verify
+          name: Build
+          command: mvn -B clean compile
+      - run:
+          name: Test
+          command: mvn -B test
 
 workflows:
   build:
