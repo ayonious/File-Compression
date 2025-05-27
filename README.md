@@ -1,5 +1,7 @@
 # File Compression
 
+[![GitHub stars](https://img.shields.io/github/stars/ayonious/File-Compression?style=social)](https://github.com/ayonious/File-Compression/stargazers)
+
 A File Compression software that helps zip/Unzip files using these 2 algorihtms:
 
 1. Huffmans Code
