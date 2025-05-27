@@ -18,8 +18,49 @@ Unlike Huffmans code LZW dont need an extra dictionary to be saved. Also
 LZW does not create a mapping to byte to bin sequence. It creates mapping
 of multiple byte to binary sequence.
 
-## Running Instruction:
+## Installation
+
+### Prerequisites
+- Java 21 or higher
+- Maven (for building)
+
+<details>
+<summary>### Installing Maven (click to expand)</summary>
+
+On macOS:
+```bash
+brew install maven
 ```
+
+On Linux:
+```bash
+sudo apt-get install maven  # For Debian/Ubuntu
+sudo dnf install maven     # For Fedora
+```
+
+Verify installation:
+```bash
+mvn -version
+```
+</details>
+
+## Building and Running
+
+### Build and Run the project Using Maven
+```bash
+mvn clean package
+mvn exec:java
+```
+
+### Using JAR directly
+After building with Maven, you can run the JAR:
+```bash
+java -jar target/file-compression-1.0-SNAPSHOT-jar-with-dependencies.jar
+```
+
+### Legacy method
+If you have the old JAR:
+```bash
 java -jar FileCompression.jar
 ```
 
@@ -36,4 +77,4 @@ file>open>click unzip>the unzipped file will be created on the same folder
 ## Testing environment:
 
 I tested this project in:
-Linux Mint, OS X El Capitan (version 10.11.6)
+Linux Mint, OS X El Capitan (version 10.11.6), macOS Sonoma
