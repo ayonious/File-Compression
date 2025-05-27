@@ -46,14 +46,9 @@ mvn -version
 
 ## Building and Running
 
-### Using Maven
-1. Build the project:
+### Build and Run the project Using Maven
 ```bash
 mvn clean package
-```
-
-2. Run using Maven:
-```bash
 mvn exec:java
 ```
 
