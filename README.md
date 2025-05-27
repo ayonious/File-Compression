@@ -28,7 +28,7 @@ of multiple byte to binary sequence.
 - Maven (for building)
 
 <details>
-<summary>### Installing Maven (click to expand)</summary>
+<summary> Installing Maven (click to expand)</summary>
 
 On macOS:
 ```bash
@@ -49,9 +49,17 @@ mvn -version
 
 ## Building and Running
 
+### Directly Run the jar file
+I have included the already build jar file. You can run it simply if you dont want to build
+```bash
+java -jar FileCompression.jar
+```
+
+
 ### Build and Run the project Using Maven
 ```bash
 mvn clean package
+mvn test
 mvn exec:java
 ```
 
@@ -59,12 +67,6 @@ mvn exec:java
 After building with Maven, you can run the JAR:
 ```bash
 java -jar target/file-compression-1.0-SNAPSHOT-jar-with-dependencies.jar
-```
-
-### Legacy method
-If you have the old JAR:
-```bash
-java -jar FileCompression.jar
 ```
 
 ![Outlook](/git_resource/outlook.png?raw=true "File Compression GUI")
