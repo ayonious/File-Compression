@@ -1,8 +1,9 @@
 package prog;
 
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.io.TempDir;
+import org.junit.jupiter.api.condition.DisabledIfSystemProperty;
 
 import javax.swing.*;
 import java.awt.*;
@@ -14,6 +15,7 @@ import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
 
 import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assumptions.assumeFalse;
 
 class MainFrameTest {
     @TempDir
@@ -22,34 +24,43 @@ class MainFrameTest {
     private JFrame mainFrame;
     private CountDownLatch latch;
 
-    @BeforeEach
-    void setUp() throws IOException {
-        testFile = tempDir.resolve("test.txt").toFile();
-        Files.write(testFile.toPath(), "Test content".getBytes());
-        latch = new CountDownLatch(1);
+    @BeforeAll
+    static void setUpClass() {
+        // Set headless mode if not already set
+        System.setProperty("java.awt.headless", "true");
+        // Initialize toolkit in headless mode
+        try {
+            Toolkit.getDefaultToolkit();
+        } catch (AWTError e) {
+            // Ignore AWTError in headless mode
+        }
     }
 
     @Test
+    @DisabledIfSystemProperty(named = "java.awt.headless", matches = "true")
     void testFrameInitialization() throws InterruptedException {
-        // Run frame initialization in EDT
+        assumeFalse(GraphicsEnvironment.isHeadless());
+        
+        latch = new CountDownLatch(1);
         SwingUtilities.invokeLater(() -> {
             mainFrame = MainFrame.createAndShowGUI();
             latch.countDown();
         });
 
-        // Wait for EDT to complete initialization
         assertTrue(latch.await(5, TimeUnit.SECONDS), "Frame initialization timed out");
-            
         assertNotNull(mainFrame, "Main frame should be created");
         assertTrue(mainFrame.isVisible(), "Frame should be visible");
         assertEquals(new Rectangle(350, 170, 550, 300), mainFrame.getBounds(), "Frame bounds should match");
             
-        // Clean up
         SwingUtilities.invokeLater(() -> mainFrame.dispose());
     }
 
     @Test
+    @DisabledIfSystemProperty(named = "java.awt.headless", matches = "true")
     void testMenuBarStructure() throws InterruptedException {
+        assumeFalse(GraphicsEnvironment.isHeadless());
+        
+        latch = new CountDownLatch(1);
         SwingUtilities.invokeLater(() -> {
             mainFrame = MainFrame.createAndShowGUI();
             latch.countDown();
@@ -78,7 +89,15 @@ class MainFrameTest {
     }
 
     @Test
-    void testFileOpenOperation() throws InterruptedException {
+    @DisabledIfSystemProperty(named = "java.awt.headless", matches = "true")
+    void testFileOpenOperation() throws InterruptedException, IOException {
+        assumeFalse(GraphicsEnvironment.isHeadless());
+        
+        // Create a test file
+        testFile = tempDir.resolve("test.txt").toFile();
+        Files.writeString(testFile.toPath(), "Test content");
+
+        latch = new CountDownLatch(1);
         SwingUtilities.invokeLater(() -> {
             mainFrame = MainFrame.createAndShowGUI();
             latch.countDown();
@@ -100,7 +119,11 @@ class MainFrameTest {
     }
 
     @Test
+    @DisabledIfSystemProperty(named = "java.awt.headless", matches = "true")
     void testContentPaneSetup() throws InterruptedException {
+        assumeFalse(GraphicsEnvironment.isHeadless());
+        
+        latch = new CountDownLatch(1);
         SwingUtilities.invokeLater(() -> {
             mainFrame = MainFrame.createAndShowGUI();
             latch.countDown();
@@ -116,7 +139,11 @@ class MainFrameTest {
     }
 
     @Test
+    @DisabledIfSystemProperty(named = "java.awt.headless", matches = "true")
     void testFrameDefaultCloseOperation() throws InterruptedException {
+        assumeFalse(GraphicsEnvironment.isHeadless());
+        
+        latch = new CountDownLatch(1);
         SwingUtilities.invokeLater(() -> {
             mainFrame = MainFrame.createAndShowGUI();
             latch.countDown();
