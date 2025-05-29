@@ -1,5 +1,6 @@
 # File Compression
 
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/ayonious/File-Compression/tree/master.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/ayonious/File-Compression/tree/master)
 [![codecov](https://codecov.io/gh/ayonious/File-Compression/branch/master/graph/badge.svg)](https://codecov.io/gh/ayonious/File-Compression)
 [![GitHub stars](https://img.shields.io/github/stars/ayonious/File-Compression?style=social)](https://github.com/ayonious/File-Compression/stargazers)
 
