@@ -1,4 +1,4 @@
-package prog;
+package prog.lzw;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;

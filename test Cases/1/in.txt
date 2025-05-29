@@ -1,2 +1,113 @@
 0.12500
 yes
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+PATTERN_START
+This is a repeating pattern that will help with compression.
+We will repeat this block multiple times to create patterns.
+The compression algorithm should handle this efficiently.
+PATTERN_END
+
+[DATA_BLOCK_1]
+Name: John Doe
+Age: 30
+City: New York
+Occupation: Software Engineer
+
+[DATA_BLOCK_2]
+Name: Jane Smith
+Age: 28
+City: San Francisco
+Occupation: Data Scientist
+
+PATTERN_START
+This is a repeating pattern that will help with compression.
+We will repeat this block multiple times to create patterns.
+The compression algorithm should handle this efficiently.
+PATTERN_END
+
+Technical Documentation:
+1. Introduction
+   - Purpose: Testing compression algorithms
+   - Scope: File size and pattern analysis
+2. Implementation Details
+   - Compression ratio testing
+   - Pattern recognition evaluation
+   - Performance benchmarking
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Curabitur aliquet quam id dui posuere blandit. Nulla quis lorem ut libero malesuada feugiat.
+
+[REPEATED_SECTION_START]
+The quick brown fox jumps over the lazy dog.
+Pack my box with five dozen liquor jugs.
+How vexingly quick daft zebras jump!
+[REPEATED_SECTION_END]
+
+[REPEATED_SECTION_START]
+The quick brown fox jumps over the lazy dog.
+Pack my box with five dozen liquor jugs.
+How vexingly quick daft zebras jump!
+[REPEATED_SECTION_END]
+
+PATTERN_START
+This is a repeating pattern that will help with compression.
+We will repeat this block multiple times to create patterns.
+The compression algorithm should handle this efficiently.
+PATTERN_END
+
+JSON-like Data Sample:
+{
+    "user": {
+        "id": 12345,
+        "name": "Test User",
+        "email": "test@example.com",
+        "preferences": {
+            "theme": "dark",
+            "notifications": true,
+            "language": "en-US"
+        }
+    }
+}
+
+CSV-like Data Sample:
+ID,Name,Department,Salary
+1,John Smith,Engineering,75000
+2,Mary Johnson,Marketing,65000
+3,Robert Wilson,Sales,70000
+4,Sarah Brown,HR,62000
+5,Michael Davis,Engineering,78000
+
+PATTERN_START
+This is a repeating pattern that will help with compression.
+We will repeat this block multiple times to create patterns.
+The compression algorithm should handle this efficiently.
+PATTERN_END
+
+<!-- HTML-like Content -->
+<section>
+    <header>
+        <h1>Sample Header</h1>
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Contact</li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <article>
+            <h2>Article Title</h2>
+            <p>Article content goes here with some sample text that will be used for compression testing.</p>
+        </article>
+    </main>
+</section>
+
+[REPEATED_SECTION_START]
+The quick brown fox jumps over the lazy dog.
+Pack my box with five dozen liquor jugs.
+How vexingly quick daft zebras jump!
+[REPEATED_SECTION_END]
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.

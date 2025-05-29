@@ -1,4 +1,4 @@
-package prog;
+package prog.huffman;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
@@ -58,7 +58,7 @@ public class Hzipping {
 				try {
 
 					bt = data_in.readByte();
-					freq[to(bt)]++;
+					freq[HuffmanUtils.to(bt)]++;
 				} catch (EOFException eof) {
 					System.out.println("End of File");
 					break;
@@ -97,7 +97,7 @@ public class Hzipping {
 		int i;
 		cnt = 0;
 		if (Root != null)
-			fredfs(Root);
+			HuffmanUtils.fredfs(Root, HuffmanUtils.HZIPPING_TREE_ACCESSOR);
 		for (i = 0; i < 300; i++)
 			freq[i] = 0;
 		for (i = 0; i < 300; i++)

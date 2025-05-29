@@ -1,0 +1,25 @@
+version: 2.1
+
+jobs:
+  build:
+    docker:
+      - image: cimg/openjdk:21.0
+    steps:
+      - checkout
+      - run:
+          name: Build
+          command: mvn -B clean compile
+      - run:
+          name: Test with Coverage
+          command: mvn -B test
+      - run:
+          name: Upload Coverage Report to Codecov
+          command: |
+            curl -Os https://uploader.codecov.io/latest/linux/codecov
+            chmod +x codecov
+            ./codecov -t ${CODECOV_TOKEN} -f target/site/jacoco/jacoco.xml
+
+workflows:
+  build:
+    jobs:
+      - build

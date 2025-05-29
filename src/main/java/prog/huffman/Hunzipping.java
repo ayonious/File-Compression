@@ -1,4 +1,4 @@
-package prog;
+package prog.huffman;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
@@ -45,7 +45,7 @@ public class Hunzipping {
 	public static void initHunzipping() {
 		int i;
 		if (Root != null)
-			fredfs1(Root);
+			HuffmanUtils.fredfs(Root, HuffmanUtils.HUNZIPPING_TREE_ACCESSOR);
 		for (i = 0; i < 300; i++)
 			freq1[i] = 0;
 		for (i = 0; i < 300; i++)
@@ -159,7 +159,7 @@ public class Hunzipping {
 			for (i = 0; i < cntu; i++) {
 				baital = data_in.readByte();
 				fey = data_in.readInt();
-				freq1[to(baital)] = fey;
+				freq1[HuffmanUtils.to(baital)] = fey;
 			}
 			data_in.close();
 			file_input.close();
@@ -293,8 +293,8 @@ public class Hunzipping {
 			while (true) {
 				try {
 					b = data_in.readByte();
-					bt = to(b);
-					bigone += makeeight(btost[bt]);
+					bt = HuffmanUtils.to(b);
+					bigone += HuffmanUtils.makeeight(btost[bt]);
 
 					// System.out.println(bigone);
 
