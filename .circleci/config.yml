@@ -4,14 +4,45 @@ jobs:
   build:
     docker:
       - image: cimg/openjdk:21.0
+    environment:
+      _JAVA_OPTIONS: "-Djava.awt.headless=true"
+      MAVEN_OPTS: "-Xmx3200m"
     steps:
       - checkout
+      
+      # Cache Maven dependencies
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "pom.xml" }}
+            - v1-dependencies-
+      
+      - run:
+          name: Download Dependencies
+          command: mvn dependency:go-offline
+      
+      - save_cache:
+          paths:
+            - ~/.m2
+          key: v1-dependencies-{{ checksum "pom.xml" }}
+      
       - run:
           name: Build
           command: mvn -B clean compile
+      
       - run:
           name: Test with Coverage
-          command: mvn -B test
+          command: |
+            mvn -B test
+            mkdir -p /tmp/test-results
+            find . -type f -regex ".*/target/surefire-reports/.*xml" -exec cp {} /tmp/test-results/ \;
+      
+      - store_test_results:
+          path: /tmp/test-results
+      
+      - store_artifacts:
+          path: target/site/jacoco/
+          destination: coverage-report
+      
       - run:
           name: Upload Coverage Report to Codecov
           command: |
