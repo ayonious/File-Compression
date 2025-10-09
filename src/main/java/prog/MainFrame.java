@@ -44,10 +44,10 @@ public class MainFrame {
         fileChooser.setFileSelectionMode(JFileChooser.FILES_AND_DIRECTORIES);
         int result = fileChooser.showOpenDialog(null);
         if (result == JFileChooser.APPROVE_OPTION) {
-            Main.opened_file = fileChooser.getSelectedFile();
-            Main.past = Main.opened_file.length();
-            Main.redScore.setText(Main.past + "Bytes");
-            Main.blueScore.setText("NotYetCalculated");
+            Main.openedFile = fileChooser.getSelectedFile();
+            Main.originalSize = Main.openedFile.length();
+            Main.originalSizeValue.setText(Main.originalSize + "Bytes");
+            Main.compressedSizeValue.setText("NotYetCalculated");
         }
     }
 

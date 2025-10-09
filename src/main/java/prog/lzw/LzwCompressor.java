@@ -11,33 +11,33 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Lzipping {
+public class LzwCompressor {
 
-	public static int btsz;
-	public static String big;
+	public static int bitSize;
+	public static String bitBuffer;
 
 
 	/*
 	 * =========================================================================
-	 * = make the integer to bin then return btsz size's string
+	 * = make the integer to bin then return bitSize size's string
 	 * =========================================================================
 	 */
-	public static String fil(int inp) {
+	public static String intToBinaryString(int input) {
 		String ret = "", r1 = "";
-		if (inp == 0)
+		if (input == 0)
 			ret = "0";
 		int i;
-		while (inp != 0) {
-			if ((inp % 2) == 1)
+		while (input != 0) {
+			if ((input % 2) == 1)
 				ret += "1";
 			else
 				ret += "0";
-			inp /= 2;
+			input /= 2;
 		}
 		for (i = ret.length() - 1; i >= 0; i--) {
 			r1 += ret.charAt(i);
 		}
-		while (r1.length() != btsz) {
+		while (r1.length() != bitSize) {
 			r1 = "0" + r1;
 		}
 		return r1;
@@ -54,13 +54,13 @@ public class Lzipping {
 	 * =
 	 */
 
-	public static Byte strtobt(String in) {
+	public static Byte stringToByte(String binaryString) {
 
-		int i, n = in.length();
+		int i, n = binaryString.length();
 		byte ret = 0;
 		for (i = 0; i < n; i++) {
 			ret *= 2.;
-			if (in.charAt(i) == '1')
+			if (binaryString.charAt(i) == '1')
 				ret++;
 		}
 		for (; n < 8; n++)
@@ -78,7 +78,7 @@ public class Lzipping {
 	 * = precalcs the length of the
 	 * =========================================================================
 	 */
-	public static void precalc(String fileis) {
+	public static void calculateBitSize(String filename) {
 		Map<String, Integer> dictionary = new HashMap<String, Integer>();
 		int dictSize = 256;
 		for (int i = 0; i < 256; i++)
@@ -87,11 +87,11 @@ public class Lzipping {
 		String w = "";
 
 		File filei = null;
-		filei = new File(fileis);
+		filei = new File(filename);
 
 		try {
-			FileInputStream file_input = new FileInputStream(filei);
-			DataInputStream data_in = new DataInputStream(file_input);
+			FileInputStream file_inputut = new FileInputStream(filei);
+			DataInputStream data_in = new DataInputStream(file_inputut);
 
 			Byte c;
 			int ch;
@@ -114,7 +114,7 @@ public class Lzipping {
 					break;
 				}
 			}
-			file_input.close();
+			file_inputut.close();
 			data_in.close();
 		} catch (IOException e) {
 			System.out.println("IO exception = " + e);
@@ -122,13 +122,13 @@ public class Lzipping {
 
 		// if empty file
 		if (dictSize <= 1) {
-			btsz = 1;
+			bitSize = 1;
 		} else {
-			btsz = 0;
+			bitSize = 0;
 			long i = 1;
 			while (i < dictSize) {
 				i *= 2;
-				btsz++;
+				bitSize++;
 			}
 		}
 		filei = null;
@@ -146,26 +146,26 @@ public class Lzipping {
 	 * ====
 	 */
 
-	public static void Lamzip(String fileis) {
+	public static void compressFile(String filename) {
 		Map<String, Integer> dictionary = new HashMap<String, Integer>();
 		int dictSize = 256;
-		big = "";
+		bitBuffer = "";
 		for (int i = 0; i < 256; i++)
 			dictionary.put("" + (char) i, i);
 		int mpsz = 256;
 		String w = "";
-		String fileos = fileis + ".LmZWp";
+		String fileos = filename + ".LmZWp";
 		File filei, fileo;
-		filei = new File(fileis);
+		filei = new File(filename);
 		fileo = new File(fileos);
 
 		try {
-			FileInputStream file_input = new FileInputStream(filei);
-			DataInputStream data_in = new DataInputStream(file_input);
+			FileInputStream file_inputut = new FileInputStream(filei);
+			DataInputStream data_in = new DataInputStream(file_inputut);
 			FileOutputStream file_output = new FileOutputStream(fileo);
 			DataOutputStream data_out = new DataOutputStream(file_output);
 
-			data_out.writeInt(btsz);
+			data_out.writeInt(bitSize);
 			Byte c;
 			int ch;
 			while (true) {
@@ -177,10 +177,10 @@ public class Lzipping {
 					if (dictionary.containsKey(wc))
 						w = wc;
 					else {
-						big += fil(dictionary.get(w));
-						while (big.length() >= 8) {
-							data_out.write(strtobt(big.substring(0, 8)));
-							big = big.substring(8, big.length());
+						bitBuffer += intToBinaryString(dictionary.get(w));
+						while (bitBuffer.length() >= 8) {
+							data_out.write(stringToByte(bitBuffer.substring(0, 8)));
+							bitBuffer = bitBuffer.substring(8, bitBuffer.length());
 						}
 
 						if (mpsz < 100000) {
@@ -196,18 +196,18 @@ public class Lzipping {
 			}
 
 			if (!w.equals("")) {
-				big += fil(dictionary.get(w));
-				while (big.length() >= 8) {
-					data_out.write(strtobt(big.substring(0, 8)));
-					big = big.substring(8, big.length());
+				bitBuffer += intToBinaryString(dictionary.get(w));
+				while (bitBuffer.length() >= 8) {
+					data_out.write(stringToByte(bitBuffer.substring(0, 8)));
+					bitBuffer = bitBuffer.substring(8, bitBuffer.length());
 				}
-				if (big.length() >= 1) {
-					data_out.write(strtobt(big));
+				if (bitBuffer.length() >= 1) {
+					data_out.write(stringToByte(bitBuffer));
 				}
 			}
 			data_in.close();
 			data_out.close();
-			file_input.close();
+			file_inputut.close();
 			file_output.close();
 		} catch (IOException e) {
 			System.out.println("IO exception = " + e);
@@ -222,17 +222,17 @@ public class Lzipping {
 	 * ====
 	 */
 
-	public static void beginLzipping(String arg1) {
-		btsz = 0;
-		big = "";
-		precalc(arg1);
-		Lamzip(arg1);
-		btsz = 0;
-		big = "";
+	public static void beginLzwCompression(String arg1) {
+		bitSize = 0;
+		bitBuffer = "";
+		calculateBitSize(arg1);
+		compressFile(arg1);
+		bitSize = 0;
+		bitBuffer = "";
 	}
 
 	/*
-	 * public static void main(String[] args) { btsz=0; big="";
-	 * precalc("in.txt"); Lamzip("in.txt"); btsz=0; big=""; }
+	 * public static void main(String[] args) { bitSize=0; bitBuffer="";
+	 * precalc("binaryString.txt"); Lamzip("binaryString.txt"); bitSize=0; bitBuffer=""; }
 	 */
 }

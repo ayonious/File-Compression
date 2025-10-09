@@ -10,44 +10,44 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
-import prog.huffman.Hzipping;
-import prog.huffman.Hunzipping;
-import prog.lzw.Lzipping;
-import prog.lzw.Lunzipping;
+import prog.huffman.HuffmanCompressor;
+import prog.huffman.HuffmanDecompressor;
+import prog.lzw.LzwCompressor;
+import prog.lzw.LzwDecompressor;
 
 public class Main extends JFrame implements ActionListener {
 	// Definition of global values and items that are part of the GUI.
 
-	static public File opened_file, other_file;
-	static long past, future;
-	static JLabel redLabel, blueLabel, redScore, blueScore;
+	static public File openedFile, outputFile;
+	static long originalSize, compressedSize;
+	static JLabel originalSizeLabel, compressedSizeLabel, originalSizeValue, compressedSizeValue;
 	static JPanel buttonPanel, titlePanel, scorePanel;
-	static JButton ZH, UH, ZL, UL, EX;
+	static JButton huffmanCompressButton, huffmanDecompressButton, lzwCompressButton, lzwDecompressButton, exitButton;
 
 	public JPanel createContentPane() {
 		return MainPanel.createContentPane(this);
 	}
 
 	private void handleHuffmanCompression() {
-		Hzipping.beginHzipping(opened_file.getPath());
+		HuffmanCompressor.beginHuffmanCompression(openedFile.getPath());
 		showCompressionCompleteDialog("Zipping");
 		updateFileStats(".huffz");
 	}
 
 	private void handleHuffmanDecompression() {
-		Hunzipping.beginHunzipping(opened_file.getPath());
+		HuffmanDecompressor.beginHuffmanDecompression(openedFile.getPath());
 		showCompressionCompleteDialog("UnZipping");
 		updateDecompressionStats();
 	}
 
 	private void handleLZWCompression() {
-		Lzipping.beginLzipping(opened_file.getPath());
+		LzwCompressor.beginLzwCompression(openedFile.getPath());
 		showCompressionCompleteDialog("Zipping");
 		updateFileStats(".LmZWp");
 	}
 
 	private void handleLZWDecompression() {
-		Lunzipping.beginLunzipping(opened_file.getPath());
+		LzwDecompressor.beginLzwDecompression(openedFile.getPath());
 		showCompressionCompleteDialog("UnZipping");
 		updateDecompressionStats();
 	}
@@ -59,31 +59,31 @@ public class Main extends JFrame implements ActionListener {
 	}
 
 	private void updateFileStats(String extension) {
-		redScore.setText(opened_file.length() + "Bytes");
-		other_file = new File(opened_file.getPath() + extension);
-		future = other_file.length();
-		blueScore.setText(future + "Bytes");
+		originalSizeValue.setText(openedFile.length() + "Bytes");
+		outputFile = new File(openedFile.getPath() + extension);
+		compressedSize = outputFile.length();
+		compressedSizeValue.setText(compressedSize + "Bytes");
 	}
 
 	private void updateDecompressionStats() {
-		redScore.setText(opened_file.length() + "Bytes");
-		String s = opened_file.getPath();
+		originalSizeValue.setText(openedFile.length() + "Bytes");
+		String s = openedFile.getPath();
 		s = s.substring(0, s.length() - 6);
-		other_file = new File(s);
-		future = other_file.length();
-		blueScore.setText(future + "Bytes");
+		outputFile = new File(s);
+		compressedSize = outputFile.length();
+		compressedSizeValue.setText(compressedSize + "Bytes");
 	}
 
 	public void actionPerformed(ActionEvent e) {
-		if (e.getSource() == ZH) {
+		if (e.getSource() == huffmanCompressButton) {
 			handleHuffmanCompression();
-		} else if (e.getSource() == UH) {
+		} else if (e.getSource() == huffmanDecompressButton) {
 			handleHuffmanDecompression();
-		} else if (e.getSource() == ZL) {
+		} else if (e.getSource() == lzwCompressButton) {
 			handleLZWCompression();
-		} else if (e.getSource() == UL) {
+		} else if (e.getSource() == lzwDecompressButton) {
 			handleLZWDecompression();
-		} else if (e.getSource() == EX) {
+		} else if (e.getSource() == exitButton) {
 			System.exit(0);
 		}
 	}

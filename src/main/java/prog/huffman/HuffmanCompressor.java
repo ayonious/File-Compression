@@ -11,54 +11,54 @@ import java.io.PrintStream;
 import java.util.PriorityQueue;
 
 //if the frequency of a byte is more than 2^32 then there will be problem
-public class Hzipping {
+public class HuffmanCompressor {
 
-	static PriorityQueue<TREE> pq = new PriorityQueue<TREE>();
-	static int[] freq = new int[300];
-	static String[] ss = new String[300];
-	static int exbits;
-	static byte bt;
-	static int cnt; // number of different characters
+	static PriorityQueue<HuffmanNode> priorityQueue = new PriorityQueue<HuffmanNode>();
+	static int[] frequency = new int[300];
+	static String[] huffmanCodes = new String[300];
+	static int extraBits;
+	static byte currentByte;
+	static int uniqueCharCount; // number of different characters
 
 	// for keeping frequncies of all the bytes
 
 	// main tree class
 
-	static class TREE implements Comparable<TREE> {
-		TREE Lchild;
-		TREE Rchild;
-		public String deb;
-		public int Bite;
-		public int Freqnc;
+	static class HuffmanNode implements Comparable<HuffmanNode> {
+		HuffmanNode leftChild;
+		HuffmanNode rightChild;
+		public String code;
+		public int byteValue;
+		public int frequency;
 
-		public int compareTo(TREE T) {
-			if (this.Freqnc < T.Freqnc)
+		public int compareTo(HuffmanNode other) {
+			if (this.frequency < other.frequency)
 				return -1;
-			if (this.Freqnc > T.Freqnc)
+			if (this.frequency > other.frequency)
 				return 1;
 			return 0;
 		}
 	}
 
-	static TREE Root;
+	static HuffmanNode root;
 
 	/*******************************************************************************
-	 * calculating frequence of file fname
+	 * calculating frequence of file filename
 	 ******************************************************************************/
 
-	public static void CalFreq(String fname) {
+	public static void calculateFrequency(String filename) {
 		File file = null;
-		Byte bt;
+		Byte currentByte;
 
-		file = new File(fname);
+		file = new File(filename);
 		try {
 			FileInputStream file_input = new FileInputStream(file);
 			DataInputStream data_in = new DataInputStream(file_input);
 			while (true) {
 				try {
 
-					bt = data_in.readByte();
-					freq[HuffmanUtils.to(bt)]++;
+					currentByte = data_in.readByte();
+					frequency[HuffmanUtils.to(currentByte)]++;
 				} catch (EOFException eof) {
 					System.out.println("End of File");
 					break;
@@ -93,32 +93,32 @@ public class Hzipping {
 	/**********************************************************************************
 	 * freing the memory
 	 *********************************************************************************/
-	public static void initHzipping() {
+	public static void initHuffmanCompressor() {
 		int i;
-		cnt = 0;
-		if (Root != null)
-			HuffmanUtils.fredfs(Root, HuffmanUtils.HZIPPING_TREE_ACCESSOR);
+		uniqueCharCount = 0;
+		if (root != null)
+			HuffmanUtils.fredfs(root, HuffmanUtils.HZIPPING_TREE_ACCESSOR);
 		for (i = 0; i < 300; i++)
-			freq[i] = 0;
+			frequency[i] = 0;
 		for (i = 0; i < 300; i++)
-			ss[i] = "";
-		pq.clear();
+			huffmanCodes[i] = "";
+		priorityQueue.clear();
 	}
 
 	/**********************************************************************************/
 	/**********************************************************************************
 	 * dfs to free memory
 	 *********************************************************************************/
-	public static void fredfs(TREE now) {
+	public static void fredfs(HuffmanNode node) {
 
-		if (now.Lchild == null && now.Rchild == null) {
-			now = null;
+		if (node.leftChild == null && node.rightChild == null) {
+			node = null;
 			return;
 		}
-		if (now.Lchild != null)
-			fredfs(now.Lchild);
-		if (now.Rchild != null)
-			fredfs(now.Rchild);
+		if (node.leftChild != null)
+			fredfs(node.leftChild);
+		if (node.rightChild != null)
+			fredfs(node.rightChild);
 	}
 
 	/**********************************************************************************/
@@ -126,16 +126,16 @@ public class Hzipping {
 	/**********************************************************************************
 	 * dfs to make the codes
 	 *********************************************************************************/
-	public static void dfs(TREE now, String st) {
-		now.deb = st;
-		if ((now.Lchild == null) && (now.Rchild == null)) {
-			ss[now.Bite] = st;
+	public static void generateHuffmanCodes(HuffmanNode node, String code) {
+		node.code = code;
+		if ((node.leftChild == null) && (node.rightChild == null)) {
+			huffmanCodes[node.byteValue] = code;
 			return;
 		}
-		if (now.Lchild != null)
-			dfs(now.Lchild, st + "0");
-		if (now.Rchild != null)
-			dfs(now.Rchild, st + "1");
+		if (node.leftChild != null)
+			generateHuffmanCodes(node.leftChild, code + "0");
+		if (node.rightChild != null)
+			generateHuffmanCodes(node.rightChild, code + "1");
 	}
 
 	/**********************************************************************************/
@@ -143,30 +143,30 @@ public class Hzipping {
 	/*******************************************************************************
 	 * Making all the nodes in a priority Q making the tree
 	 *******************************************************************************/
-	public static void MakeNode() {
+	public static void buildHuffmanTree() {
 		int i;
-		pq.clear();
+		priorityQueue.clear();
 
 		for (i = 0; i < 300; i++) {
-			if (freq[i] != 0) {
-				TREE Temp = new TREE();
-				Temp.Bite = i;
-				Temp.Freqnc = freq[i];
-				Temp.Lchild = null;
-				Temp.Rchild = null;
-				pq.add(Temp);
-				cnt++;
+			if (frequency[i] != 0) {
+				HuffmanNode Temp = new HuffmanNode();
+				Temp.byteValue = i;
+				Temp.frequency = frequency[i];
+				Temp.leftChild = null;
+				Temp.rightChild = null;
+				priorityQueue.add(Temp);
+				uniqueCharCount++;
 			}
 
 		}
-		TREE Temp1, Temp2;
+		HuffmanNode Temp1, Temp2;
 
-		if (cnt == 0) {
+		if (uniqueCharCount == 0) {
 			return;
-		} else if (cnt == 1) {
+		} else if (uniqueCharCount == 1) {
 			for (i = 0; i < 300; i++)
-				if (freq[i] != 0) {
-					ss[i] = "0";
+				if (frequency[i] != 0) {
+					huffmanCodes[i] = "0";
 					break;
 				}
 			return;
@@ -174,16 +174,16 @@ public class Hzipping {
 
 		// will there b a problem if the file is empty
 		// a bug is found if there is only one character
-		while (pq.size() != 1) {
-			TREE Temp = new TREE();
-			Temp1 = pq.poll();
-			Temp2 = pq.poll();
-			Temp.Lchild = Temp1;
-			Temp.Rchild = Temp2;
-			Temp.Freqnc = Temp1.Freqnc + Temp2.Freqnc;
-			pq.add(Temp);
+		while (priorityQueue.size() != 1) {
+			HuffmanNode Temp = new HuffmanNode();
+			Temp1 = priorityQueue.poll();
+			Temp2 = priorityQueue.poll();
+			Temp.leftChild = Temp1;
+			Temp.rightChild = Temp2;
+			Temp.frequency = Temp1.frequency + Temp2.frequency;
+			priorityQueue.add(Temp);
 		}
-		Root = pq.poll();
+		root = priorityQueue.poll();
 	}
 
 	/*******************************************************************************/
@@ -191,18 +191,18 @@ public class Hzipping {
 	/*******************************************************************************
 	 * encrypting
 	 *******************************************************************************/
-	public static void encrypt(String fname) {
+	public static void encrypt(String filename) {
 		File file = null;
 
-		file = new File(fname);
+		file = new File(filename);
 		try {
 			FileInputStream file_input = new FileInputStream(file);
 			DataInputStream data_in = new DataInputStream(file_input);
 			while (true) {
 				try {
 
-					bt = data_in.readByte();
-					freq[bt]++;
+					currentByte = data_in.readByte();
+					frequency[currentByte]++;
 				} catch (EOFException eof) {
 					System.out.println("End of File");
 					break;
@@ -223,12 +223,12 @@ public class Hzipping {
 	 * fake zip creates a file "fakezip.txt" where puts the final binary codes
 	 * of the real zipped file
 	 *******************************************************************************/
-	public static void fakezip(String fname) {
+	public static void fakezip(String filename) {
 
 		File filei, fileo;
 		int i;
 
-		filei = new File(fname);
+		filei = new File(filename);
 		fileo = new File("fakezipped.txt");
 		try {
 			FileInputStream file_input = new FileInputStream(filei);
@@ -237,8 +237,8 @@ public class Hzipping {
 
 			while (true) {
 				try {
-					bt = data_in.readByte();
-					ps.print(ss[to(bt)]);
+					currentByte = data_in.readByte();
+					ps.print(huffmanCodes[to(currentByte)]);
 				} catch (EOFException eof) {
 					System.out.println("End of File");
 					break;
@@ -260,15 +260,15 @@ public class Hzipping {
 	/*******************************************************************************/
 
 	/*******************************************************************************
-	 * real zip according to codes of fakezip.txt (fname)
+	 * real zip according to codes of fakezip.txt (filename)
 	 *******************************************************************************/
-	public static void realzip(String fname, String fname1) {
+	public static void realzip(String filename, String filename1) {
 		File filei, fileo;
 		int i, j = 10;
-		Byte btt;
+		Byte currentBytet;
 
-		filei = new File(fname);
-		fileo = new File(fname1);
+		filei = new File(filename);
+		fileo = new File(filename1);
 
 		try {
 			FileInputStream file_input = new FileInputStream(filei);
@@ -276,42 +276,42 @@ public class Hzipping {
 			FileOutputStream file_output = new FileOutputStream(fileo);
 			DataOutputStream data_out = new DataOutputStream(file_output);
 
-			data_out.writeInt(cnt);
+			data_out.writeInt(uniqueCharCount);
 			for (i = 0; i < 256; i++) {
-				if (freq[i] != 0) {
-					btt = (byte) i;
-					data_out.write(btt);
-					data_out.writeInt(freq[i]);
+				if (frequency[i] != 0) {
+					currentBytet = (byte) i;
+					data_out.write(currentBytet);
+					data_out.writeInt(frequency[i]);
 				}
 			}
-			long texbits;
-			texbits = filei.length() % 8;
-			texbits = (8 - texbits) % 8;
-			exbits = (int) texbits;
-			data_out.writeInt(exbits);
+			long textraBits;
+			textraBits = filei.length() % 8;
+			textraBits = (8 - textraBits) % 8;
+			extraBits = (int) textraBits;
+			data_out.writeInt(extraBits);
 			while (true) {
 				try {
-					bt = 0;
+					currentByte = 0;
 					byte ch;
-					for (exbits = 0; exbits < 8; exbits++) {
+					for (extraBits = 0; extraBits < 8; extraBits++) {
 						ch = data_in.readByte();
-						bt *= 2;
+						currentByte *= 2;
 						if (ch == '1')
-							bt++;
+							currentByte++;
 					}
-					data_out.write(bt);
+					data_out.write(currentByte);
 
 				} catch (EOFException eof) {
 					int x;
-					if (exbits != 0) {
-						for (x = exbits; x < 8; x++) {
-							bt *= 2;
+					if (extraBits != 0) {
+						for (x = extraBits; x < 8; x++) {
+							currentByte *= 2;
 						}
-						data_out.write(bt);
+						data_out.write(currentByte);
 					}
 
-					exbits = (int) texbits;
-					System.out.println("extrabits: " + exbits);
+					extraBits = (int) textraBits;
+					System.out.println("extrabits: " + extraBits);
 					System.out.println("End of File");
 					break;
 				}
@@ -335,7 +335,7 @@ public class Hzipping {
 	/*
 	 * public static void main (String[] args) { initHzipping();
 	 * CalFreq("in.txt"); // calculate the frequency of each digit MakeNode();
-	 * // makeing corresponding nodes if(cnt>1) dfs(Root,""); // dfs to make the
+	 * // makeing corresponding nodes if(uniqueCharCount>1) generateHuffmanCodes(root,""); // dfs to make the
 	 * codes fakezip("in.txt"); // fake zip file which will have the binary of
 	 * the input to fakezipped.txt file
 	 * realzip("fakezipped.txt","in.txt"+".huffz"); // making the real zip
@@ -344,17 +344,17 @@ public class Hzipping {
 	 * }
 	 */
 
-	public static void beginHzipping(String arg1) {
-		initHzipping();
-		CalFreq(arg1); // calculate the frequency of each digit
-		MakeNode(); // makeing corresponding nodes
-		if (cnt > 1)
-			dfs(Root, ""); // dfs to make the codes
+	public static void beginHuffmanCompression(String arg1) {
+		initHuffmanCompressor();
+		calculateFrequency(arg1); // calculate the frequency of each digit
+		buildHuffmanTree(); // build huffman tree from frequencies
+		if (uniqueCharCount > 1)
+			generateHuffmanCodes(root, ""); // dfs to make the codes
 		fakezip(arg1); // fake zip file which will have the binary of the input
 						// to fakezipped.txt file
 		realzip("fakezipped.txt", arg1 + ".huffz"); // making the real zip
 													// according the fakezip.txt
 													// file
-		initHzipping();
+		initHuffmanCompressor();
 	}
 }

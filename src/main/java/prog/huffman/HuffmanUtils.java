@@ -34,23 +34,23 @@ public class HuffmanUtils {
         T getRightChild(T node);
     }
 
-    // Accessor for Hzipping.TREE
-    public static final TreeAccessor<Hzipping.TREE> HZIPPING_TREE_ACCESSOR = new TreeAccessor<Hzipping.TREE>() {
-        public Hzipping.TREE getLeftChild(Hzipping.TREE node) {
-            return node.Lchild;
+    // Accessor for HuffmanCompressor.HuffmanNode
+    public static final TreeAccessor<HuffmanCompressor.HuffmanNode> HZIPPING_TREE_ACCESSOR = new TreeAccessor<HuffmanCompressor.HuffmanNode>() {
+        public HuffmanCompressor.HuffmanNode getLeftChild(HuffmanCompressor.HuffmanNode node) {
+            return node.leftChild;
         }
-        public Hzipping.TREE getRightChild(Hzipping.TREE node) {
-            return node.Rchild;
+        public HuffmanCompressor.HuffmanNode getRightChild(HuffmanCompressor.HuffmanNode node) {
+            return node.rightChild;
         }
     };
 
-    // Accessor for Hunzipping.TREE
-    public static final TreeAccessor<Hunzipping.TREE> HUNZIPPING_TREE_ACCESSOR = new TreeAccessor<Hunzipping.TREE>() {
-        public Hunzipping.TREE getLeftChild(Hunzipping.TREE node) {
-            return node.Lchild;
+    // Accessor for HuffmanDecompressor.HuffmanNode
+    public static final TreeAccessor<HuffmanDecompressor.HuffmanNode> HUNZIPPING_HuffmanNode_ACCESSOR = new TreeAccessor<HuffmanDecompressor.HuffmanNode>() {
+        public HuffmanDecompressor.HuffmanNode getLeftChild(HuffmanDecompressor.HuffmanNode node) {
+            return node.leftChild;
         }
-        public Hunzipping.TREE getRightChild(Hunzipping.TREE node) {
-            return node.Rchild;
+        public HuffmanDecompressor.HuffmanNode getRightChild(HuffmanDecompressor.HuffmanNode node) {
+            return node.rightChild;
         }
     };
 

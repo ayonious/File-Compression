@@ -31,11 +31,11 @@ public class MainPanel {
         mainPanel.add(Main.titlePanel);
 
         // Create and add labels
-        Main.redLabel = createLabel("Selected File Size: ", 43, 0, 150, 30);
-        Main.blueLabel = createLabel("After zip/unzip the file size: ", 10, 30, 170, 30);
-        
-        Main.titlePanel.add(Main.redLabel);
-        Main.titlePanel.add(Main.blueLabel);
+        Main.originalSizeLabel = createLabel("Selected File Size: ", 43, 0, 150, 30);
+        Main.compressedSizeLabel = createLabel("After zip/unzip the file size: ", 10, 30, 170, 30);
+
+        Main.titlePanel.add(Main.originalSizeLabel);
+        Main.titlePanel.add(Main.compressedSizeLabel);
     }
 
     private static void createScorePanel(JPanel mainPanel) {
@@ -46,11 +46,11 @@ public class MainPanel {
         mainPanel.add(Main.scorePanel);
 
         // Create and add score labels
-        Main.redScore = createLabel("", 0, 0, 100, 30);
-        Main.blueScore = createLabel("", 0, 30, 100, 30);
-        
-        Main.scorePanel.add(Main.redScore);
-        Main.scorePanel.add(Main.blueScore);
+        Main.originalSizeValue = createLabel("", 0, 0, 100, 30);
+        Main.compressedSizeValue = createLabel("", 0, 30, 100, 30);
+
+        Main.scorePanel.add(Main.originalSizeValue);
+        Main.scorePanel.add(Main.compressedSizeValue);
     }
 
     private static JLabel createLabel(String text, int x, int y, int width, int height) {
@@ -77,18 +77,18 @@ public class MainPanel {
         mainPanel.add(Main.buttonPanel);
 
         // Create compression buttons
-        Main.ZH = createButton("ZIP HuffZ", 0, 0, 120, 30, listener);
-        Main.UH = createButton("UNZIP HuffZ", 130, 0, 120, 30, listener);
-        Main.ZL = createButton("ZIP LmZWp", 260, 0, 120, 30, listener);
-        Main.UL = createButton("UNZIP LmZWp", 390, 0, 120, 30, listener);
-        Main.EX = createButton("EXIT", 130, 70, 250, 30, listener);
+        Main.huffmanCompressButton = createButton("ZIP HuffZ", 0, 0, 120, 30, listener);
+        Main.huffmanDecompressButton = createButton("UNZIP HuffZ", 130, 0, 120, 30, listener);
+        Main.lzwCompressButton = createButton("ZIP LmZWp", 260, 0, 120, 30, listener);
+        Main.lzwDecompressButton = createButton("UNZIP LmZWp", 390, 0, 120, 30, listener);
+        Main.exitButton = createButton("EXIT", 130, 70, 250, 30, listener);
 
         // Add buttons to panel
-        Main.buttonPanel.add(Main.ZH);
-        Main.buttonPanel.add(Main.UH);
-        Main.buttonPanel.add(Main.ZL);
-        Main.buttonPanel.add(Main.UL);
-        Main.buttonPanel.add(Main.EX);
+        Main.buttonPanel.add(Main.huffmanCompressButton);
+        Main.buttonPanel.add(Main.huffmanDecompressButton);
+        Main.buttonPanel.add(Main.lzwCompressButton);
+        Main.buttonPanel.add(Main.lzwDecompressButton);
+        Main.buttonPanel.add(Main.exitButton);
     }
 
     public static JPanel createContentPane(ActionListener listener) {

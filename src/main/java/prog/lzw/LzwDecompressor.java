@@ -11,49 +11,49 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Lunzipping {
+public class LzwDecompressor {
 
-	public static int bitsz1;
+	public static int bitSize;
 
 	// byte er string representation in eight digit
-	public static String bttost[] = new String[256];
-	public static String big1;
+	public static String byteToString[] = new String[256];
+	public static String bitBuffer;
 
 	/*
 	 * ============================================================ make all the
 	 * binary to string conversion for 8 bits
 	 * =============================================================
 	 */
-	public static void pre() {
+	public static void initializeByteToStringTable() {
 		int i, j;
 		String r1;
-		bttost[0] = "0";
+		byteToString[0] = "0";
 		for (i = 0; i < 256; i++) {
 			r1 = "";
 			j = i;
 			if (i != 0)
-				bttost[i] = "";
+				byteToString[i] = "";
 			while (j != 0) {
 				if ((j % 2) == 1)
-					bttost[i] += "1";
+					byteToString[i] += "1";
 				else
-					bttost[i] += "0";
+					byteToString[i] += "0";
 				j /= 2;
 			}
-			for (j = bttost[i].length() - 1; j >= 0; j--) {
-				r1 += bttost[i].charAt(j);
+			for (j = byteToString[i].length() - 1; j >= 0; j--) {
+				r1 += byteToString[i].charAt(j);
 			}
 			while (r1.length() < 8) {
 				r1 = "0" + r1;
 			}
-			bttost[i] = r1;
+			byteToString[i] = r1;
 		}
 	}
 	/*
 	 * =========================================================================
 	 */
 
-	public static void Lunzip(String fileis) {
+	public static void decompressFile(String filename) {
 		int k;
 		int dictSize = 256;
 		int mpsz = 256;
@@ -62,10 +62,10 @@ public class Lunzipping {
 		for (int i = 0; i < 256; i++)
 			dictionary.put(i, "" + (char) i);
 
-		String fileos = fileis.substring(0, fileis.length() - 6);
+		String fileos = filename.substring(0, filename.length() - 6);
 
 		File filei = null, fileo = null;
-		filei = new File(fileis);
+		filei = new File(filename);
 		fileo = new File(fileos);
 		try {
 			FileInputStream file_input = new FileInputStream(filei);
@@ -74,13 +74,13 @@ public class Lunzipping {
 			DataOutputStream data_out = new DataOutputStream(file_output);
 
 			Byte c;
-			bitsz1 = data_in.readInt();
+			bitSize = data_in.readInt();
 
 			while (true) {
 				try {
 					c = data_in.readByte();
-					big1 += bttost[CommonUtil.byteToUnsignedInt(c)];
-					if (big1.length() >= bitsz1)
+					bitBuffer += byteToString[CommonUtil.byteToUnsignedInt(c)];
+					if (bitBuffer.length() >= bitSize)
 						break;
 				} catch (EOFException eof) {
 					System.out.println("End of File");
@@ -88,9 +88,9 @@ public class Lunzipping {
 				}
 			}
 
-			if (big1.length() >= bitsz1) {
-				k = CommonUtil.binaryStringToInt(big1.substring(0, bitsz1));
-				big1 = big1.substring(bitsz1, big1.length());
+			if (bitBuffer.length() >= bitSize) {
+				k = CommonUtil.binaryStringToInt(bitBuffer.substring(0, bitSize));
+				bitBuffer = bitBuffer.substring(bitSize, bitBuffer.length());
 			} else {
 				data_in.close();
 				data_out.close();
@@ -104,12 +104,12 @@ public class Lunzipping {
 
 			while (true) {
 				try {
-					while (big1.length() < bitsz1) {
+					while (bitBuffer.length() < bitSize) {
 						c = data_in.readByte();
-						big1 += bttost[CommonUtil.byteToUnsignedInt(c)];
+						bitBuffer += byteToString[CommonUtil.byteToUnsignedInt(c)];
 					}
-					k = CommonUtil.binaryStringToInt(big1.substring(0, bitsz1));
-					big1 = big1.substring(bitsz1, big1.length());
+					k = CommonUtil.binaryStringToInt(bitBuffer.substring(0, bitSize));
+					bitBuffer = bitBuffer.substring(bitSize, bitBuffer.length());
 
 					String entry = "";
 					if (dictionary.containsKey(k)) {
@@ -145,17 +145,17 @@ public class Lunzipping {
 
 	}
 
-	public static void beginLunzipping(String arg1) {
-		big1 = "";
-		bitsz1 = 0;
-		pre();
-		Lunzip(arg1);
-		big1 = "";
-		bitsz1 = 0;
+	public static void beginLzwDecompression(String arg1) {
+		bitBuffer = "";
+		bitSize = 0;
+		initializeByteToStringTable();
+		decompressFile(arg1);
+		bitBuffer = "";
+		bitSize = 0;
 	}
 
 	/*
-	 * public static void main(String[] args) { big1=""; bitsz1=0; pre();
-	 * Lunzip("in.txt.LmZWp"); big1=""; bitsz1=0; }
+	 * public static void main(String[] args) { bitBuffer=""; bitSize=0; pre();
+	 * Lunzip("in.txt.LmZWp"); bitBuffer=""; bitSize=0; }
 	 */
 }
