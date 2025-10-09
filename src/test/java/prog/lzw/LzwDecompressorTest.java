@@ -13,7 +13,7 @@ import java.nio.file.Path;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class LunzippingTest {
+class LzwDecompressorTest {
     @TempDir
     Path tempDir;
     
@@ -28,9 +28,9 @@ class LunzippingTest {
 
     @BeforeEach
     void setUp() {
-        Lunzipping.big1 = "";
-        Lunzipping.bitsz1 = 0;
-        Lunzipping.pre();  // Initialize the binary to string conversion table
+        LzwDecompressor.bitBuffer = "";
+        LzwDecompressor.bitSize = 0;
+        LzwDecompressor.initializeByteToStringTable();  // Initialize the binary to string conversion table
     }
 
     @Test
@@ -41,7 +41,7 @@ class LunzippingTest {
         File compressedFile = createCompressedFile(filename, 8, compressedContent);
         
         // Run decompression
-        Lunzipping.beginLunzipping(compressedFile.getAbsolutePath());
+        LzwDecompressor.beginLzwDecompression(compressedFile.getAbsolutePath());
         
         // Check the decompressed file
         File decompressedFile = new File(tempDir.toFile(), filename);
@@ -60,7 +60,7 @@ class LunzippingTest {
         File compressedFile = createCompressedFile(filename, 8, compressedContent);
         
         // Run decompression
-        Lunzipping.beginLunzipping(compressedFile.getAbsolutePath());
+        LzwDecompressor.beginLzwDecompression(compressedFile.getAbsolutePath());
         
         // Check the decompressed file
         File decompressedFile = new File(tempDir.toFile(), filename);
@@ -76,7 +76,7 @@ class LunzippingTest {
         File compressedFile = createCompressedFile(filename, 8, compressedContent);
         
         // Run decompression
-        Lunzipping.beginLunzipping(compressedFile.getAbsolutePath());
+        LzwDecompressor.beginLzwDecompression(compressedFile.getAbsolutePath());
         
         // Check the decompressed file
         File decompressedFile = new File(tempDir.toFile(), filename);
@@ -92,13 +92,13 @@ class LunzippingTest {
 
     @Test
     void testBinaryToStringConversion() {
-        Lunzipping.pre();  // Initialize conversion table
+        LzwDecompressor.initializeByteToStringTable();  // Initialize conversion table
         
         // Test some known conversions
-        assertEquals("00000000", Lunzipping.bttost[0], "Conversion for 0");
-        assertEquals("00000001", Lunzipping.bttost[1], "Conversion for 1");
-        assertEquals("10000000", Lunzipping.bttost[128], "Conversion for 128");
-        assertEquals("11111111", Lunzipping.bttost[255], "Conversion for 255");
+        assertEquals("00000000", LzwDecompressor.byteToString[0], "Conversion for 0");
+        assertEquals("00000001", LzwDecompressor.byteToString[1], "Conversion for 1");
+        assertEquals("10000000", LzwDecompressor.byteToString[128], "Conversion for 128");
+        assertEquals("11111111", LzwDecompressor.byteToString[255], "Conversion for 255");
     }
 
 } 

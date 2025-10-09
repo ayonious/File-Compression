@@ -38,7 +38,7 @@ class HuffmanCompressionIntegrationTest {
         System.out.println("Original file size: " + originalSize + " bytes");
 
         // Compress the file
-        Hzipping.beginHzipping(originalFile.getAbsolutePath());
+        HuffmanCompressor.beginHuffmanCompression(originalFile.getAbsolutePath());
         assertTrue(compressedFile.exists(), "Compressed file should exist");
         
         long compressedSize = Files.size(compressedFile.toPath());
@@ -50,7 +50,7 @@ class HuffmanCompressionIntegrationTest {
         assertFalse(originalFile.exists(), "Original file should be deleted");
 
         // Decompress
-        Hunzipping.beginHunzipping(compressedFile.getAbsolutePath());
+        HuffmanDecompressor.beginHuffmanDecompression(compressedFile.getAbsolutePath());
         assertTrue(decompressedFile.exists(), "Decompressed file should exist");
 
         // Compare contents
@@ -92,7 +92,7 @@ class HuffmanCompressionIntegrationTest {
         String originalContent = Files.readString(testFile.toPath());
 
         // Compress
-        Hzipping.beginHzipping(testFile.getAbsolutePath());
+        HuffmanCompressor.beginHuffmanCompression(testFile.getAbsolutePath());
         assertTrue(compressedFile.exists(), "Compressed file should exist");
 
         // Delete original file
@@ -100,7 +100,7 @@ class HuffmanCompressionIntegrationTest {
         assertFalse(testFile.exists(), "Original file should be deleted");
 
         // Decompress
-        Hunzipping.beginHunzipping(compressedFile.getAbsolutePath());
+        HuffmanDecompressor.beginHuffmanDecompression(compressedFile.getAbsolutePath());
         assertTrue(decompressedFile.exists(), "Decompressed file should exist");
 
         // Compare contents

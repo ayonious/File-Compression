@@ -34,7 +34,7 @@ class LzwCompressionIntegrationTest {
         long originalSize = Files.size(originalFile.toPath());
 
         // Compress using LZW
-        Lzipping.beginLzipping(originalFile.getAbsolutePath());
+        LzwCompressor.beginLzwCompression(originalFile.getAbsolutePath());
         assertTrue(compressedFile.exists(), "Compressed file should exist");
 
         // Store original file content
@@ -45,7 +45,7 @@ class LzwCompressionIntegrationTest {
         assertFalse(originalFile.exists(), "Original file should be deleted");
 
         // Decompress using LZW
-        Lunzipping.beginLunzipping(compressedFile.getAbsolutePath());
+        LzwDecompressor.beginLzwDecompression(compressedFile.getAbsolutePath());
         assertTrue(decompressedFile.exists(), "Decompressed file should exist");
 
         // Compare contents

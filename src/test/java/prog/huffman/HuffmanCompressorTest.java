@@ -13,7 +13,7 @@ import java.util.Arrays;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class HzippingTest {
+class HuffmanCompressorTest {
     @TempDir
     Path tempDir;
     private File inputFile;
@@ -31,7 +31,7 @@ class HzippingTest {
             writer.write("");
         }
 
-        Hzipping.beginHzipping(inputFile.getAbsolutePath());
+        HuffmanCompressor.beginHuffmanCompression(inputFile.getAbsolutePath());
         File compressedFile = new File(inputFile.getAbsolutePath() + ".huffz");
 
         assertTrue(compressedFile.exists());
@@ -45,7 +45,7 @@ class HzippingTest {
             writer.write("aaaa");
         }
 
-        Hzipping.beginHzipping(inputFile.getAbsolutePath());
+        HuffmanCompressor.beginHuffmanCompression(inputFile.getAbsolutePath());
         File compressedFile = new File(inputFile.getAbsolutePath() + ".huffz");
 
         assertTrue(compressedFile.exists());
@@ -59,7 +59,7 @@ class HzippingTest {
             writer.write("Hello, World! This is a test file with multiple characters.");
         }
 
-        Hzipping.beginHzipping(inputFile.getAbsolutePath());
+        HuffmanCompressor.beginHuffmanCompression(inputFile.getAbsolutePath());
         File compressedFile = new File(inputFile.getAbsolutePath() + ".huffz");
 
         assertTrue(compressedFile.exists());
@@ -74,21 +74,21 @@ class HzippingTest {
             writer.write("aabbc");
         }
 
-        Hzipping.initHzipping();
-        Hzipping.CalFreq(inputFile.getAbsolutePath());
+        HuffmanCompressor.initHuffmanCompressor();
+        HuffmanCompressor.calculateFrequency(inputFile.getAbsolutePath());
 
         // Check frequencies
-        assertEquals(2, Hzipping.freq['a']);
-        assertEquals(2, Hzipping.freq['b']);
-        assertEquals(1, Hzipping.freq['c']);
+        assertEquals(2, HuffmanCompressor.frequency['a']);
+        assertEquals(2, HuffmanCompressor.frequency['b']);
+        assertEquals(1, HuffmanCompressor.frequency['c']);
     }
 
     @Test
     void testByteConversion() {
         // Test positive byte
-        assertEquals(65, Hzipping.to((byte) 65)); // 'A'
+        assertEquals(65, HuffmanCompressor.to((byte) 65)); // 'A'
         // Test negative byte
-        assertEquals(128, Hzipping.to((byte) -128));
+        assertEquals(128, HuffmanCompressor.to((byte) -128));
     }
 
     @Test
@@ -98,24 +98,24 @@ class HzippingTest {
             writer.write("aabbc");
         }
 
-        Hzipping.initHzipping();
-        Hzipping.CalFreq(inputFile.getAbsolutePath());
-        Hzipping.MakeNode();
+        HuffmanCompressor.initHuffmanCompressor();
+        HuffmanCompressor.calculateFrequency(inputFile.getAbsolutePath());
+        HuffmanCompressor.buildHuffmanTree();
 
         // Verify tree construction
-        assertNotNull(Hzipping.Root);
-        assertEquals(5, Hzipping.Root.Freqnc); // Total frequency should be 5
+        assertNotNull(HuffmanCompressor.root);
+        assertEquals(5, HuffmanCompressor.root.frequency); // Total frequency should be 5
     }
 
     @Test
     void testInitialization() {
-        Hzipping.initHzipping();
+        HuffmanCompressor.initHuffmanCompressor();
         
         // Check if frequencies are reset
-        assertTrue(Arrays.stream(Hzipping.freq).allMatch(freq -> freq == 0));
+        assertTrue(Arrays.stream(HuffmanCompressor.frequency).allMatch(freq -> freq == 0));
         // Check if string array is reset
-        assertTrue(Arrays.stream(Hzipping.ss).allMatch(s -> s.equals("")));
+        assertTrue(Arrays.stream(HuffmanCompressor.huffmanCodes).allMatch(s -> s.equals("")));
         // Check if priority queue is empty
-        assertTrue(Hzipping.pq.isEmpty());
+        assertTrue(HuffmanCompressor.priorityQueue.isEmpty());
     }
 } 

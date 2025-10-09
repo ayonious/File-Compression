@@ -13,7 +13,7 @@ import java.util.Arrays;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class LzippingTest {
+class LzwCompressorTest {
     @TempDir
     Path tempDir;
     private File inputFile;
@@ -30,25 +30,25 @@ class LzippingTest {
     @Test
     void testFillBinaryString() {
         // Test with btsz = 8
-        Lzipping.btsz = 8;
-        assertEquals("00000000", Lzipping.fil(0));
-        assertEquals("00000001", Lzipping.fil(1));
-        assertEquals("00001010", Lzipping.fil(10));
-        assertEquals("11111111", Lzipping.fil(255));
+        LzwCompressor.bitSize = 8;
+        assertEquals("00000000", LzwCompressor.intToBinaryString(0));
+        assertEquals("00000001", LzwCompressor.intToBinaryString(1));
+        assertEquals("00001010", LzwCompressor.intToBinaryString(10));
+        assertEquals("11111111", LzwCompressor.intToBinaryString(255));
 
         // Test with btsz = 4
-        Lzipping.btsz = 4;
-        assertEquals("0000", Lzipping.fil(0));
-        assertEquals("0001", Lzipping.fil(1));
-        assertEquals("1111", Lzipping.fil(15));
+        LzwCompressor.bitSize = 4;
+        assertEquals("0000", LzwCompressor.intToBinaryString(0));
+        assertEquals("0001", LzwCompressor.intToBinaryString(1));
+        assertEquals("1111", LzwCompressor.intToBinaryString(15));
     }
 
     @Test
     void testStringToByte() {
-        assertEquals((byte) 0, Lzipping.strtobt("00000000"));
-        assertEquals((byte) 1, Lzipping.strtobt("00000001"));
-        assertEquals((byte) -1, Lzipping.strtobt("11111111"));
-        assertEquals((byte) 65, Lzipping.strtobt("01000001")); // 'A'
+        assertEquals((byte) 0, LzwCompressor.stringToByte("00000000"));
+        assertEquals((byte) 1, LzwCompressor.stringToByte("00000001"));
+        assertEquals((byte) -1, LzwCompressor.stringToByte("11111111"));
+        assertEquals((byte) 65, LzwCompressor.stringToByte("01000001")); // 'A'
     }
 
     @Test
@@ -58,7 +58,7 @@ class LzippingTest {
             writer.write("");
         }
 
-        Lzipping.beginLzipping(inputFile.getAbsolutePath());
+        LzwCompressor.beginLzwCompression(inputFile.getAbsolutePath());
         assertTrue(compressedFile.exists());
         assertTrue(compressedFile.length() > 0); // Should at least contain the btsz value
     }
@@ -70,7 +70,7 @@ class LzippingTest {
             writer.write("aaaa");
         }
 
-        Lzipping.beginLzipping(inputFile.getAbsolutePath());
+        LzwCompressor.beginLzwCompression(inputFile.getAbsolutePath());
         assertTrue(compressedFile.exists());
         assertTrue(compressedFile.length() > 0);
     }
@@ -82,7 +82,7 @@ class LzippingTest {
             writer.write("abcabcabc");
         }
 
-        Lzipping.beginLzipping(inputFile.getAbsolutePath());
+        LzwCompressor.beginLzwCompression(inputFile.getAbsolutePath());
         assertTrue(compressedFile.exists());
         assertTrue(compressedFile.length() > 0);
         
@@ -103,7 +103,7 @@ class LzippingTest {
             writer.write(content.toString());
         }
 
-        Lzipping.beginLzipping(inputFile.getAbsolutePath());
+        LzwCompressor.beginLzwCompression(inputFile.getAbsolutePath());
         assertTrue(compressedFile.exists());
         
         // Large repeating content should compress well
@@ -122,7 +122,7 @@ class LzippingTest {
             writer.write(content.toString());
         }
 
-        Lzipping.beginLzipping(inputFile.getAbsolutePath());
+        LzwCompressor.beginLzwCompression(inputFile.getAbsolutePath());
         assertTrue(compressedFile.exists());
     }
 
@@ -135,7 +135,7 @@ class LzippingTest {
             writer.write(content);
         }
 
-        Lzipping.beginLzipping(inputFile.getAbsolutePath());
+        LzwCompressor.beginLzwCompression(inputFile.getAbsolutePath());
         assertTrue(compressedFile.exists());
     }
 
@@ -151,19 +151,19 @@ class LzippingTest {
             writer.write(content.toString());
         }
 
-        Lzipping.beginLzipping(inputFile.getAbsolutePath());
+        LzwCompressor.beginLzwCompression(inputFile.getAbsolutePath());
         assertTrue(compressedFile.exists());
     }
 
     @Test
     void testStateReset() {
         // Test that static variables are properly reset
-        Lzipping.btsz = 42;
-        Lzipping.big = "test";
+        LzwCompressor.bitSize = 42;
+        LzwCompressor.bitBuffer = "test";
         
-        Lzipping.beginLzipping(inputFile.getAbsolutePath());
+        LzwCompressor.beginLzwCompression(inputFile.getAbsolutePath());
         
-        assertEquals(0, Lzipping.btsz);
-        assertEquals("", Lzipping.big);
+        assertEquals(0, LzwCompressor.bitSize);
+        assertEquals("", LzwCompressor.bitBuffer);
     }
 } 

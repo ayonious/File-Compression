@@ -105,15 +105,15 @@ class MainFrameTest {
         assertTrue(latch.await(5, TimeUnit.SECONDS), "Frame initialization timed out");
 
         // Simulate file selection
-        Main.opened_file = testFile;
-        Main.past = testFile.length();
-        Main.redScore.setText(Main.past + "Bytes");
-        Main.blueScore.setText("NotYetCalculated");
+        Main.openedFile = testFile;
+        Main.originalSize = testFile.length();
+        Main.originalSizeValue.setText(Main.originalSize + "Bytes");
+        Main.compressedSizeValue.setText("NotYetCalculated");
 
-        assertEquals(testFile, Main.opened_file, "Selected file should be set");
-        assertEquals(testFile.length(), Main.past, "File size should be set");
-        assertEquals(testFile.length() + "Bytes", Main.redScore.getText(), "Red score should show file size");
-        assertEquals("NotYetCalculated", Main.blueScore.getText(), "Blue score should show not calculated");
+        assertEquals(testFile, Main.openedFile, "Selected file should be set");
+        assertEquals(testFile.length(), Main.originalSize, "File size should be set");
+        assertEquals(testFile.length() + "Bytes", Main.originalSizeValue.getText(), "Original size should show file size");
+        assertEquals("NotYetCalculated", Main.compressedSizeValue.getText(), "Compressed size should show not calculated");
 
         SwingUtilities.invokeLater(() -> mainFrame.dispose());
     }

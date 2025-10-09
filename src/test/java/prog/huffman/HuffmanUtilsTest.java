@@ -39,74 +39,74 @@ class HuffmanUtilsTest {
 
     @Test
     void testFreeDfsWithHzippingTree() {
-        // Create a simple Hzipping tree structure
-        Hzipping.TREE root = new Hzipping.TREE();
-        Hzipping.TREE left = new Hzipping.TREE();
-        Hzipping.TREE right = new Hzipping.TREE();
-        
-        root.Lchild = left;
-        root.Rchild = right;
-        root.Bite = 1;
-        left.Bite = 2;
-        right.Bite = 3;
+        // Create a simple HuffmanCompressor tree structure
+        HuffmanCompressor.HuffmanNode root = new HuffmanCompressor.HuffmanNode();
+        HuffmanCompressor.HuffmanNode left = new HuffmanCompressor.HuffmanNode();
+        HuffmanCompressor.HuffmanNode right = new HuffmanCompressor.HuffmanNode();
+
+        root.leftChild = left;
+        root.rightChild = right;
+        root.byteValue = 1;
+        left.byteValue = 2;
+        right.byteValue = 3;
 
         // Test that no exception is thrown when traversing
-        assertDoesNotThrow(() -> 
+        assertDoesNotThrow(() ->
             HuffmanUtils.fredfs(root, HuffmanUtils.HZIPPING_TREE_ACCESSOR)
         );
     }
 
     @Test
     void testFreeDfsWithHunzippingTree() {
-        // Create a simple Hunzipping tree structure
-        Hunzipping.TREE root = new Hunzipping.TREE();
-        Hunzipping.TREE left = new Hunzipping.TREE();
-        Hunzipping.TREE right = new Hunzipping.TREE();
-        
-        root.Lchild = left;
-        root.Rchild = right;
-        root.Bite = 1;
-        left.Bite = 2;
-        right.Bite = 3;
+        // Create a simple HuffmanDecompressor tree structure
+        HuffmanDecompressor.HuffmanNode root = new HuffmanDecompressor.HuffmanNode();
+        HuffmanDecompressor.HuffmanNode left = new HuffmanDecompressor.HuffmanNode();
+        HuffmanDecompressor.HuffmanNode right = new HuffmanDecompressor.HuffmanNode();
+
+        root.leftChild = left;
+        root.rightChild = right;
+        root.byteValue = 1;
+        left.byteValue = 2;
+        right.byteValue = 3;
 
         // Test that no exception is thrown when traversing
-        assertDoesNotThrow(() -> 
-            HuffmanUtils.fredfs(root, HuffmanUtils.HUNZIPPING_TREE_ACCESSOR)
+        assertDoesNotThrow(() ->
+            HuffmanUtils.fredfs(root, HuffmanUtils.HUNZIPPING_HuffmanNode_ACCESSOR)
         );
     }
 
     @Test
     void testTreeAccessors() {
-        // Test Hzipping tree accessor
-        Hzipping.TREE hzipRoot = new Hzipping.TREE();
-        Hzipping.TREE hzipLeft = new Hzipping.TREE();
-        Hzipping.TREE hzipRight = new Hzipping.TREE();
-        hzipRoot.Lchild = hzipLeft;
-        hzipRoot.Rchild = hzipRight;
+        // Test HuffmanCompressor tree accessor
+        HuffmanCompressor.HuffmanNode hzipRoot = new HuffmanCompressor.HuffmanNode();
+        HuffmanCompressor.HuffmanNode hzipLeft = new HuffmanCompressor.HuffmanNode();
+        HuffmanCompressor.HuffmanNode hzipRight = new HuffmanCompressor.HuffmanNode();
+        hzipRoot.leftChild = hzipLeft;
+        hzipRoot.rightChild = hzipRight;
 
         assertEquals(hzipLeft, HuffmanUtils.HZIPPING_TREE_ACCESSOR.getLeftChild(hzipRoot));
         assertEquals(hzipRight, HuffmanUtils.HZIPPING_TREE_ACCESSOR.getRightChild(hzipRoot));
 
-        // Test Hunzipping tree accessor
-        Hunzipping.TREE hunzipRoot = new Hunzipping.TREE();
-        Hunzipping.TREE hunzipLeft = new Hunzipping.TREE();
-        Hunzipping.TREE hunzipRight = new Hunzipping.TREE();
-        hunzipRoot.Lchild = hunzipLeft;
-        hunzipRoot.Rchild = hunzipRight;
+        // Test HuffmanDecompressor tree accessor
+        HuffmanDecompressor.HuffmanNode hunzipRoot = new HuffmanDecompressor.HuffmanNode();
+        HuffmanDecompressor.HuffmanNode hunzipLeft = new HuffmanDecompressor.HuffmanNode();
+        HuffmanDecompressor.HuffmanNode hunzipRight = new HuffmanDecompressor.HuffmanNode();
+        hunzipRoot.leftChild = hunzipLeft;
+        hunzipRoot.rightChild = hunzipRight;
 
-        assertEquals(hunzipLeft, HuffmanUtils.HUNZIPPING_TREE_ACCESSOR.getLeftChild(hunzipRoot));
-        assertEquals(hunzipRight, HuffmanUtils.HUNZIPPING_TREE_ACCESSOR.getRightChild(hunzipRoot));
+        assertEquals(hunzipLeft, HuffmanUtils.HUNZIPPING_HuffmanNode_ACCESSOR.getLeftChild(hunzipRoot));
+        assertEquals(hunzipRight, HuffmanUtils.HUNZIPPING_HuffmanNode_ACCESSOR.getRightChild(hunzipRoot));
     }
 
     @Test
     void testNullTreeNodes() {
         // Test with null children
-        Hzipping.TREE hzipRoot = new Hzipping.TREE();
+        HuffmanCompressor.HuffmanNode hzipRoot = new HuffmanCompressor.HuffmanNode();
         assertNull(HuffmanUtils.HZIPPING_TREE_ACCESSOR.getLeftChild(hzipRoot));
         assertNull(HuffmanUtils.HZIPPING_TREE_ACCESSOR.getRightChild(hzipRoot));
 
-        Hunzipping.TREE hunzipRoot = new Hunzipping.TREE();
-        assertNull(HuffmanUtils.HUNZIPPING_TREE_ACCESSOR.getLeftChild(hunzipRoot));
-        assertNull(HuffmanUtils.HUNZIPPING_TREE_ACCESSOR.getRightChild(hunzipRoot));
+        HuffmanDecompressor.HuffmanNode hunzipRoot = new HuffmanDecompressor.HuffmanNode();
+        assertNull(HuffmanUtils.HUNZIPPING_HuffmanNode_ACCESSOR.getLeftChild(hunzipRoot));
+        assertNull(HuffmanUtils.HUNZIPPING_HuffmanNode_ACCESSOR.getRightChild(hunzipRoot));
     }
 } 
