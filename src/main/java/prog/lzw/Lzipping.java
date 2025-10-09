@@ -1,5 +1,6 @@
 package prog.lzw;
 
+import prog.util.CommonUtil;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.EOFException;
@@ -15,14 +16,6 @@ public class Lzipping {
 	public static int btsz;
 	public static String big;
 
-	public static int btoi(Byte bt) {
-		int ret = bt;
-		if (ret < 0) {
-			ret += 256;
-		}
-		return ret;
-
-	}
 
 	/*
 	 * =========================================================================
@@ -105,7 +98,7 @@ public class Lzipping {
 			while (true) {
 				try {
 					c = data_in.readByte();
-					ch = btoi(c);
+					ch = CommonUtil.byteToUnsignedInt(c);
 					String wc = w + (char) ch;
 					if (dictionary.containsKey(wc))
 						w = wc;
@@ -178,7 +171,7 @@ public class Lzipping {
 			while (true) {
 				try {
 					c = data_in.readByte();
-					ch = btoi(c);
+					ch = CommonUtil.byteToUnsignedInt(c);
 
 					String wc = w + (char) ch;
 					if (dictionary.containsKey(wc))

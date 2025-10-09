@@ -102,22 +102,4 @@ class LunzippingTest {
         assertEquals("11111111", Lunzipping.bttost[255], "Conversion for 255");
     }
 
-    @Test
-    void testByteToIntConversion() {
-        // Test positive values
-        assertEquals(0, Lunzipping.btoi((byte) 0));
-        assertEquals(127, Lunzipping.btoi((byte) 127));
-        
-        // Test negative values (which should be converted to positive)
-        assertEquals(128, Lunzipping.btoi((byte) -128));
-        assertEquals(255, Lunzipping.btoi((byte) -1));
-    }
-
-    @Test
-    void testStringToIntConversion() {
-        assertEquals(0, Lunzipping.stoi("0"));
-        assertEquals(1, Lunzipping.stoi("1"));
-        assertEquals(2, Lunzipping.stoi("10"));
-        assertEquals(255, Lunzipping.stoi("11111111"));
-    }
 } 

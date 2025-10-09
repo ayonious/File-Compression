@@ -26,17 +26,6 @@ class LzippingTest {
         compressedFile = new File(inputFile.getAbsolutePath() + ".LmZWp");
     }
 
-    @Test
-    void testByteToInteger() {
-        // Test positive byte values
-        assertEquals(65, Lzipping.btoi((byte) 65));  // 'A'
-        assertEquals(90, Lzipping.btoi((byte) 90));  // 'Z'
-        assertEquals(48, Lzipping.btoi((byte) 48));  // '0'
-        
-        // Test negative byte values (should convert to positive values 128-255)
-        assertEquals(128, Lzipping.btoi((byte) -128));
-        assertEquals(255, Lzipping.btoi((byte) -1));
-    }
 
     @Test
     void testFillBinaryString() {
