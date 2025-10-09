@@ -1,5 +1,6 @@
 package prog.lzw;
 
+import prog.util.CommonUtil;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.EOFException;
@@ -52,38 +53,6 @@ public class Lunzipping {
 	 * =========================================================================
 	 */
 
-	/*
-	 * =========================================================================
-	 * = byte to int conversion
-	 * =========================================================================
-	 */
-	public static int btoi(Byte bt) {
-		int ret = bt;
-		if (ret < 0)
-			ret += 256;
-		return ret;
-
-	}
-
-	/** ====================================================================== */
-
-	/*
-	 * =========================================================================
-	 * = byte to int conversion
-	 * =========================================================================
-	 */
-	public static int stoi(String s) {
-		int ret = 0, i;
-		for (i = 0; i < s.length(); i++) {
-			ret *= 2;
-			if (s.charAt(i) == '1')
-				ret++;
-		}
-		return ret;
-	}
-
-	/** ====================================================================== */
-
 	public static void Lunzip(String fileis) {
 		int k;
 		int dictSize = 256;
@@ -110,7 +79,7 @@ public class Lunzipping {
 			while (true) {
 				try {
 					c = data_in.readByte();
-					big1 += bttost[btoi(c)];
+					big1 += bttost[CommonUtil.byteToUnsignedInt(c)];
 					if (big1.length() >= bitsz1)
 						break;
 				} catch (EOFException eof) {
@@ -120,7 +89,7 @@ public class Lunzipping {
 			}
 
 			if (big1.length() >= bitsz1) {
-				k = stoi(big1.substring(0, bitsz1));
+				k = CommonUtil.binaryStringToInt(big1.substring(0, bitsz1));
 				big1 = big1.substring(bitsz1, big1.length());
 			} else {
 				data_in.close();
@@ -137,9 +106,9 @@ public class Lunzipping {
 				try {
 					while (big1.length() < bitsz1) {
 						c = data_in.readByte();
-						big1 += bttost[btoi(c)];
+						big1 += bttost[CommonUtil.byteToUnsignedInt(c)];
 					}
-					k = stoi(big1.substring(0, bitsz1));
+					k = CommonUtil.binaryStringToInt(big1.substring(0, bitsz1));
 					big1 = big1.substring(bitsz1, big1.length());
 
 					String entry = "";
