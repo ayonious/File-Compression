@@ -1,0 +1,793 @@
+1704067200000 [INFO] [Cache] User login attempt from IP: 192.168.1.309
+1704067204130 [FATAL] [Authentication] Exception caught: NullPointerException
+1704067213838 [INFO] [Controller] Connection established successfully
+1704067216678 [DEBUG] [API] Exception caught: NullPointerException
+1704067219459 [INFO] [Authentication] Request processed in 32 ms
+1704067227377 [INFO] [Cache] Request processed in 704 ms
+1704067233466 [ERROR] [Cache] User login attempt from IP: 192.168.1.504
+1704067237719 [INFO] [API] Thread pool size adjusted to 670
+1704067247015 [INFO] [Service] Connection established successfully
+1704067251519 [FATAL] [Service] User login attempt from IP: 192.168.1.13
+1704067258501 [ERROR] [Queue] Cache hit for key: key_81
+1704067268476 [DEBUG] [Cache] Connection established successfully
+1704067273912 [INFO] [Database] User login attempt from IP: 192.168.1.145
+1704067282669 [WARN] [API] Connection established successfully
+1704067289051 [INFO] [Queue] Request processed in 501 ms
+1704067297543 [WARN] [Database] Cache hit for key: key_38
+1704067302873 [FATAL] [API] Exception caught: NullPointerException
+1704067308729 [WARN] [Database] Exception caught: NullPointerException
+1704067313799 [WARN] [Database] Request processed in 925 ms
+1704067321680 [ERROR] [Database] Cache hit for key: key_53
+1704067328205 [WARN] [Database] Transaction completed with ID: 156
+1704067335995 [WARN] [Service] Connection established successfully
+1704067345926 [DEBUG] [Controller] Request processed in 800 ms
+1704067355878 [DEBUG] [Controller] User login attempt from IP: 192.168.1.415
+1704067361696 [ERROR] [Controller] Connection established successfully
+1704067364692 [ERROR] [Service] Thread pool size adjusted to 659
+1704067372483 [WARN] [Authentication] Thread pool size adjusted to 441
+1704067378561 [ERROR] [Authentication] Request processed in 506 ms
+1704067379569 [INFO] [Cache] Thread pool size adjusted to 998
+1704067389327 [DEBUG] [Cache] User login attempt from IP: 192.168.1.391
+1704067390748 [DEBUG] [Database] Request processed in 753 ms
+1704067394555 [INFO] [Service] Connection established successfully
+1704067395648 [DEBUG] [API] Connection established successfully
+1704067404456 [INFO] [Queue] Connection established successfully
+1704067410093 [DEBUG] [API] Memory usage at 741%
+1704067416921 [WARN] [Database] User login attempt from IP: 192.168.1.826
+1704067422225 [WARN] [Database] Request processed in 39 ms
+1704067423937 [ERROR] [Service] Memory usage at 862%
+1704067429491 [INFO] [Authentication] Transaction completed with ID: 84
+1704067438830 [ERROR] [Database] User login attempt from IP: 192.168.1.794
+1704067443263 [DEBUG] [Service] Connection established successfully
+1704067447431 [INFO] [Authentication] Exception caught: NullPointerException
+1704067451881 [ERROR] [Service] User login attempt from IP: 192.168.1.32
+1704067457708 [WARN] [API] Cache hit for key: key_90
+1704067461401 [ERROR] [Authentication] Transaction completed with ID: 226
+1704067466417 [INFO] [Service] Request processed in 726 ms
+1704067474122 [ERROR] [Controller] Thread pool size adjusted to 68
+1704067475238 [DEBUG] [Controller] Request processed in 720 ms
+1704067480913 [WARN] [Cache] Transaction completed with ID: 155
+1704067483412 [ERROR] [Queue] Cache hit for key: key_16
+1704067492030 [FATAL] [Queue] Thread pool size adjusted to 86
+1704067500387 [ERROR] [Controller] Transaction completed with ID: 442
+1704067502683 [WARN] [Queue] Thread pool size adjusted to 611
+1704067505461 [INFO] [Authentication] Thread pool size adjusted to 570
+1704067515042 [WARN] [Queue] Memory usage at 346%
+1704067524994 [FATAL] [Cache] Transaction completed with ID: 339
+1704067531661 [ERROR] [API] Exception caught: NullPointerException
+1704067534949 [WARN] [API] User login attempt from IP: 192.168.1.932
+1704067543877 [INFO] [Cache] Memory usage at 657%
+1704067552957 [ERROR] [Database] Request processed in 143 ms
+1704067561962 [ERROR] [Controller] User login attempt from IP: 192.168.1.102
+1704067564473 [DEBUG] [Queue] Cache hit for key: key_32
+1704067574081 [DEBUG] [Queue] Transaction completed with ID: 113
+1704067582050 [DEBUG] [Controller] Memory usage at 21%
+1704067585779 [INFO] [Database] Connection established successfully
+1704067593093 [INFO] [Queue] Memory usage at 611%
+1704067598217 [WARN] [Controller] Connection established successfully
+1704067605621 [FATAL] [Queue] Request processed in 844 ms
+1704067609583 [ERROR] [Cache] Connection established successfully
+1704067617726 [DEBUG] [Authentication] Cache hit for key: key_47
+1704067622336 [DEBUG] [Authentication] User login attempt from IP: 192.168.1.219
+1704067628085 [INFO] [Queue] Cache hit for key: key_56
+1704067636833 [INFO] [Database] User login attempt from IP: 192.168.1.111
+1704067641724 [WARN] [API] Thread pool size adjusted to 447
+1704067645412 [ERROR] [Cache] Exception caught: NullPointerException
+1704067647917 [INFO] [Controller] Cache hit for key: key_76
+1704067653717 [WARN] [Authentication] Connection established successfully
+1704067657092 [FATAL] [Cache] Connection established successfully
+1704067665942 [DEBUG] [Authentication] Transaction completed with ID: 377
+1704067675374 [WARN] [Cache] Thread pool size adjusted to 840
+1704067682522 [ERROR] [Authentication] Cache hit for key: key_69
+1704067687315 [ERROR] [Controller] Exception caught: NullPointerException
+1704067691275 [WARN] [Database] Request processed in 494 ms
+1704067696842 [ERROR] [Controller] User login attempt from IP: 192.168.1.118
+1704067703998 [ERROR] [Database] Memory usage at 331%
+1704067707029 [FATAL] [Controller] Request processed in 276 ms
+1704067712415 [WARN] [Database] Thread pool size adjusted to 896
+1704067714830 [ERROR] [Authentication] Transaction completed with ID: 992
+1704067719945 [FATAL] [Controller] Thread pool size adjusted to 579
+1704067729271 [WARN] [Cache] Memory usage at 622%
+1704067735121 [ERROR] [Authentication] Request processed in 402 ms
+1704067736217 [FATAL] [API] Memory usage at 479%
+1704067743151 [INFO] [Database] Memory usage at 830%
+1704067747205 [FATAL] [Controller] Thread pool size adjusted to 563
+1704067753036 [FATAL] [API] Cache hit for key: key_91
+1704067758447 [FATAL] [Controller] Request processed in 802 ms
+1704067768176 [ERROR] [Authentication] Exception caught: NullPointerException
+1704067772788 [INFO] [API] Connection established successfully
+1704067781740 [WARN] [Controller] Cache hit for key: key_6
+1704067786527 [WARN] [API] Memory usage at 783%
+1704067794861 [FATAL] [Controller] Transaction completed with ID: 76
+1704067800522 [WARN] [Authentication] Exception caught: NullPointerException
+1704067809523 [FATAL] [Authentication] Request processed in 295 ms
+1704067818094 [FATAL] [Database] Connection established successfully
+1704067824639 [INFO] [Service] Exception caught: NullPointerException
+1704067827182 [WARN] [Authentication] Request processed in 971 ms
+1704067831090 [INFO] [Controller] Connection established successfully
+1704067836504 [FATAL] [API] Memory usage at 377%
+1704067843130 [DEBUG] [API] Transaction completed with ID: 950
+1704067849095 [FATAL] [Cache] Transaction completed with ID: 207
+1704067858748 [ERROR] [Cache] Transaction completed with ID: 962
+1704067860758 [ERROR] [Database] Memory usage at 182%
+1704067870019 [FATAL] [Cache] Cache hit for key: key_54
+1704067877491 [ERROR] [Cache] Thread pool size adjusted to 558
+1704067886476 [WARN] [API] Exception caught: NullPointerException
+1704067894926 [DEBUG] [Service] Memory usage at 337%
+1704067902115 [ERROR] [API] Cache hit for key: key_12
+1704067911268 [DEBUG] [API] Exception caught: NullPointerException
+1704067920259 [WARN] [Controller] Transaction completed with ID: 426
+1704067927220 [DEBUG] [Service] Request processed in 438 ms
+1704067936862 [DEBUG] [API] Exception caught: NullPointerException
+1704067946846 [ERROR] [Service] Thread pool size adjusted to 284
+1704067952625 [WARN] [Cache] Memory usage at 644%
+1704067957828 [INFO] [Cache] Request processed in 689 ms
+1704067965025 [WARN] [Controller] Exception caught: NullPointerException
+1704067972100 [ERROR] [Service] Request processed in 725 ms
+1704067979679 [DEBUG] [Queue] Connection established successfully
+1704067989201 [INFO] [Controller] User login attempt from IP: 192.168.1.275
+1704067998113 [INFO] [API] Transaction completed with ID: 983
+1704068001963 [ERROR] [Authentication] Transaction completed with ID: 586
+1704068003038 [INFO] [Service] Memory usage at 508%
+1704068004235 [DEBUG] [Cache] Cache hit for key: key_60
+1704068008722 [FATAL] [Queue] Connection established successfully
+1704068015517 [DEBUG] [Database] User login attempt from IP: 192.168.1.345
+1704068020058 [INFO] [Authentication] Connection established successfully
+1704068029885 [INFO] [Database] Cache hit for key: key_25
+1704068038148 [WARN] [Controller] Thread pool size adjusted to 387
+1704068041306 [DEBUG] [Cache] Memory usage at 402%
+1704068049839 [FATAL] [Controller] Transaction completed with ID: 158
+1704068053882 [ERROR] [Queue] Request processed in 817 ms
+1704068062669 [FATAL] [Authentication] Thread pool size adjusted to 641
+1704068069887 [WARN] [Cache] Transaction completed with ID: 667
+1704068074620 [DEBUG] [Cache] Thread pool size adjusted to 468
+1704068076172 [INFO] [Queue] Connection established successfully
+1704068084099 [DEBUG] [Database] Request processed in 473 ms
+1704068089967 [WARN] [API] Thread pool size adjusted to 887
+1704068096888 [WARN] [Service] Request processed in 313 ms
+1704068101379 [FATAL] [Cache] Exception caught: NullPointerException
+1704068110568 [WARN] [Service] Connection established successfully
+1704068114792 [FATAL] [API] Thread pool size adjusted to 32
+1704068116847 [DEBUG] [Service] Thread pool size adjusted to 410
+1704068120486 [DEBUG] [Database] Connection established successfully
+1704068129486 [INFO] [Service] Cache hit for key: key_74
+1704068136505 [WARN] [Cache] Cache hit for key: key_79
+1704068139314 [WARN] [Authentication] Transaction completed with ID: 845
+1704068144834 [INFO] [Service] Exception caught: NullPointerException
+1704068149751 [WARN] [Queue] User login attempt from IP: 192.168.1.615
+1704068154722 [INFO] [Cache] Cache hit for key: key_65
+1704068160870 [FATAL] [Service] User login attempt from IP: 192.168.1.972
+1704068163500 [FATAL] [API] Request processed in 851 ms
+1704068170001 [FATAL] [Queue] Exception caught: NullPointerException
+1704068179191 [DEBUG] [Service] Thread pool size adjusted to 409
+1704068180533 [WARN] [Queue] Transaction completed with ID: 765
+1704068189200 [DEBUG] [Authentication] Thread pool size adjusted to 529
+1704068194161 [FATAL] [Queue] Memory usage at 192%
+1704068198858 [DEBUG] [Cache] Exception caught: NullPointerException
+1704068208201 [INFO] [Controller] Exception caught: NullPointerException
+1704068213264 [INFO] [Database] User login attempt from IP: 192.168.1.817
+1704068221969 [ERROR] [Cache] Thread pool size adjusted to 580
+1704068230320 [ERROR] [Controller] Request processed in 45 ms
+1704068234588 [INFO] [Queue] Memory usage at 280%
+1704068244471 [DEBUG] [Database] Connection established successfully
+1704068247946 [INFO] [Controller] Request processed in 690 ms
+1704068255316 [FATAL] [Authentication] User login attempt from IP: 192.168.1.907
+1704068262326 [DEBUG] [Service] Cache hit for key: key_85
+1704068266304 [WARN] [Database] Transaction completed with ID: 198
+1704068270736 [FATAL] [API] Request processed in 456 ms
+1704068278566 [DEBUG] [Service] Thread pool size adjusted to 166
+1704068285728 [WARN] [Controller] Request processed in 507 ms
+1704068287682 [DEBUG] [Cache] Exception caught: NullPointerException
+1704068291895 [DEBUG] [Service] Request processed in 135 ms
+1704068293764 [ERROR] [Controller] Memory usage at 823%
+1704068295340 [FATAL] [Queue] Transaction completed with ID: 390
+1704068304756 [FATAL] [Controller] Transaction completed with ID: 397
+1704068313396 [DEBUG] [Service] Request processed in 21 ms
+1704068316688 [ERROR] [Database] User login attempt from IP: 192.168.1.76
+1704068320874 [INFO] [Service] Transaction completed with ID: 221
+1704068323284 [WARN] [Queue] Transaction completed with ID: 144
+1704068330109 [ERROR] [Authentication] Exception caught: NullPointerException
+1704068336257 [INFO] [Queue] Thread pool size adjusted to 640
+1704068340725 [WARN] [Authentication] Connection established successfully
+1704068349716 [ERROR] [Controller] Cache hit for key: key_59
+1704068351947 [INFO] [Authentication] Connection established successfully
+1704068360362 [DEBUG] [Queue] User login attempt from IP: 192.168.1.702
+1704068363075 [ERROR] [Queue] Connection established successfully
+1704068370687 [WARN] [Service] Connection established successfully
+1704068377492 [DEBUG] [API] Request processed in 203 ms
+1704068380745 [DEBUG] [Database] Thread pool size adjusted to 703
+1704068382990 [DEBUG] [Controller] Request processed in 114 ms
+1704068388800 [INFO] [Queue] Request processed in 9 ms
+1704068390134 [WARN] [API] User login attempt from IP: 192.168.1.902
+1704068393857 [DEBUG] [Authentication] User login attempt from IP: 192.168.1.24
+1704068396979 [WARN] [Cache] Memory usage at 928%
+1704068405702 [WARN] [Queue] Thread pool size adjusted to 286
+1704068408908 [WARN] [Queue] User login attempt from IP: 192.168.1.353
+1704068414438 [WARN] [Controller] Memory usage at 127%
+1704068419904 [DEBUG] [Queue] Cache hit for key: key_59
+1704068423358 [FATAL] [Cache] User login attempt from IP: 192.168.1.136
+1704068427480 [FATAL] [API] User login attempt from IP: 192.168.1.74
+1704068432846 [FATAL] [Cache] Request processed in 319 ms
+1704068434795 [WARN] [Cache] Exception caught: NullPointerException
+1704068438407 [DEBUG] [Authentication] Thread pool size adjusted to 823
+1704068443318 [WARN] [Controller] Connection established successfully
+1704068445445 [ERROR] [Database] Cache hit for key: key_12
+1704068455424 [ERROR] [Service] Thread pool size adjusted to 244
+1704068459919 [ERROR] [Authentication] Cache hit for key: key_2
+1704068466666 [DEBUG] [Database] Cache hit for key: key_76
+1704068474102 [INFO] [API] Thread pool size adjusted to 703
+1704068479161 [DEBUG] [Controller] Cache hit for key: key_10
+1704068483954 [ERROR] [Authentication] Connection established successfully
+1704068490736 [DEBUG] [Controller] Connection established successfully
+1704068491861 [FATAL] [Service] Cache hit for key: key_96
+1704068501354 [WARN] [Controller] Exception caught: NullPointerException
+1704068506391 [WARN] [Database] Connection established successfully
+1704068514307 [FATAL] [Queue] User login attempt from IP: 192.168.1.951
+1704068519851 [FATAL] [API] Thread pool size adjusted to 80
+1704068522790 [ERROR] [Authentication] Transaction completed with ID: 717
+1704068528124 [INFO] [API] Request processed in 860 ms
+1704068536175 [FATAL] [Queue] Cache hit for key: key_41
+1704068543722 [FATAL] [Queue] Request processed in 160 ms
+1704068552054 [ERROR] [Authentication] Exception caught: NullPointerException
+1704068561545 [DEBUG] [API] Connection established successfully
+1704068569259 [DEBUG] [Controller] Memory usage at 314%
+1704068578208 [ERROR] [Cache] Cache hit for key: key_99
+1704068584617 [DEBUG] [Controller] Thread pool size adjusted to 568
+1704068589352 [INFO] [API] Thread pool size adjusted to 978
+1704068592168 [WARN] [Authentication] Thread pool size adjusted to 288
+1704068601096 [INFO] [Queue] Cache hit for key: key_51
+1704068608741 [FATAL] [API] Exception caught: NullPointerException
+1704068612285 [DEBUG] [Authentication] Connection established successfully
+1704068615114 [WARN] [API] Cache hit for key: key_72
+1704068623586 [ERROR] [Service] Thread pool size adjusted to 965
+1704068631885 [WARN] [API] Exception caught: NullPointerException
+1704068633325 [ERROR] [Cache] Request processed in 610 ms
+1704068636031 [FATAL] [Controller] Memory usage at 525%
+1704068643976 [WARN] [API] Transaction completed with ID: 315
+1704068652501 [FATAL] [Queue] Cache hit for key: key_21
+1704068654366 [FATAL] [Service] Transaction completed with ID: 290
+1704068659422 [DEBUG] [API] User login attempt from IP: 192.168.1.38
+1704068668091 [WARN] [API] Thread pool size adjusted to 674
+1704068670270 [FATAL] [Cache] Exception caught: NullPointerException
+1704068674251 [DEBUG] [Authentication] Thread pool size adjusted to 353
+1704068677256 [FATAL] [Database] Cache hit for key: key_64
+1704068685022 [INFO] [Cache] Connection established successfully
+1704068688901 [ERROR] [Controller] Transaction completed with ID: 685
+1704068697076 [DEBUG] [Authentication] Transaction completed with ID: 358
+1704068699506 [INFO] [API] Cache hit for key: key_82
+1704068703906 [DEBUG] [Controller] Connection established successfully
+1704068706245 [INFO] [Authentication] Thread pool size adjusted to 990
+1704068715952 [DEBUG] [Queue] Cache hit for key: key_11
+1704068719769 [FATAL] [Cache] Memory usage at 117%
+1704068724001 [FATAL] [Database] Transaction completed with ID: 35
+1704068732777 [WARN] [Controller] Cache hit for key: key_24
+1704068738432 [WARN] [Authentication] Request processed in 985 ms
+1704068742477 [WARN] [API] Thread pool size adjusted to 276
+1704068750927 [INFO] [Controller] User login attempt from IP: 192.168.1.196
+1704068760323 [DEBUG] [Cache] Exception caught: NullPointerException
+1704068763982 [WARN] [Controller] Connection established successfully
+1704068765979 [FATAL] [Queue] Memory usage at 611%
+1704068769344 [WARN] [API] Connection established successfully
+1704068773316 [DEBUG] [Controller] User login attempt from IP: 192.168.1.807
+1704068778198 [DEBUG] [API] Connection established successfully
+1704068781346 [WARN] [Service] Request processed in 664 ms
+1704068787177 [FATAL] [Authentication] Connection established successfully
+1704068794907 [DEBUG] [Cache] Request processed in 333 ms
+1704068804182 [WARN] [Cache] User login attempt from IP: 192.168.1.725
+1704068806292 [DEBUG] [Cache] Thread pool size adjusted to 299
+1704068807506 [FATAL] [Controller] User login attempt from IP: 192.168.1.835
+1704068816971 [WARN] [Authentication] Connection established successfully
+1704068818945 [DEBUG] [Authentication] Exception caught: NullPointerException
+1704068820987 [DEBUG] [Queue] Request processed in 257 ms
+1704068824660 [FATAL] [Cache] Thread pool size adjusted to 911
+1704068829298 [FATAL] [Queue] User login attempt from IP: 192.168.1.621
+1704068838068 [INFO] [Cache] Connection established successfully
+1704068844514 [WARN] [Authentication] Thread pool size adjusted to 225
+1704068849578 [WARN] [Controller] Cache hit for key: key_5
+1704068854191 [ERROR] [Queue] User login attempt from IP: 192.168.1.827
+1704068863600 [WARN] [Controller] Request processed in 298 ms
+1704068869776 [INFO] [Controller] Request processed in 668 ms
+1704068874883 [ERROR] [Controller] Exception caught: NullPointerException
+1704068882298 [ERROR] [Queue] Connection established successfully
+1704068890498 [ERROR] [Cache] Memory usage at 429%
+1704068896100 [WARN] [Controller] Transaction completed with ID: 698
+1704068901924 [DEBUG] [Database] Thread pool size adjusted to 812
+1704068904196 [FATAL] [API] Cache hit for key: key_58
+1704068907665 [WARN] [Service] Request processed in 55 ms
+1704068912384 [DEBUG] [Service] Request processed in 97 ms
+1704068915432 [WARN] [Controller] Request processed in 14 ms
+1704068924002 [FATAL] [Queue] Connection established successfully
+1704068933759 [INFO] [Queue] Thread pool size adjusted to 997
+1704068942828 [WARN] [Authentication] Cache hit for key: key_36
+1704068944157 [FATAL] [Cache] Thread pool size adjusted to 686
+1704068948660 [INFO] [Database] Request processed in 525 ms
+1704068958636 [INFO] [Authentication] Transaction completed with ID: 248
+1704068960138 [ERROR] [API] Memory usage at 890%
+1704068968018 [DEBUG] [Controller] Connection established successfully
+1704068969173 [WARN] [Service] Memory usage at 960%
+1704068971213 [ERROR] [Queue] User login attempt from IP: 192.168.1.68
+1704068977776 [DEBUG] [Authentication] Exception caught: NullPointerException
+1704068981833 [FATAL] [Cache] Memory usage at 453%
+1704068984195 [ERROR] [Service] Connection established successfully
+1704068991390 [WARN] [API] User login attempt from IP: 192.168.1.626
+1704068993665 [INFO] [Service] Transaction completed with ID: 814
+1704068997032 [WARN] [API] Transaction completed with ID: 872
+1704069006857 [INFO] [Cache] Memory usage at 769%
+1704069008813 [DEBUG] [Service] Cache hit for key: key_39
+1704069018724 [ERROR] [Database] Connection established successfully
+1704069020236 [WARN] [Database] Thread pool size adjusted to 651
+1704069029210 [INFO] [Service] Cache hit for key: key_89
+1704069037567 [INFO] [Authentication] Request processed in 555 ms
+1704069046321 [FATAL] [Service] Transaction completed with ID: 370
+1704069049312 [WARN] [Cache] Memory usage at 544%
+1704069053186 [DEBUG] [Cache] Transaction completed with ID: 581
+1704069059701 [WARN] [Service] Request processed in 672 ms
+1704069066868 [ERROR] [Authentication] Thread pool size adjusted to 384
+1704069075405 [INFO] [Cache] Connection established successfully
+1704069079586 [INFO] [API] Exception caught: NullPointerException
+1704069080643 [FATAL] [Authentication] Thread pool size adjusted to 249
+1704069083593 [INFO] [Authentication] Request processed in 556 ms
+1704069088829 [DEBUG] [Database] Request processed in 508 ms
+1704069096929 [FATAL] [Cache] Connection established successfully
+1704069099751 [INFO] [Controller] User login attempt from IP: 192.168.1.687
+1704069102932 [DEBUG] [Controller] Thread pool size adjusted to 1
+1704069110509 [FATAL] [API] Transaction completed with ID: 485
+1704069115893 [FATAL] [API] Request processed in 857 ms
+1704069124866 [DEBUG] [API] Cache hit for key: key_3
+1704069127940 [INFO] [Queue] User login attempt from IP: 192.168.1.793
+1704069131349 [INFO] [Service] Thread pool size adjusted to 238
+1704069134962 [INFO] [API] User login attempt from IP: 192.168.1.801
+1704069141789 [ERROR] [Authentication] Cache hit for key: key_41
+1704069151154 [WARN] [Controller] Memory usage at 22%
+1704069157202 [WARN] [Service] Exception caught: NullPointerException
+1704069159677 [DEBUG] [Controller] Connection established successfully
+1704069165587 [DEBUG] [Database] Cache hit for key: key_82
+1704069168663 [DEBUG] [Controller] Thread pool size adjusted to 697
+1704069174766 [ERROR] [Cache] Request processed in 290 ms
+1704069182494 [DEBUG] [Controller] Transaction completed with ID: 592
+1704069190333 [FATAL] [Authentication] Cache hit for key: key_2
+1704069196443 [WARN] [Queue] Memory usage at 433%
+1704069197533 [DEBUG] [API] Request processed in 498 ms
+1704069202224 [DEBUG] [Service] Thread pool size adjusted to 779
+1704069205572 [ERROR] [Database] Transaction completed with ID: 977
+1704069209462 [WARN] [Queue] Exception caught: NullPointerException
+1704069217774 [WARN] [API] Exception caught: NullPointerException
+1704069227238 [FATAL] [Database] Request processed in 155 ms
+1704069233947 [FATAL] [Authentication] User login attempt from IP: 192.168.1.221
+1704069239223 [INFO] [Database] Connection established successfully
+1704069243829 [FATAL] [Queue] Connection established successfully
+1704069244926 [INFO] [Cache] User login attempt from IP: 192.168.1.636
+1704069254313 [DEBUG] [Service] Thread pool size adjusted to 368
+1704069263610 [FATAL] [Queue] Transaction completed with ID: 641
+1704069267700 [WARN] [Authentication] Connection established successfully
+1704069272145 [DEBUG] [Database] Connection established successfully
+1704069273462 [INFO] [Controller] Request processed in 815 ms
+1704069276435 [INFO] [Service] Cache hit for key: key_2
+1704069281376 [WARN] [Authentication] Cache hit for key: key_72
+1704069290255 [INFO] [API] Transaction completed with ID: 797
+1704069293125 [DEBUG] [API] Cache hit for key: key_62
+1704069295966 [INFO] [Service] Connection established successfully
+1704069301853 [WARN] [API] Thread pool size adjusted to 817
+1704069302948 [WARN] [Database] Exception caught: NullPointerException
+1704069309061 [FATAL] [Authentication] Transaction completed with ID: 221
+1704069315671 [INFO] [Cache] Memory usage at 856%
+1704069323675 [ERROR] [Queue] Thread pool size adjusted to 795
+1704069326511 [WARN] [Database] Exception caught: NullPointerException
+1704069333460 [WARN] [Cache] Cache hit for key: key_57
+1704069339396 [DEBUG] [Service] Memory usage at 246%
+1704069342766 [WARN] [Queue] Request processed in 782 ms
+1704069345036 [DEBUG] [Service] Connection established successfully
+1704069348682 [DEBUG] [Controller] Cache hit for key: key_17
+1704069356595 [WARN] [Cache] Memory usage at 507%
+1704069359006 [INFO] [Cache] Cache hit for key: key_73
+1704069362779 [DEBUG] [Service] Connection established successfully
+1704069370025 [DEBUG] [Database] Exception caught: NullPointerException
+1704069374783 [WARN] [API] User login attempt from IP: 192.168.1.429
+1704069382218 [FATAL] [API] User login attempt from IP: 192.168.1.335
+1704069390312 [FATAL] [Database] Thread pool size adjusted to 566
+1704069396231 [DEBUG] [API] Exception caught: NullPointerException
+1704069397881 [FATAL] [Database] Request processed in 278 ms
+1704069405977 [ERROR] [Queue] Connection established successfully
+1704069407922 [INFO] [Authentication] Memory usage at 44%
+1704069415115 [WARN] [Authentication] Transaction completed with ID: 510
+1704069422808 [WARN] [Cache] User login attempt from IP: 192.168.1.552
+1704069428397 [ERROR] [API] Transaction completed with ID: 627
+1704069436381 [FATAL] [Service] Exception caught: NullPointerException
+1704069437432 [WARN] [Database] Transaction completed with ID: 212
+1704069439760 [WARN] [API] Connection established successfully
+1704069441168 [DEBUG] [Database] Thread pool size adjusted to 838
+1704069449024 [WARN] [Queue] Request processed in 405 ms
+1704069457153 [WARN] [Authentication] Connection established successfully
+1704069458329 [WARN] [Queue] Thread pool size adjusted to 123
+1704069460706 [ERROR] [Authentication] Transaction completed with ID: 748
+1704069463141 [WARN] [Service] Exception caught: NullPointerException
+1704069466155 [WARN] [Queue] Connection established successfully
+1704069473883 [DEBUG] [Service] Exception caught: NullPointerException
+1704069478168 [INFO] [Cache] Transaction completed with ID: 381
+1704069480186 [ERROR] [Authentication] Memory usage at 887%
+1704069489844 [FATAL] [Cache] User login attempt from IP: 192.168.1.723
+1704069493170 [DEBUG] [Controller] Cache hit for key: key_95
+1704069497835 [INFO] [API] User login attempt from IP: 192.168.1.408
+1704069500934 [WARN] [Cache] Memory usage at 325%
+1704069510880 [FATAL] [Service] Connection established successfully
+1704069512870 [FATAL] [Authentication] Cache hit for key: key_5
+1704069516022 [INFO] [Service] Cache hit for key: key_73
+1704069525979 [FATAL] [Cache] Cache hit for key: key_95
+1704069531202 [INFO] [Database] Connection established successfully
+1704069538194 [FATAL] [Queue] Cache hit for key: key_93
+1704069544023 [INFO] [Queue] Cache hit for key: key_25
+1704069547335 [DEBUG] [API] Cache hit for key: key_41
+1704069554882 [INFO] [Controller] Memory usage at 366%
+1704069563657 [DEBUG] [Service] Exception caught: NullPointerException
+1704069568867 [FATAL] [Controller] Thread pool size adjusted to 188
+1704069574733 [WARN] [Queue] Connection established successfully
+1704069581685 [DEBUG] [Service] Request processed in 8 ms
+1704069586591 [INFO] [Queue] Connection established successfully
+1704069588728 [INFO] [Authentication] Request processed in 275 ms
+1704069589974 [WARN] [Cache] Request processed in 528 ms
+1704069596319 [WARN] [API] Connection established successfully
+1704069604366 [INFO] [Controller] User login attempt from IP: 192.168.1.291
+1704069612573 [ERROR] [Cache] Thread pool size adjusted to 443
+1704069616678 [INFO] [Queue] Transaction completed with ID: 658
+1704069617776 [FATAL] [Service] Request processed in 725 ms
+1704069627286 [DEBUG] [Queue] Request processed in 950 ms
+1704069631418 [WARN] [Authentication] Memory usage at 720%
+1704069639725 [ERROR] [Database] Memory usage at 779%
+1704069648173 [DEBUG] [Controller] User login attempt from IP: 192.168.1.690
+1704069650766 [INFO] [Database] Exception caught: NullPointerException
+1704069659896 [FATAL] [Controller] User login attempt from IP: 192.168.1.954
+1704069668004 [DEBUG] [Controller] Request processed in 574 ms
+1704069673872 [WARN] [Authentication] Request processed in 665 ms
+1704069680681 [ERROR] [Service] Connection established successfully
+1704069690614 [DEBUG] [Service] Connection established successfully
+1704069694231 [INFO] [Queue] Memory usage at 499%
+1704069697129 [FATAL] [Cache] Exception caught: NullPointerException
+1704069700648 [WARN] [API] Exception caught: NullPointerException
+1704069705392 [DEBUG] [Service] Transaction completed with ID: 607
+1704069714401 [ERROR] [Authentication] Exception caught: NullPointerException
+1704069717968 [ERROR] [Authentication] Connection established successfully
+1704069723072 [WARN] [Queue] Connection established successfully
+1704069727964 [DEBUG] [Queue] Exception caught: NullPointerException
+1704069732871 [FATAL] [Database] User login attempt from IP: 192.168.1.193
+1704069738576 [ERROR] [Cache] Exception caught: NullPointerException
+1704069744222 [DEBUG] [Service] Connection established successfully
+1704069747103 [WARN] [Queue] Connection established successfully
+1704069749044 [FATAL] [Database] User login attempt from IP: 192.168.1.924
+1704069755422 [INFO] [Cache] Thread pool size adjusted to 562
+1704069760031 [DEBUG] [Queue] Connection established successfully
+1704069766597 [WARN] [Cache] Connection established successfully
+1704069768749 [INFO] [Authentication] Connection established successfully
+1704069776745 [DEBUG] [Controller] Request processed in 815 ms
+1704069782182 [FATAL] [Authentication] Thread pool size adjusted to 697
+1704069784526 [DEBUG] [Cache] Transaction completed with ID: 989
+1704069791998 [ERROR] [Controller] Exception caught: NullPointerException
+1704069800202 [INFO] [Authentication] Exception caught: NullPointerException
+1704069802803 [DEBUG] [Queue] Connection established successfully
+1704069810906 [FATAL] [Queue] User login attempt from IP: 192.168.1.166
+1704069815854 [ERROR] [Authentication] User login attempt from IP: 192.168.1.689
+1704069822597 [DEBUG] [Cache] Request processed in 519 ms
+1704069827475 [DEBUG] [Service] Transaction completed with ID: 769
+1704069831863 [FATAL] [Database] Memory usage at 762%
+1704069841104 [DEBUG] [Service] User login attempt from IP: 192.168.1.222
+1704069847936 [DEBUG] [Service] Cache hit for key: key_16
+1704069856865 [FATAL] [Cache] Cache hit for key: key_48
+1704069864109 [WARN] [Service] Exception caught: NullPointerException
+1704069871101 [FATAL] [Queue] User login attempt from IP: 192.168.1.762
+1704069880905 [DEBUG] [API] Cache hit for key: key_61
+1704069890107 [WARN] [Cache] Memory usage at 165%
+1704069894499 [DEBUG] [Queue] Request processed in 368 ms
+1704069897819 [FATAL] [Service] Exception caught: NullPointerException
+1704069904695 [WARN] [Database] Thread pool size adjusted to 201
+1704069910666 [ERROR] [Controller] User login attempt from IP: 192.168.1.173
+1704069913981 [DEBUG] [API] Connection established successfully
+1704069921205 [INFO] [API] User login attempt from IP: 192.168.1.935
+1704069929522 [DEBUG] [API] Exception caught: NullPointerException
+1704069933372 [INFO] [Cache] Thread pool size adjusted to 703
+1704069936040 [DEBUG] [Controller] Memory usage at 118%
+1704069944686 [WARN] [Controller] User login attempt from IP: 192.168.1.396
+1704069953030 [DEBUG] [API] Request processed in 944 ms
+1704069961270 [FATAL] [Database] User login attempt from IP: 192.168.1.570
+1704069966181 [ERROR] [Service] Exception caught: NullPointerException
+1704069967304 [FATAL] [API] Thread pool size adjusted to 647
+1704069974197 [DEBUG] [Service] Request processed in 68 ms
+1704069983910 [FATAL] [Service] Exception caught: NullPointerException
+1704069989558 [FATAL] [Database] User login attempt from IP: 192.168.1.362
+1704069991583 [DEBUG] [API] Cache hit for key: key_57
+1704069995028 [INFO] [Queue] Cache hit for key: key_32
+1704070002099 [ERROR] [API] Cache hit for key: key_23
+1704070006453 [INFO] [Authentication] Request processed in 537 ms
+1704070007717 [FATAL] [API] Connection established successfully
+1704070016707 [DEBUG] [Authentication] Exception caught: NullPointerException
+1704070018949 [WARN] [Cache] Thread pool size adjusted to 373
+1704070024336 [WARN] [API] Connection established successfully
+1704070026692 [INFO] [Service] Connection established successfully
+1704070033768 [ERROR] [Authentication] Cache hit for key: key_59
+1704070037898 [FATAL] [Database] Transaction completed with ID: 522
+1704070044690 [FATAL] [Cache] Memory usage at 716%
+1704070048050 [ERROR] [Controller] Cache hit for key: key_87
+1704070056079 [FATAL] [Authentication] Thread pool size adjusted to 877
+1704070064267 [WARN] [Service] Cache hit for key: key_31
+1704070073817 [INFO] [Database] Memory usage at 224%
+1704070079303 [WARN] [Authentication] Cache hit for key: key_96
+1704070087159 [ERROR] [Service] Exception caught: NullPointerException
+1704070092290 [DEBUG] [Authentication] Connection established successfully
+1704070097305 [ERROR] [Cache] Connection established successfully
+1704070098763 [WARN] [Cache] Thread pool size adjusted to 537
+1704070101018 [INFO] [Database] User login attempt from IP: 192.168.1.247
+1704070109347 [DEBUG] [Controller] Thread pool size adjusted to 603
+1704070116106 [INFO] [API] Exception caught: NullPointerException
+1704070123217 [DEBUG] [API] Cache hit for key: key_13
+1704070125015 [FATAL] [API] Transaction completed with ID: 622
+1704070128943 [ERROR] [Service] Connection established successfully
+1704070130637 [INFO] [Cache] Connection established successfully
+1704070134343 [FATAL] [Queue] Connection established successfully
+1704070138496 [FATAL] [Controller] Request processed in 709 ms
+1704070146393 [ERROR] [Cache] Thread pool size adjusted to 940
+1704070154811 [DEBUG] [Service] Thread pool size adjusted to 792
+1704070161248 [WARN] [Controller] Thread pool size adjusted to 469
+1704070162428 [WARN] [API] Cache hit for key: key_90
+1704070165082 [WARN] [Queue] Transaction completed with ID: 387
+1704070169147 [WARN] [Queue] Request processed in 929 ms
+1704070175701 [INFO] [Service] Connection established successfully
+1704070182025 [INFO] [Queue] Request processed in 382 ms
+1704070186143 [DEBUG] [Controller] Transaction completed with ID: 635
+1704070195054 [FATAL] [Controller] Thread pool size adjusted to 477
+1704070196361 [DEBUG] [Service] Exception caught: NullPointerException
+1704070198995 [INFO] [Controller] Connection established successfully
+1704070202437 [ERROR] [Authentication] Connection established successfully
+1704070208910 [FATAL] [Queue] Cache hit for key: key_10
+1704070213927 [DEBUG] [Authentication] Connection established successfully
+1704070217512 [ERROR] [Cache] Transaction completed with ID: 111
+1704070223106 [DEBUG] [API] Memory usage at 49%
+1704070230560 [INFO] [Cache] Exception caught: NullPointerException
+1704070237544 [FATAL] [Service] Cache hit for key: key_12
+1704070241115 [ERROR] [Service] Connection established successfully
+1704070249610 [FATAL] [Service] User login attempt from IP: 192.168.1.866
+1704070255351 [WARN] [Cache] Request processed in 352 ms
+1704070257069 [WARN] [API] Memory usage at 650%
+1704070263891 [ERROR] [Controller] User login attempt from IP: 192.168.1.17
+1704070272899 [INFO] [Authentication] Thread pool size adjusted to 513
+1704070278820 [WARN] [Controller] Thread pool size adjusted to 80
+1704070283395 [WARN] [API] Transaction completed with ID: 942
+1704070288474 [FATAL] [Controller] Request processed in 206 ms
+1704070295736 [ERROR] [Service] Cache hit for key: key_79
+1704070303967 [INFO] [Database] Transaction completed with ID: 804
+1704070308719 [FATAL] [Controller] Transaction completed with ID: 485
+1704070318513 [INFO] [Database] Exception caught: NullPointerException
+1704070328409 [FATAL] [Queue] Thread pool size adjusted to 671
+1704070332207 [FATAL] [Authentication] Thread pool size adjusted to 153
+1704070335152 [DEBUG] [API] Thread pool size adjusted to 79
+1704070342132 [ERROR] [Authentication] Transaction completed with ID: 768
+1704070344078 [DEBUG] [Cache] User login attempt from IP: 192.168.1.746
+1704070352264 [FATAL] [Cache] Exception caught: NullPointerException
+1704070354101 [DEBUG] [Authentication] Connection established successfully
+1704070358395 [FATAL] [Queue] Request processed in 71 ms
+1704070365119 [WARN] [API] Exception caught: NullPointerException
+1704070374456 [INFO] [Authentication] Cache hit for key: key_47
+1704070378084 [ERROR] [Authentication] User login attempt from IP: 192.168.1.472
+1704070380373 [FATAL] [Authentication] User login attempt from IP: 192.168.1.577
+1704070386785 [DEBUG] [Database] Exception caught: NullPointerException
+1704070392732 [INFO] [Controller] Transaction completed with ID: 455
+1704070397462 [DEBUG] [API] User login attempt from IP: 192.168.1.199
+1704070400643 [ERROR] [Database] Connection established successfully
+1704070405148 [DEBUG] [Queue] User login attempt from IP: 192.168.1.497
+1704070409916 [INFO] [Service] Connection established successfully
+1704070411374 [FATAL] [Database] Thread pool size adjusted to 322
+1704070419308 [INFO] [Cache] Connection established successfully
+1704070425291 [DEBUG] [Queue] Thread pool size adjusted to 212
+1704070428228 [WARN] [Cache] Transaction completed with ID: 176
+1704070437173 [INFO] [Authentication] Transaction completed with ID: 39
+1704070445790 [WARN] [API] Thread pool size adjusted to 357
+1704070452786 [DEBUG] [Cache] Memory usage at 612%
+1704070456043 [FATAL] [Queue] Request processed in 779 ms
+1704070465166 [ERROR] [Queue] Connection established successfully
+1704070474731 [FATAL] [Service] Request processed in 890 ms
+1704070482062 [INFO] [Service] Request processed in 583 ms
+1704070486625 [WARN] [API] Connection established successfully
+1704070495787 [FATAL] [Authentication] Request processed in 580 ms
+1704070503605 [DEBUG] [Service] Memory usage at 270%
+1704070509656 [WARN] [Queue] Cache hit for key: key_9
+1704070519009 [DEBUG] [Controller] Thread pool size adjusted to 892
+1704070525874 [ERROR] [Cache] Memory usage at 332%
+1704070532286 [DEBUG] [API] Transaction completed with ID: 646
+1704070536774 [ERROR] [Database] Transaction completed with ID: 332
+1704070544523 [DEBUG] [Queue] Request processed in 305 ms
+1704070546738 [INFO] [Queue] Thread pool size adjusted to 869
+1704070552468 [FATAL] [Service] Exception caught: NullPointerException
+1704070556433 [DEBUG] [API] Cache hit for key: key_52
+1704070565424 [INFO] [Cache] User login attempt from IP: 192.168.1.88
+1704070572850 [FATAL] [Authentication] Request processed in 815 ms
+1704070574129 [ERROR] [Cache] Memory usage at 746%
+1704070584013 [FATAL] [Authentication] Memory usage at 647%
+1704070587817 [WARN] [Service] Cache hit for key: key_17
+1704070589413 [FATAL] [API] Cache hit for key: key_75
+1704070596218 [DEBUG] [Database] Cache hit for key: key_29
+1704070599548 [DEBUG] [Controller] Transaction completed with ID: 790
+1704070603219 [DEBUG] [Cache] Transaction completed with ID: 30
+1704070604507 [WARN] [Database] Memory usage at 271%
+1704070614374 [INFO] [Service] User login attempt from IP: 192.168.1.731
+1704070623475 [WARN] [Queue] Request processed in 270 ms
+1704070628218 [ERROR] [Authentication] Connection established successfully
+1704070636119 [INFO] [Queue] User login attempt from IP: 192.168.1.910
+1704070640891 [DEBUG] [Queue] Transaction completed with ID: 553
+1704070642548 [WARN] [Queue] Request processed in 743 ms
+1704070644960 [WARN] [Controller] User login attempt from IP: 192.168.1.656
+1704070650967 [ERROR] [Service] Connection established successfully
+1704070657561 [DEBUG] [Queue] Thread pool size adjusted to 425
+1704070663021 [INFO] [Authentication] Request processed in 899 ms
+1704070665165 [INFO] [Cache] Request processed in 789 ms
+1704070668573 [DEBUG] [Cache] Connection established successfully
+1704070671830 [ERROR] [Authentication] Request processed in 996 ms
+1704070673993 [FATAL] [Service] Request processed in 517 ms
+1704070675569 [ERROR] [Controller] Transaction completed with ID: 631
+1704070683496 [DEBUG] [Authentication] Transaction completed with ID: 258
+1704070688922 [INFO] [Authentication] Memory usage at 925%
+1704070694192 [ERROR] [Queue] Exception caught: NullPointerException
+1704070704066 [ERROR] [Queue] Request processed in 97 ms
+1704070709315 [ERROR] [Cache] Thread pool size adjusted to 505
+1704070712922 [WARN] [Cache] Transaction completed with ID: 181
+1704070718936 [FATAL] [Queue] Request processed in 986 ms
+1704070721355 [WARN] [Database] Connection established successfully
+1704070728596 [ERROR] [API] Memory usage at 463%
+1704070732502 [INFO] [Cache] Exception caught: NullPointerException
+1704070738206 [ERROR] [Controller] Memory usage at 619%
+1704070745815 [DEBUG] [Service] User login attempt from IP: 192.168.1.201
+1704070751453 [FATAL] [Cache] Thread pool size adjusted to 853
+1704070758186 [INFO] [API] Thread pool size adjusted to 44
+1704070764170 [FATAL] [Database] Exception caught: NullPointerException
+1704070771349 [ERROR] [Controller] User login attempt from IP: 192.168.1.585
+1704070777342 [FATAL] [Database] Memory usage at 350%
+1704070782699 [ERROR] [API] Transaction completed with ID: 386
+1704070786162 [WARN] [Service] Memory usage at 981%
+1704070791309 [ERROR] [Queue] User login attempt from IP: 192.168.1.789
+1704070796841 [FATAL] [Controller] Thread pool size adjusted to 521
+1704070805616 [FATAL] [Database] Thread pool size adjusted to 209
+1704070813039 [WARN] [API] Transaction completed with ID: 13
+1704070817109 [FATAL] [Authentication] Transaction completed with ID: 979
+1704070826915 [DEBUG] [Controller] Transaction completed with ID: 234
+1704070833506 [DEBUG] [Controller] Connection established successfully
+1704070842067 [DEBUG] [Database] Exception caught: NullPointerException
+1704070851404 [ERROR] [Database] Connection established successfully
+1704070855645 [ERROR] [Authentication] Connection established successfully
+1704070858300 [DEBUG] [Queue] Cache hit for key: key_91
+1704070866630 [INFO] [Queue] Cache hit for key: key_12
+1704070876096 [DEBUG] [Service] User login attempt from IP: 192.168.1.982
+1704070882194 [INFO] [Database] Exception caught: NullPointerException
+1704070886897 [INFO] [Service] Thread pool size adjusted to 520
+1704070893284 [ERROR] [Queue] Exception caught: NullPointerException
+1704070899530 [FATAL] [API] User login attempt from IP: 192.168.1.931
+1704070904812 [WARN] [Controller] Exception caught: NullPointerException
+1704070914626 [DEBUG] [API] Memory usage at 151%
+1704070915984 [WARN] [Database] Connection established successfully
+1704070925824 [FATAL] [Controller] Memory usage at 384%
+1704070927870 [ERROR] [Authentication] Request processed in 37 ms
+1704070930516 [FATAL] [Queue] Cache hit for key: key_96
+1704070936480 [ERROR] [Database] Request processed in 910 ms
+1704070944406 [FATAL] [Controller] Cache hit for key: key_94
+1704070947192 [WARN] [Database] Connection established successfully
+1704070954497 [FATAL] [Service] Request processed in 313 ms
+1704070958618 [ERROR] [Controller] Request processed in 60 ms
+1704070963341 [WARN] [Service] Thread pool size adjusted to 602
+1704070966802 [INFO] [Queue] Transaction completed with ID: 237
+1704070974645 [WARN] [Authentication] Thread pool size adjusted to 951
+1704070977326 [ERROR] [Authentication] Exception caught: NullPointerException
+1704070983099 [INFO] [Database] Memory usage at 123%
+1704070989435 [WARN] [Database] User login attempt from IP: 192.168.1.897
+1704070996788 [ERROR] [Cache] Transaction completed with ID: 364
+1704071002697 [FATAL] [API] Request processed in 286 ms
+1704071007334 [DEBUG] [Service] Exception caught: NullPointerException
+1704071009508 [ERROR] [Queue] Memory usage at 116%
+1704071017616 [DEBUG] [Cache] Request processed in 386 ms
+1704071018844 [ERROR] [API] Exception caught: NullPointerException
+1704071025487 [FATAL] [Authentication] User login attempt from IP: 192.168.1.466
+1704071028870 [ERROR] [Controller] Thread pool size adjusted to 223
+1704071037199 [DEBUG] [Controller] Connection established successfully
+1704071046735 [ERROR] [Controller] Connection established successfully
+1704071049850 [ERROR] [Cache] Cache hit for key: key_79
+1704071055871 [WARN] [Controller] Exception caught: NullPointerException
+1704071057370 [FATAL] [Queue] Cache hit for key: key_41
+1704071067331 [INFO] [Service] Thread pool size adjusted to 393
+1704071071813 [WARN] [Database] Cache hit for key: key_67
+1704071078702 [INFO] [Authentication] Request processed in 265 ms
+1704071082614 [WARN] [Database] User login attempt from IP: 192.168.1.166
+1704071091978 [DEBUG] [API] Memory usage at 934%
+1704071093406 [INFO] [Authentication] Cache hit for key: key_27
+1704071096114 [DEBUG] [Authentication] Thread pool size adjusted to 448
+1704071098811 [FATAL] [Database] Request processed in 551 ms
+1704071103373 [FATAL] [Service] Transaction completed with ID: 142
+1704071110689 [DEBUG] [Queue] Connection established successfully
+1704071117619 [INFO] [Database] Exception caught: NullPointerException
+1704071119033 [DEBUG] [Authentication] Request processed in 668 ms
+1704071126587 [INFO] [Queue] Transaction completed with ID: 682
+1704071136413 [DEBUG] [Authentication] User login attempt from IP: 192.168.1.111
+1704071137483 [INFO] [Controller] Cache hit for key: key_91
+1704071147369 [DEBUG] [Database] Transaction completed with ID: 547
+1704071149838 [DEBUG] [Authentication] Memory usage at 73%
+1704071154180 [FATAL] [Service] Transaction completed with ID: 90
+1704071160805 [INFO] [API] Exception caught: NullPointerException
+1704071167436 [ERROR] [Queue] Exception caught: NullPointerException
+1704071172589 [WARN] [API] Exception caught: NullPointerException
+1704071182171 [FATAL] [API] Request processed in 118 ms
+1704071188593 [DEBUG] [Controller] Thread pool size adjusted to 845
+1704071190008 [FATAL] [Database] Request processed in 599 ms
+1704071198679 [ERROR] [Cache] Memory usage at 31%
+1704071206814 [ERROR] [API] Request processed in 15 ms
+1704071210756 [DEBUG] [Authentication] Connection established successfully
+1704071216053 [DEBUG] [Queue] Exception caught: NullPointerException
+1704071220465 [INFO] [Controller] Transaction completed with ID: 23
+1704071222754 [FATAL] [Queue] User login attempt from IP: 192.168.1.63
+1704071231575 [ERROR] [Database] Transaction completed with ID: 537
+1704071232946 [INFO] [Controller] Request processed in 940 ms
+1704071236631 [INFO] [API] User login attempt from IP: 192.168.1.5
+1704071246351 [FATAL] [API] Transaction completed with ID: 164
+1704071255070 [INFO] [Authentication] Exception caught: NullPointerException
+1704071264132 [INFO] [Database] Transaction completed with ID: 734
+1704071271796 [FATAL] [Controller] Thread pool size adjusted to 320
+1704071277755 [DEBUG] [Service] Request processed in 995 ms
+1704071287126 [FATAL] [Database] Connection established successfully
+1704071292841 [WARN] [Controller] Exception caught: NullPointerException
+1704071298069 [DEBUG] [Authentication] Cache hit for key: key_16
+1704071304428 [WARN] [Database] Thread pool size adjusted to 128
+1704071308119 [DEBUG] [Database] Thread pool size adjusted to 40
+1704071314188 [WARN] [Database] User login attempt from IP: 192.168.1.65
+1704071316060 [ERROR] [API] Thread pool size adjusted to 149
+1704071321133 [WARN] [API] Exception caught: NullPointerException
+1704071328674 [FATAL] [Database] Request processed in 762 ms
+1704071332849 [INFO] [API] Thread pool size adjusted to 393
+1704071334139 [DEBUG] [Authentication] Transaction completed with ID: 459
+1704071338933 [WARN] [Queue] Connection established successfully
+1704071344712 [ERROR] [Queue] Thread pool size adjusted to 176
+1704071349481 [FATAL] [Queue] Connection established successfully
+1704071359332 [FATAL] [Database] Thread pool size adjusted to 652
+1704071361416 [DEBUG] [Authentication] Cache hit for key: key_82
+1704071368361 [ERROR] [Cache] Connection established successfully
+1704071373909 [INFO] [Database] Transaction completed with ID: 865
+1704071377282 [ERROR] [Service] Thread pool size adjusted to 218
+1704071378816 [WARN] [Database] Request processed in 126 ms
+1704071384154 [DEBUG] [Service] User login attempt from IP: 192.168.1.162
+1704071387735 [DEBUG] [Queue] Memory usage at 480%
+1704071397607 [WARN] [API] Transaction completed with ID: 604
+1704071403742 [INFO] [Controller] Cache hit for key: key_11
+1704071410032 [INFO] [Controller] Memory usage at 850%
+1704071411488 [WARN] [Queue] Connection established successfully
+1704071414003 [DEBUG] [Cache] Thread pool size adjusted to 503
+1704071415199 [ERROR] [Service] Request processed in 24 ms
+1704071421054 [FATAL] [Database] Thread pool size adjusted to 302
+1704071426503 [WARN] [Service] Exception caught: NullPointerException
+1704071435937 [DEBUG] [Database] Transaction completed with ID: 147
+1704071439876 [FATAL] [Service] Exception caught: NullPointerException
+1704071446122 [ERROR] [Controller] Memory usage at 350%
+1704071451710 [INFO] [Database] Connection established successfully
+1704071461279 [ERROR] [API] Request processed in 552 ms
+1704071466097 [INFO] [Database] Transaction completed with ID: 818
+1704071467775 [INFO] [Service] Memory usage at 174%
+1704071476236 [FATAL] [Cache] Cache hit for key: key_30
+1704071483505 [FATAL] [Queue] Connection established successfully
+1704071493156 [INFO] [Authentication] Memory usage at 581%
+1704071501658 [DEBUG] [Controller] User login attempt from IP: 192.168.1.818
+1704071510365 [ERROR] [Service] Exception caught: NullPointerException
+1704071511838 [FATAL] [Controller] Cache hit for key: key_20
+1704071516125 [INFO] [Controller] Cache hit for key: key_79
+1704071517435 [DEBUG] [Database] Memory usage at 837%
+1704071521621 [WARN] [Service] Connection established successfully
+1704071530493 [WARN] [Queue] Transaction completed with ID: 717
+1704071535846 [FATAL] [Controller] Thread pool size adjusted to 496
+1704071539216 [FATAL] [Database] Transaction completed with ID: 698
+1704071546941 [ERROR] [Cache] Request processed in 153 ms
+1704071554431 [FATAL] [Service] Connection established successfully
+1704071558738 [INFO] [Database] User login attempt from IP: 192.168.1.619
+1704071566494 [DEBUG] [Database] Transaction completed with ID: 262
+1704071570260 [ERROR] [API] Request processed in 402 ms
+1704071575388 [DEBUG] [Authentication] Memory usage at 90%
+1704071577444 [DEBUG] [Authentication] Request processed in 32 ms
+1704071583504 [INFO] [Service] Memory usage at 441%
+1704071586960 [INFO] [Cache] Connection established successfully
+1704071594359 [ERROR] [API] Request processed in 190 ms
+1704071598711 [INFO] [Cache] User login attempt from IP: 192.168.1.948
+1704071599892 [INFO] [Queue] Memory usage at 480%
+1704071606400 [INFO] [Cache] Transaction completed with ID: 577
+1704071608379 [ERROR] [Service] User login attempt from IP: 192.168.1.632
+1704071617132 [INFO] [Queue] User login attempt from IP: 192.168.1.766
+1704071621067 [DEBUG] [Cache] Memory usage at 53%
+1704071625636 [WARN] [Authentication] Transaction completed with ID: 522
+1704071631734 [FATAL] [Authentication] Memory usage at 36%

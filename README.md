@@ -1,6 +1,6 @@
 # File Compression
 
-[![Build and Test](https://github.com/ayonious/File-Compression/actions/workflows/build.yml/badge.svg)](https://github.com/ayonious/File-Compression/actions/workflows/build.yml)
+[![CI](https://github.com/ayonious/File-Compression/workflows/CI/badge.svg)](https://github.com/ayonious/File-Compression/actions)
 [![codecov](https://codecov.io/gh/ayonious/File-Compression/branch/master/graph/badge.svg)](https://codecov.io/gh/ayonious/File-Compression)
 [![GitHub stars](https://img.shields.io/github/stars/ayonious/File-Compression?style=social)](https://github.com/ayonious/File-Compression/stargazers)
 

@@ -13,7 +13,7 @@ import java.util.Arrays;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class HunzippingTest {
+class HuffmanDecompressorTest {
     @TempDir
     Path tempDir;
     private File inputFile;
@@ -23,7 +23,7 @@ class HunzippingTest {
     @BeforeEach
     void setUp() throws IOException {
         // Create temporary files for testing
-        inputFile = tempDir.resolve("test_input.txt").toFile();
+        inputFile = tempDir.resolve("testInput.txt").toFile();
         compressedFile = new File(inputFile.getAbsolutePath() + ".huffz");
         decompressedFile = new File(inputFile.getAbsolutePath());
     }
@@ -35,11 +35,11 @@ class HunzippingTest {
             writer.write("");
         }
         
-        Hzipping.beginHzipping(inputFile.getAbsolutePath());
+        HuffmanCompressor.beginHuffmanCompression(inputFile.getAbsolutePath());
         assertTrue(compressedFile.exists());
         
         // Test unzipping
-        Hunzipping.beginHunzipping(compressedFile.getAbsolutePath());
+        HuffmanDecompressor.beginHuffmanDecompression(compressedFile.getAbsolutePath());
         assertTrue(decompressedFile.exists());
         assertEquals(0, decompressedFile.length());
     }
@@ -52,11 +52,11 @@ class HunzippingTest {
             writer.write(content);
         }
         
-        Hzipping.beginHzipping(inputFile.getAbsolutePath());
+        HuffmanCompressor.beginHuffmanCompression(inputFile.getAbsolutePath());
         assertTrue(compressedFile.exists());
         
         // Test unzipping
-        Hunzipping.beginHunzipping(compressedFile.getAbsolutePath());
+        HuffmanDecompressor.beginHuffmanDecompression(compressedFile.getAbsolutePath());
         assertTrue(decompressedFile.exists());
         
         String decompressedContent = Files.readString(decompressedFile.toPath());
@@ -71,51 +71,33 @@ class HunzippingTest {
             writer.write(content);
         }
         
-        Hzipping.beginHzipping(inputFile.getAbsolutePath());
+        HuffmanCompressor.beginHuffmanCompression(inputFile.getAbsolutePath());
         assertTrue(compressedFile.exists());
         
         // Test unzipping
-        Hunzipping.beginHunzipping(compressedFile.getAbsolutePath());
+        HuffmanDecompressor.beginHuffmanDecompression(compressedFile.getAbsolutePath());
         assertTrue(decompressedFile.exists());
         
         String decompressedContent = Files.readString(decompressedFile.toPath());
         assertEquals(content, decompressedContent);
     }
 
-    @Test
-    void testByteConversion() {
-        // Test positive byte
-        assertEquals(65, Hunzipping.to((byte) 65)); // 'A'
-        // Test negative byte
-        assertEquals(128, Hunzipping.to((byte) -128));
-    }
-
-    @Test
-    void testMakeEight() {
-        // Test padding of binary strings to 8 bits
-        assertEquals("00000000", Hunzipping.makeeight(""));
-        assertEquals("00000001", Hunzipping.makeeight("1"));
-        assertEquals("00001111", Hunzipping.makeeight("1111"));
-        assertEquals("11111111", Hunzipping.makeeight("11111111"));
-    }
 
     @Test
     void testInitialization() {
         // Test initialization of static variables
-        Hunzipping.initHunzipping();
-        
+        HuffmanDecompressor.initHuffmanDecompressor();
+
         // Check if frequencies are reset
-        assertTrue(Arrays.stream(Hunzipping.freq1).allMatch(freq -> freq == 0));
+        assertTrue(Arrays.stream(HuffmanDecompressor.frequency).allMatch(freq -> freq == 0));
         // Check if string arrays are reset
-        assertTrue(Arrays.stream(Hunzipping.ss1).allMatch(s -> s == null || s.equals("")));
+        assertTrue(Arrays.stream(HuffmanDecompressor.huffmanCodes).allMatch(s -> s == null || s.equals("")));
         // Check if priority queue is empty
-        assertTrue(Hunzipping.pq1.isEmpty());
+        assertTrue(HuffmanDecompressor.priorityQueue.isEmpty());
         // Check if other variables are reset
-        assertEquals("", Hunzipping.bigone);
-        assertEquals("", Hunzipping.temp);
-        assertEquals(0, Hunzipping.exbits1);
-        assertEquals(0, Hunzipping.putit);
-        assertEquals(0, Hunzipping.cntu);
+        assertEquals("", HuffmanDecompressor.bitBuffer);
+        assertEquals(0, HuffmanDecompressor.extraBits);
+        assertEquals(0, HuffmanDecompressor.uniqueCharCount);
     }
 
     @Test
@@ -130,11 +112,11 @@ class HunzippingTest {
             writer.write(content.toString());
         }
         
-        Hzipping.beginHzipping(inputFile.getAbsolutePath());
+        HuffmanCompressor.beginHuffmanCompression(inputFile.getAbsolutePath());
         assertTrue(compressedFile.exists());
         
         // Test unzipping
-        Hunzipping.beginHunzipping(compressedFile.getAbsolutePath());
+        HuffmanDecompressor.beginHuffmanDecompression(compressedFile.getAbsolutePath());
         assertTrue(decompressedFile.exists());
         
         String decompressedContent = Files.readString(decompressedFile.toPath());
@@ -149,11 +131,11 @@ class HunzippingTest {
             writer.write(content);
         }
         
-        Hzipping.beginHzipping(inputFile.getAbsolutePath());
+        HuffmanCompressor.beginHuffmanCompression(inputFile.getAbsolutePath());
         assertTrue(compressedFile.exists());
         
         // Test unzipping
-        Hunzipping.beginHunzipping(compressedFile.getAbsolutePath());
+        HuffmanDecompressor.beginHuffmanDecompression(compressedFile.getAbsolutePath());
         assertTrue(decompressedFile.exists());
         
         String decompressedContent = Files.readString(decompressedFile.toPath());

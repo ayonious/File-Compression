@@ -3,6 +3,7 @@ package prog.lzw;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.io.TempDir;
+import prog.util.CommonUtil;
 
 import java.io.DataOutputStream;
 import java.io.File;
@@ -10,11 +11,10 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.Arrays;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class LunzippingTest {
+class LzwDecompressorTest {
     @TempDir
     Path tempDir;
     
@@ -29,9 +29,9 @@ class LunzippingTest {
 
     @BeforeEach
     void setUp() {
-        Lunzipping.big1 = "";
-        Lunzipping.bitsz1 = 0;
-        Lunzipping.pre();  // Initialize the binary to string conversion table
+        LzwDecompressor.bitBuffer = "";
+        LzwDecompressor.bitSize = 0;
+        LzwDecompressor.byteToBinaryLookup = CommonUtil.createByteToBinaryLookupTable();
     }
 
     @Test
@@ -42,7 +42,7 @@ class LunzippingTest {
         File compressedFile = createCompressedFile(filename, 8, compressedContent);
         
         // Run decompression
-        Lunzipping.beginLunzipping(compressedFile.getAbsolutePath());
+        LzwDecompressor.beginLzwDecompression(compressedFile.getAbsolutePath());
         
         // Check the decompressed file
         File decompressedFile = new File(tempDir.toFile(), filename);
@@ -61,7 +61,7 @@ class LunzippingTest {
         File compressedFile = createCompressedFile(filename, 8, compressedContent);
         
         // Run decompression
-        Lunzipping.beginLunzipping(compressedFile.getAbsolutePath());
+        LzwDecompressor.beginLzwDecompression(compressedFile.getAbsolutePath());
         
         // Check the decompressed file
         File decompressedFile = new File(tempDir.toFile(), filename);
@@ -77,7 +77,7 @@ class LunzippingTest {
         File compressedFile = createCompressedFile(filename, 8, compressedContent);
         
         // Run decompression
-        Lunzipping.beginLunzipping(compressedFile.getAbsolutePath());
+        LzwDecompressor.beginLzwDecompression(compressedFile.getAbsolutePath());
         
         // Check the decompressed file
         File decompressedFile = new File(tempDir.toFile(), filename);
@@ -93,31 +93,13 @@ class LunzippingTest {
 
     @Test
     void testBinaryToStringConversion() {
-        Lunzipping.pre();  // Initialize conversion table
-        
+        String[] lookupTable = CommonUtil.createByteToBinaryLookupTable();
+
         // Test some known conversions
-        assertEquals("00000000", Lunzipping.bttost[0], "Conversion for 0");
-        assertEquals("00000001", Lunzipping.bttost[1], "Conversion for 1");
-        assertEquals("10000000", Lunzipping.bttost[128], "Conversion for 128");
-        assertEquals("11111111", Lunzipping.bttost[255], "Conversion for 255");
+        assertEquals("00000000", lookupTable[0], "Conversion for 0");
+        assertEquals("00000001", lookupTable[1], "Conversion for 1");
+        assertEquals("10000000", lookupTable[128], "Conversion for 128");
+        assertEquals("11111111", lookupTable[255], "Conversion for 255");
     }
 
-    @Test
-    void testByteToIntConversion() {
-        // Test positive values
-        assertEquals(0, Lunzipping.btoi((byte) 0));
-        assertEquals(127, Lunzipping.btoi((byte) 127));
-        
-        // Test negative values (which should be converted to positive)
-        assertEquals(128, Lunzipping.btoi((byte) -128));
-        assertEquals(255, Lunzipping.btoi((byte) -1));
-    }
-
-    @Test
-    void testStringToIntConversion() {
-        assertEquals(0, Lunzipping.stoi("0"));
-        assertEquals(1, Lunzipping.stoi("1"));
-        assertEquals(2, Lunzipping.stoi("10"));
-        assertEquals(255, Lunzipping.stoi("11111111"));
-    }
 } 

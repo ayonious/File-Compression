@@ -1,0 +1,121 @@
+# Large Test File for Compression Testing
+
+## Section 1: Lorem Ipsum Text
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+
+## Section 2: JSON Data
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "email": "john@example.com",
+      "preferences": {
+        "theme": "dark",
+        "notifications": true
+      }
+    },
+    {
+      "id": 2,
+      "name": "Jane Smith",
+      "email": "jane@example.com",
+      "preferences": {
+        "theme": "light",
+        "notifications": false
+      }
+    }
+  ]
+}
+
+## Section 3: XML-like Content
+<root>
+  <user id="1">
+    <name>Alice Johnson</name>
+    <role>Administrator</role>
+    <permissions>
+      <permission>READ</permission>
+      <permission>WRITE</permission>
+      <permission>EXECUTE</permission>
+    </permissions>
+  </user>
+</root>
+
+## Section 4: Repeating Patterns
+PATTERN_START
+This is a repeating pattern.
+It should be highly compressible.
+The compression algorithm should handle this efficiently.
+PATTERN_END
+
+PATTERN_START
+This is a repeating pattern.
+It should be highly compressible.
+The compression algorithm should handle this efficiently.
+PATTERN_END
+
+## Section 5: Binary-like Data
+01001000 01100101 01101100 01101100 01101111
+01010111 01101111 01110010 01101100 01100100
+00100001 00100001 00100001 00100001 00100001
+
+## Section 6: Structured Data
+ID,Name,Age,City
+1,John Smith,25,New York
+2,Mary Johnson,32,Los Angeles
+3,Robert Brown,45,Chicago
+4,Patricia Davis,28,Houston
+5,Michael Wilson,39,Phoenix
+
+## Section 7: Unicode Characters and Emojis
+Hello World! 👋 
+Programming is fun! 💻
+I love coding! ❤️
+Testing compression! 🧪
+Data structures! 📊
+
+## Section 8: Pangrams
+The quick brown fox jumps over the lazy dog.
+Pack my box with five dozen liquor jugs.
+How vexingly quick daft zebras jump!
+The five boxing wizards jump quickly.
+
+## Section 9: Mathematical Sequences
+Fibonacci: 1,1,2,3,5,8,13,21,34,55,89,144
+Prime Numbers: 2,3,5,7,11,13,17,19,23,29,31,37
+Square Numbers: 1,4,9,16,25,36,49,64,81,100
+Triangular Numbers: 1,3,6,10,15,21,28,36,45,55
+
+## Section 10: Code-like Content
+public class Example {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+        for (int i = 0; i < 10; i++) {
+            System.out.println("Count: " + i);
+        }
+    }
+}
+
+## Section 11: HTML Content
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Page</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .container { margin: 0 auto; width: 80%; }
+        .header { background-color: #f0f0f0; padding: 20px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Test Page</h1>
+        <p>This is a sample HTML content for testing compression.</p>
+    </div>
+</body>
+</html>
+
+## Section 12: Highly Repetitive Content
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD 

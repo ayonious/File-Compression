@@ -40,14 +40,14 @@ class MainPanelTest {
         assertNotNull(Main.titlePanel, "Title panel should be created");
         assertEquals(new Point(90, 20), Main.titlePanel.getLocation(), "Title panel location should match");
         assertEquals(new Dimension(170, 70), Main.titlePanel.getSize(), "Title panel size should match");
-        
+
         // Test labels in title panel
-        assertEquals("Selected File Size: ", Main.redLabel.getText(), "Red label text should match");
-        assertEquals("After zip/unzip the file size: ", Main.blueLabel.getText(), "Blue label text should match");
-        
+        assertEquals("Selected File Size: ", Main.originalSizeLabel.getText(), "Original size label text should match");
+        assertEquals("After zip/unzip the file size: ", Main.compressedSizeLabel.getText(), "Compressed size label text should match");
+
         // Test label alignment
-        assertEquals(SwingConstants.CENTER, Main.redLabel.getHorizontalAlignment(), "Red label should be center-aligned");
-        assertEquals(SwingConstants.CENTER, Main.blueLabel.getHorizontalAlignment(), "Blue label should be center-aligned");
+        assertEquals(SwingConstants.CENTER, Main.originalSizeLabel.getHorizontalAlignment(), "Original size label should be center-aligned");
+        assertEquals(SwingConstants.CENTER, Main.compressedSizeLabel.getHorizontalAlignment(), "Compressed size label should be center-aligned");
     }
 
     @Test
@@ -55,14 +55,14 @@ class MainPanelTest {
         assertNotNull(Main.scorePanel, "Score panel should be created");
         assertEquals(new Point(270, 20), Main.scorePanel.getLocation(), "Score panel location should match");
         assertEquals(new Dimension(120, 60), Main.scorePanel.getSize(), "Score panel size should match");
-        
+
         // Test score labels
-        assertEquals("", Main.redScore.getText(), "Red score should be empty initially");
-        assertEquals("", Main.blueScore.getText(), "Blue score should be empty initially");
-        
+        assertEquals("", Main.originalSizeValue.getText(), "Original size value should be empty initially");
+        assertEquals("", Main.compressedSizeValue.getText(), "Compressed size value should be empty initially");
+
         // Test label alignment
-        assertEquals(SwingConstants.CENTER, Main.redScore.getHorizontalAlignment(), "Red score should be center-aligned");
-        assertEquals(SwingConstants.CENTER, Main.blueScore.getHorizontalAlignment(), "Blue score should be center-aligned");
+        assertEquals(SwingConstants.CENTER, Main.originalSizeValue.getHorizontalAlignment(), "Original size value should be center-aligned");
+        assertEquals(SwingConstants.CENTER, Main.compressedSizeValue.getHorizontalAlignment(), "Compressed size value should be center-aligned");
     }
 
     @Test
@@ -76,52 +76,52 @@ class MainPanelTest {
     @Test
     void testButtonProperties() {
         // Test ZIP HuffZ button
-        assertEquals("ZIP HuffZ", Main.ZH.getText(), "ZIP HuffZ button text should match");
-        assertEquals(new Point(0, 0), Main.ZH.getLocation(), "ZIP HuffZ button location should match");
-        assertEquals(new Dimension(120, 30), Main.ZH.getSize(), "ZIP HuffZ button size should match");
+        assertEquals("ZIP HuffZ", Main.huffmanCompressButton.getText(), "ZIP HuffZ button text should match");
+        assertEquals(new Point(0, 0), Main.huffmanCompressButton.getLocation(), "ZIP HuffZ button location should match");
+        assertEquals(new Dimension(120, 30), Main.huffmanCompressButton.getSize(), "ZIP HuffZ button size should match");
 
         // Test UNZIP HuffZ button
-        assertEquals("UNZIP HuffZ", Main.UH.getText(), "UNZIP HuffZ button text should match");
-        assertEquals(new Point(130, 0), Main.UH.getLocation(), "UNZIP HuffZ button location should match");
-        assertEquals(new Dimension(120, 30), Main.UH.getSize(), "UNZIP HuffZ button size should match");
+        assertEquals("UNZIP HuffZ", Main.huffmanDecompressButton.getText(), "UNZIP HuffZ button text should match");
+        assertEquals(new Point(130, 0), Main.huffmanDecompressButton.getLocation(), "UNZIP HuffZ button location should match");
+        assertEquals(new Dimension(120, 30), Main.huffmanDecompressButton.getSize(), "UNZIP HuffZ button size should match");
 
         // Test ZIP LmZWp button
-        assertEquals("ZIP LmZWp", Main.ZL.getText(), "ZIP LmZWp button text should match");
-        assertEquals(new Point(260, 0), Main.ZL.getLocation(), "ZIP LmZWp button location should match");
-        assertEquals(new Dimension(120, 30), Main.ZL.getSize(), "ZIP LmZWp button size should match");
+        assertEquals("ZIP LmZWp", Main.lzwCompressButton.getText(), "ZIP LmZWp button text should match");
+        assertEquals(new Point(260, 0), Main.lzwCompressButton.getLocation(), "ZIP LmZWp button location should match");
+        assertEquals(new Dimension(120, 30), Main.lzwCompressButton.getSize(), "ZIP LmZWp button size should match");
 
         // Test UNZIP LmZWp button
-        assertEquals("UNZIP LmZWp", Main.UL.getText(), "UNZIP LmZWp button text should match");
-        assertEquals(new Point(390, 0), Main.UL.getLocation(), "UNZIP LmZWp button location should match");
-        assertEquals(new Dimension(120, 30), Main.UL.getSize(), "UNZIP LmZWp button size should match");
+        assertEquals("UNZIP LmZWp", Main.lzwDecompressButton.getText(), "UNZIP LmZWp button text should match");
+        assertEquals(new Point(390, 0), Main.lzwDecompressButton.getLocation(), "UNZIP LmZWp button location should match");
+        assertEquals(new Dimension(120, 30), Main.lzwDecompressButton.getSize(), "UNZIP LmZWp button size should match");
 
         // Test EXIT button
-        assertEquals("EXIT", Main.EX.getText(), "EXIT button text should match");
-        assertEquals(new Point(130, 70), Main.EX.getLocation(), "EXIT button location should match");
-        assertEquals(new Dimension(250, 30), Main.EX.getSize(), "EXIT button size should match");
+        assertEquals("EXIT", Main.exitButton.getText(), "EXIT button text should match");
+        assertEquals(new Point(130, 70), Main.exitButton.getLocation(), "EXIT button location should match");
+        assertEquals(new Dimension(250, 30), Main.exitButton.getSize(), "EXIT button size should match");
     }
 
     @Test
     void testButtonActionListeners() {
         // Verify that all buttons have action listeners attached
-        assertNotNull(Main.ZH.getActionListeners(), "ZIP HuffZ button should have action listener");
-        assertNotNull(Main.UH.getActionListeners(), "UNZIP HuffZ button should have action listener");
-        assertNotNull(Main.ZL.getActionListeners(), "ZIP LmZWp button should have action listener");
-        assertNotNull(Main.UL.getActionListeners(), "UNZIP LmZWp button should have action listener");
-        assertNotNull(Main.EX.getActionListeners(), "EXIT button should have action listener");
-        
-        assertEquals(1, Main.ZH.getActionListeners().length, "ZIP HuffZ button should have exactly one listener");
-        assertEquals(1, Main.UH.getActionListeners().length, "UNZIP HuffZ button should have exactly one listener");
-        assertEquals(1, Main.ZL.getActionListeners().length, "ZIP LmZWp button should have exactly one listener");
-        assertEquals(1, Main.UL.getActionListeners().length, "UNZIP LmZWp button should have exactly one listener");
-        assertEquals(1, Main.EX.getActionListeners().length, "EXIT button should have exactly one listener");
-        
+        assertNotNull(Main.huffmanCompressButton.getActionListeners(), "ZIP HuffZ button should have action listener");
+        assertNotNull(Main.huffmanDecompressButton.getActionListeners(), "UNZIP HuffZ button should have action listener");
+        assertNotNull(Main.lzwCompressButton.getActionListeners(), "ZIP LmZWp button should have action listener");
+        assertNotNull(Main.lzwDecompressButton.getActionListeners(), "UNZIP LmZWp button should have action listener");
+        assertNotNull(Main.exitButton.getActionListeners(), "EXIT button should have action listener");
+
+        assertEquals(1, Main.huffmanCompressButton.getActionListeners().length, "ZIP HuffZ button should have exactly one listener");
+        assertEquals(1, Main.huffmanDecompressButton.getActionListeners().length, "UNZIP HuffZ button should have exactly one listener");
+        assertEquals(1, Main.lzwCompressButton.getActionListeners().length, "ZIP LmZWp button should have exactly one listener");
+        assertEquals(1, Main.lzwDecompressButton.getActionListeners().length, "UNZIP LmZWp button should have exactly one listener");
+        assertEquals(1, Main.exitButton.getActionListeners().length, "EXIT button should have exactly one listener");
+
         // Verify that all buttons have the same listener instance
-        ActionListener zhListener = Main.ZH.getActionListeners()[0];
-        assertSame(zhListener, Main.UH.getActionListeners()[0], "All buttons should share the same listener");
-        assertSame(zhListener, Main.ZL.getActionListeners()[0], "All buttons should share the same listener");
-        assertSame(zhListener, Main.UL.getActionListeners()[0], "All buttons should share the same listener");
-        assertSame(zhListener, Main.EX.getActionListeners()[0], "All buttons should share the same listener");
+        ActionListener zhListener = Main.huffmanCompressButton.getActionListeners()[0];
+        assertSame(zhListener, Main.huffmanDecompressButton.getActionListeners()[0], "All buttons should share the same listener");
+        assertSame(zhListener, Main.lzwCompressButton.getActionListeners()[0], "All buttons should share the same listener");
+        assertSame(zhListener, Main.lzwDecompressButton.getActionListeners()[0], "All buttons should share the same listener");
+        assertSame(zhListener, Main.exitButton.getActionListeners()[0], "All buttons should share the same listener");
     }
 
     @Test

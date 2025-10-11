@@ -3,10 +3,11 @@ package prog;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import prog.util.Constants;
 
 public class MainFrame {
     private static JFrame createMainFrame() {
-        JFrame frame = new JFrame("File Compresser");
+        JFrame frame = new JFrame("File Compressor");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setBounds(350, 170, 550, 300);
         return frame;
@@ -44,10 +45,10 @@ public class MainFrame {
         fileChooser.setFileSelectionMode(JFileChooser.FILES_AND_DIRECTORIES);
         int result = fileChooser.showOpenDialog(null);
         if (result == JFileChooser.APPROVE_OPTION) {
-            Main.opened_file = fileChooser.getSelectedFile();
-            Main.past = Main.opened_file.length();
-            Main.redScore.setText(Main.past + "Bytes");
-            Main.blueScore.setText("NotYetCalculated");
+            Main.openedFile = fileChooser.getSelectedFile();
+            Main.originalSize = Main.openedFile.length();
+            Main.originalSizeValue.setText(Main.originalSize + "Bytes");
+            Main.compressedSizeValue.setText("NotYetCalculated");
         }
     }
 
@@ -64,26 +65,26 @@ public class MainFrame {
     }
 
     private static void showHowToDialog() {
-        String message = "Two algorithms are used for file compression\n" +
-                "1. Huffmans Codes\n" +
-                "2. Lampel-Ziv-Welch\n" +
-                "To compress a file first open the file then click\n" +
-                "ZIP HuffZ to zip the file using Huffmans algo.A zipped\n" +
-                "file with extension .huffz will be created in the same\n" +
-                "folder. This is the zipped file. During unzipping just open\n" +
+        String message = "Two algorithms are used for file compression:\n" +
+                "1. Huffman Coding\n" +
+                "2. Lempel-Ziv-Welch (LZW)\n" +
+                "To compress a file, first open the file then click\n" +
+                "ZIP HuffZ to zip the file using Huffman's algorithm. A compressed\n" +
+                "file with extension " + Constants.HUFFMAN_FILE_EXTENSION + " will be created in the same\n" +
+                "folder. This is the compressed file. To decompress, just open\n" +
                 "this file and click UNZIP HuffZ button.\n\n" +
-                "Same will happen for LZW. Zipped file's extension will be .LmZWp\n" +
-                "for LZW. Always make sure that during unzipping you must use\n" +
-                "the same algorithm that you used for zipping ";
+                "The same process applies for LZW. Compressed file's extension will be " + Constants.LZW_FILE_EXTENSION + "\n" +
+                "for LZW. Always make sure that during decompression you must use\n" +
+                "the same algorithm that you used for compression.";
         JOptionPane.showMessageDialog(null, message, "How To...", JOptionPane.PLAIN_MESSAGE);
     }
 
     private static void showAboutDialog() {
-        String message = "File Compresser is a software to zip and unzip files\n" +
-                "It is developed on JAVA, as a term project of\n" +
-                " Level - 2, Term - 1,Dept. of CSE,BUET.\n" +
-                "It is completed by Nahiyan Kamal (St. ID 0805006) under\n" +
-                "the supervision of Jesun Shahariar of Dept. of CSE, BUET.";
+        String message = "File Compressor is a software to compress and decompress files.\n" +
+                "It is developed in Java as a term project for\n" +
+                "Level 2, Term 1, Department of CSE, BUET.\n" +
+                "Developed by Nahiyan Kamal (Student ID: 0805006) under\n" +
+                "the supervision of Jesun Shahariar, Department of CSE, BUET.";
         JOptionPane.showMessageDialog(null, message, "About", JOptionPane.PLAIN_MESSAGE);
     }
 
