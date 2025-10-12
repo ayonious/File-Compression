@@ -108,7 +108,8 @@ public class MainWindow {
                 "<li><b>Huffman Coding</b> - Frequency-based compression</li>" +
                 "<li><b>LZW</b> - Dictionary-based compression</li>" +
                 "</ul>" +
-                "<p>This software was developed as a term project for Level 2, Term 1, " +
+                "<p>The original software(v 1.0) was developed as a term project for Level 2, Term 1, " +
+                "<p>Over the last few years I have refactored the code to make it more readable and maintainable." +
                 "Department of CSE, BUET.</p>" +
                 "<p><b>Developer:</b> Nahiyan Kamal (Student ID: 0805006)</p>" +
                 "<p><b>Supervisor:</b> Jesun Shahariar, Department of CSE, BUET</p>" +
