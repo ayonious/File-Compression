@@ -1,6 +1,7 @@
 # File Compression
 
 [![Build and Test](https://github.com/ayonious/File-Compression/actions/workflows/build.yml/badge.svg)](https://github.com/ayonious/File-Compression/actions/workflows/build.yml)
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/ayonious/File-Compression/tree/master.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/ayonious/File-Compression/tree/master)
 [![codecov](https://codecov.io/gh/ayonious/File-Compression/branch/master/graph/badge.svg)](https://codecov.io/gh/ayonious/File-Compression)
 [![GitHub stars](https://img.shields.io/github/stars/ayonious/File-Compression?style=social)](https://github.com/ayonious/File-Compression/stargazers)
 
@@ -36,12 +37,6 @@ On macOS:
 brew install maven
 ```
 
-On Linux:
-```bash
-sudo apt-get install maven  # For Debian/Ubuntu
-sudo dnf install maven     # For Fedora
-```
-
 Verify installation:
 ```bash
 mvn -version
@@ -53,7 +48,7 @@ mvn -version
 ### Directly Run the jar file
 I have included the already build jar file. You can run it simply if you dont want to build
 ```bash
-java -jar FileCompression.jar
+java -jar file-compression-2.0-SNAPSHOT.jar
 ```
 
 
@@ -67,20 +62,12 @@ mvn exec:java
 ### Using JAR directly
 After building with Maven, you can run the JAR:
 ```bash
-java -jar target/file-compression-1.0-SNAPSHOT-jar-with-dependencies.jar
+java -jar target/file-compression-2.0-SNAPSHOT-jar-with-dependencies.jar
 ```
 
-![Outlook](/git_resource/outlook.png?raw=true "File Compression GUI")
-
-## Zip a file
-file>open>click zip>the zipped file will be created on the same folder
-
-
-## Unzip a file
-file>open>click unzip>the unzipped file will be created on the same folder
-
+![Outlook](/git_resource/readmeScreenshot.png?raw=true "File Compression GUI")
 
 ## Testing environment:
 
 I tested this project in:
-Linux Mint, OS X El Capitan (version 10.11.6), macOS Sonoma
+MacOS Tahoe (version 26.0.1)

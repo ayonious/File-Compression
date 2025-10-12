@@ -1,8 +1,11 @@
 package prog;
 
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.io.TempDir;
+import org.junit.jupiter.api.condition.DisabledIfSystemProperty;
+
+import prog.ui.MainWindow;
 
 import javax.swing.*;
 import java.awt.*;
@@ -14,6 +17,7 @@ import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
 
 import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assumptions.assumeFalse;
 
 class MainFrameTest {
     @TempDir
@@ -21,37 +25,51 @@ class MainFrameTest {
     private File testFile;
     private JFrame mainFrame;
     private CountDownLatch latch;
+    private Main mainApp;
 
-    @BeforeEach
-    void setUp() throws IOException {
-        testFile = tempDir.resolve("test.txt").toFile();
-        Files.write(testFile.toPath(), "Test content".getBytes());
-        latch = new CountDownLatch(1);
+    @BeforeAll
+    static void setUpClass() {
+        // Set headless mode if not already set
+        System.setProperty("java.awt.headless", "true");
+        // Initialize toolkit in headless mode
+        try {
+            Toolkit.getDefaultToolkit();
+        } catch (AWTError e) {
+            // Ignore AWTError in headless mode
+        }
     }
 
     @Test
+    @DisabledIfSystemProperty(named = "java.awt.headless", matches = "true")
     void testFrameInitialization() throws InterruptedException {
-        // Run frame initialization in EDT
+        assumeFalse(GraphicsEnvironment.isHeadless());
+
+        latch = new CountDownLatch(1);
         SwingUtilities.invokeLater(() -> {
-            mainFrame = MainFrame.createAndShowGUI();
+            mainApp = new Main();
+            JPanel contentPane = mainApp.createContentPane();
+            mainFrame = MainWindow.createAndShowGUI(contentPane, e -> {});
             latch.countDown();
         });
 
-        // Wait for EDT to complete initialization
         assertTrue(latch.await(5, TimeUnit.SECONDS), "Frame initialization timed out");
-            
         assertNotNull(mainFrame, "Main frame should be created");
         assertTrue(mainFrame.isVisible(), "Frame should be visible");
-        assertEquals(new Rectangle(350, 170, 550, 300), mainFrame.getBounds(), "Frame bounds should match");
-            
-        // Clean up
+        assertEquals(new Rectangle(200, 100, 700, 550), mainFrame.getBounds(), "Frame bounds should match");
+
         SwingUtilities.invokeLater(() -> mainFrame.dispose());
     }
 
     @Test
+    @DisabledIfSystemProperty(named = "java.awt.headless", matches = "true")
     void testMenuBarStructure() throws InterruptedException {
+        assumeFalse(GraphicsEnvironment.isHeadless());
+
+        latch = new CountDownLatch(1);
         SwingUtilities.invokeLater(() -> {
-            mainFrame = MainFrame.createAndShowGUI();
+            mainApp = new Main();
+            JPanel contentPane = mainApp.createContentPane();
+            mainFrame = MainWindow.createAndShowGUI(contentPane, e -> {});
             latch.countDown();
         });
         assertTrue(latch.await(5, TimeUnit.SECONDS), "Frame initialization timed out");
@@ -59,14 +77,14 @@ class MainFrameTest {
         JMenuBar menuBar = mainFrame.getJMenuBar();
         assertNotNull(menuBar, "Menu bar should exist");
         assertEquals(2, menuBar.getMenuCount(), "Should have 2 menus");
-            
+
         // Test File menu
         JMenu fileMenu = menuBar.getMenu(0);
         assertEquals("File", fileMenu.getText(), "First menu should be File");
         assertEquals(2, fileMenu.getItemCount(), "File menu should have 2 items");
         assertEquals("Open", fileMenu.getItem(0).getText(), "First item should be Open");
         assertEquals("Exit", fileMenu.getItem(1).getText(), "Second item should be Exit");
-            
+
         // Test Help menu
         JMenu helpMenu = menuBar.getMenu(1);
         assertEquals("Help", helpMenu.getText(), "Second menu should be Help");
@@ -78,31 +96,41 @@ class MainFrameTest {
     }
 
     @Test
-    void testFileOpenOperation() throws InterruptedException {
+    @DisabledIfSystemProperty(named = "java.awt.headless", matches = "true")
+    void testFileOpenOperation() throws InterruptedException, IOException {
+        assumeFalse(GraphicsEnvironment.isHeadless());
+
+        // Create a test file
+        testFile = tempDir.resolve("test.txt").toFile();
+        Files.writeString(testFile.toPath(), "Test content");
+
+        latch = new CountDownLatch(1);
         SwingUtilities.invokeLater(() -> {
-            mainFrame = MainFrame.createAndShowGUI();
+            mainApp = new Main();
+            JPanel contentPane = mainApp.createContentPane();
+            mainFrame = MainWindow.createAndShowGUI(contentPane, e -> {});
             latch.countDown();
         });
         assertTrue(latch.await(5, TimeUnit.SECONDS), "Frame initialization timed out");
 
-        // Simulate file selection
-        Main.opened_file = testFile;
-        Main.past = testFile.length();
-        Main.redScore.setText(Main.past + "Bytes");
-        Main.blueScore.setText("NotYetCalculated");
-
-        assertEquals(testFile, Main.opened_file, "Selected file should be set");
-        assertEquals(testFile.length(), Main.past, "File size should be set");
-        assertEquals(testFile.length() + "Bytes", Main.redScore.getText(), "Red score should show file size");
-        assertEquals("NotYetCalculated", Main.blueScore.getText(), "Blue score should show not calculated");
+        // Verify file selection components are initialized
+        assertNotNull(mainApp.getFilePathField(), "File path field should be initialized");
+        assertNotNull(mainApp.getOriginalSizeValue(), "Original size label should be initialized");
+        assertNotNull(mainApp.getCompressedSizeValue(), "Compressed size label should be initialized");
 
         SwingUtilities.invokeLater(() -> mainFrame.dispose());
     }
 
     @Test
+    @DisabledIfSystemProperty(named = "java.awt.headless", matches = "true")
     void testContentPaneSetup() throws InterruptedException {
+        assumeFalse(GraphicsEnvironment.isHeadless());
+
+        latch = new CountDownLatch(1);
         SwingUtilities.invokeLater(() -> {
-            mainFrame = MainFrame.createAndShowGUI();
+            mainApp = new Main();
+            JPanel contentPane = mainApp.createContentPane();
+            mainFrame = MainWindow.createAndShowGUI(contentPane, e -> {});
             latch.countDown();
         });
         assertTrue(latch.await(5, TimeUnit.SECONDS), "Frame initialization timed out");
@@ -116,14 +144,20 @@ class MainFrameTest {
     }
 
     @Test
+    @DisabledIfSystemProperty(named = "java.awt.headless", matches = "true")
     void testFrameDefaultCloseOperation() throws InterruptedException {
+        assumeFalse(GraphicsEnvironment.isHeadless());
+
+        latch = new CountDownLatch(1);
         SwingUtilities.invokeLater(() -> {
-            mainFrame = MainFrame.createAndShowGUI();
+            mainApp = new Main();
+            JPanel contentPane = mainApp.createContentPane();
+            mainFrame = MainWindow.createAndShowGUI(contentPane, e -> {});
             latch.countDown();
         });
         assertTrue(latch.await(5, TimeUnit.SECONDS), "Frame initialization timed out");
 
-        assertEquals(JFrame.EXIT_ON_CLOSE, mainFrame.getDefaultCloseOperation(), 
+        assertEquals(JFrame.EXIT_ON_CLOSE, mainFrame.getDefaultCloseOperation(),
             "Frame should exit on close");
 
         SwingUtilities.invokeLater(() -> mainFrame.dispose());

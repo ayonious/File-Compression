@@ -1,0 +1,1539 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog>
+  <book id="0">
+    <title>Book Title 0</title>
+    <author>Author Name 0</author>
+    <year>2000</year>
+    <price>19.99</price>
+    <category>Fiction</category>
+    <description>This is a description for book 0 with some sample text.</description>
+  </book>
+  <book id="1">
+    <title>Book Title 1</title>
+    <author>Author Name 1</author>
+    <year>2001</year>
+    <price>20.99</price>
+    <category>Non-Fiction</category>
+    <description>This is a description for book 1 with some sample text.</description>
+  </book>
+  <book id="2">
+    <title>Book Title 2</title>
+    <author>Author Name 2</author>
+    <year>2002</year>
+    <price>21.99</price>
+    <category>Science</category>
+    <description>This is a description for book 2 with some sample text.</description>
+  </book>
+  <book id="3">
+    <title>Book Title 3</title>
+    <author>Author Name 3</author>
+    <year>2003</year>
+    <price>22.99</price>
+    <category>Fiction</category>
+    <description>This is a description for book 3 with some sample text.</description>
+  </book>
+  <book id="4">
+    <title>Book Title 4</title>
+    <author>Author Name 4</author>
+    <year>2004</year>
+    <price>23.99</price>
+    <category>Non-Fiction</category>
+    <description>This is a description for book 4 with some sample text.</description>
+  </book>
+  <book id="5">
+    <title>Book Title 5</title>
+    <author>Author Name 5</author>
+    <year>2005</year>
+    <price>24.99</price>
+    <category>Science</category>
+    <description>This is a description for book 5 with some sample text.</description>
+  </book>
+  <book id="6">
+    <title>Book Title 6</title>
+    <author>Author Name 6</author>
+    <year>2006</year>
+    <price>25.99</price>
+    <category>Fiction</category>
+    <description>This is a description for book 6 with some sample text.</description>
+  </book>
+  <book id="7">
+    <title>Book Title 7</title>
+    <author>Author Name 7</author>
+    <year>2007</year>
+    <price>26.99</price>
+    <category>Non-Fiction</category>
+    <description>This is a description for book 7 with some sample text.</description>
+  </book>
+  <book id="8">
+    <title>Book Title 8</title>
+    <author>Author Name 8</author>
+    <year>2008</year>
+    <price>27.99</price>
+    <category>Science</category>
+    <description>This is a description for book 8 with some sample text.</description>
+  </book>
+  <book id="9">
+    <title>Book Title 9</title>
+    <author>Author Name 9</author>
+    <year>2009</year>
+    <price>28.99</price>
+    <category>Fiction</category>
+    <description>This is a description for book 9 with some sample text.</description>
+  </book>
+  <book id="10">
+    <title>Book Title 10</title>
+    <author>Author Name 10</author>
+    <year>2010</year>
+    <price>29.99</price>
+    <category>Non-Fiction</category>
+    <description>This is a description for book 10 with some sample text.</description>
+  </book>
+  <book id="11">
+    <title>Book Title 11</title>
+    <author>Author Name 11</author>
+    <year>2011</year>
+    <price>30.99</price>
+    <category>Science</category>
+    <description>This is a description for book 11 with some sample text.</description>
+  </book>
+  <book id="12">
+    <title>Book Title 12</title>
+    <author>Author Name 12</author>
+    <year>2012</year>
+    <price>31.99</price>
+    <category>Fiction</category>
+    <description>This is a description for book 12 with some sample text.</description>
+  </book>
+  <book id="13">
+    <title>Book Title 13</title>
+    <author>Author Name 13</author>
+    <year>2013</year>
+    <price>32.99</price>
+    <category>Non-Fiction</category>
+    <description>This is a description for book 13 with some sample text.</description>
+  </book>
+  <book id="14">
+    <title>Book Title 14</title>
+    <author>Author Name 14</author>
+    <year>2014</year>
+    <price>33.99</price>
+    <category>Science</category>
+    <description>This is a description for book 14 with some sample text.</description>
+  </book>
+  <book id="15">
+    <title>Book Title 15</title>
+    <author>Author Name 15</author>
+    <year>2015</year>
+    <price>34.99</price>
+    <category>Fiction</category>
+    <description>This is a description for book 15 with some sample text.</description>
+  </book>
+  <book id="16">
+    <title>Book Title 16</title>
+    <author>Author Name 16</author>
+    <year>2016</year>
+    <price>35.99</price>
+    <category>Non-Fiction</category>
+    <description>This is a description for book 16 with some sample text.</description>
+  </book>
+  <book id="17">
+    <title>Book Title 17</title>
+    <author>Author Name 17</author>
+    <year>2017</year>
+    <price>36.99</price>
+    <category>Science</category>
+    <description>This is a description for book 17 with some sample text.</description>
+  </book>
+  <book id="18">
+    <title>Book Title 18</title>
+    <author>Author Name 18</author>
+    <year>2018</year>
+    <price>37.99</price>
+    <category>Fiction</category>
+    <description>This is a description for book 18 with some sample text.</description>
+  </book>
+  <book id="19">
+    <title>Book Title 19</title>
+    <author>Author Name 19</author>
+    <year>2019</year>
+    <price>38.99</price>
+    <category>Non-Fiction</category>
+    <description>This is a description for book 19 with some sample text.</description>
+  </book>
+  <book id="20">
+    <title>Book Title 20</title>
+    <author>Author Name 20</author>
+    <year>2020</year>
+    <price>39.99</price>
+    <category>Science</category>
+    <description>This is a description for book 20 with some sample text.</description>
+  </book>
+  <book id="21">
+    <title>Book Title 21</title>
+    <author>Author Name 21</author>
+    <year>2021</year>
+    <price>40.99</price>
+    <category>Fiction</category>
+    <description>This is a description for book 21 with some sample text.</description>
+  </book>
+  <book id="22">
+    <title>Book Title 22</title>
+    <author>Author Name 22</author>
+    <year>2022</year>
+    <price>41.99</price>
+    <category>Non-Fiction</category>
+    <description>This is a description for book 22 with some sample text.</description>
+  </book>
+  <book id="23">
+    <title>Book Title 23</title>
+    <author>Author Name 23</author>
+    <year>2023</year>
+    <price>42.99</price>
+    <category>Science</category>
+    <description>This is a description for book 23 with some sample text.</description>
+  </book>
+  <book id="24">
+    <title>Book Title 24</title>
+    <author>Author Name 24</author>
+    <year>2000</year>
+    <price>43.99</price>
+    <category>Fiction</category>
+    <description>This is a description for book 24 with some sample text.</description>
+  </book>
+  <book id="25">
+    <title>Book Title 25</title>
+    <author>Author Name 25</author>
+    <year>2001</year>
+    <price>44.99</price>
+    <category>Non-Fiction</category>
+    <description>This is a description for book 25 with some sample text.</description>
+  </book>
+  <book id="26">
+    <title>Book Title 26</title>
+    <author>Author Name 26</author>
+    <year>2002</year>
+    <price>45.99</price>
+    <category>Science</category>
+    <description>This is a description for book 26 with some sample text.</description>
+  </book>
+  <book id="27">
+    <title>Book Title 27</title>
+    <author>Author Name 27</author>
+    <year>2003</year>
+    <price>46.99</price>
+    <category>Fiction</category>
+    <description>This is a description for book 27 with some sample text.</description>
+  </book>
+  <book id="28">
+    <title>Book Title 28</title>
+    <author>Author Name 28</author>
+    <year>2004</year>
+    <price>47.99</price>
+    <category>Non-Fiction</category>
+    <description>This is a description for book 28 with some sample text.</description>
+  </book>
+  <book id="29">
+    <title>Book Title 29</title>
+    <author>Author Name 29</author>
+    <year>2005</year>
+    <price>48.99</price>
+    <category>Science</category>
+    <description>This is a description for book 29 with some sample text.</description>
+  </book>
+  <book id="30">
+    <title>Book Title 30</title>
+    <author>Author Name 30</author>
+    <year>2006</year>
+    <price>49.99</price>
+    <category>Fiction</category>
+    <description>This is a description for book 30 with some sample text.</description>
+  </book>
+  <book id="31">
+    <title>Book Title 31</title>
+    <author>Author Name 31</author>
+    <year>2007</year>
+    <price>50.99</price>
+    <category>Non-Fiction</category>
+    <description>This is a description for book 31 with some sample text.</description>
+  </book>
+  <book id="32">
+    <title>Book Title 32</title>
+    <author>Author Name 32</author>
+    <year>2008</year>
+    <price>51.99</price>
+    <category>Science</category>
+    <description>This is a description for book 32 with some sample text.</description>
+  </book>
+  <book id="33">
+    <title>Book Title 33</title>
+    <author>Author Name 33</author>
+    <year>2009</year>
+    <price>52.99</price>
+    <category>Fiction</category>
+    <description>This is a description for book 33 with some sample text.</description>
+  </book>
+  <book id="34">
+    <title>Book Title 34</title>
+    <author>Author Name 34</author>
+    <year>2010</year>
+    <price>53.99</price>
+    <category>Non-Fiction</category>
+    <description>This is a description for book 34 with some sample text.</description>
+  </book>
+  <book id="35">
+    <title>Book Title 35</title>
+    <author>Author Name 35</author>
+    <year>2011</year>
+    <price>54.99</price>
+    <category>Science</category>
+    <description>This is a description for book 35 with some sample text.</description>
+  </book>
+  <book id="36">
+    <title>Book Title 36</title>
+    <author>Author Name 36</author>
+    <year>2012</year>
+    <price>55.99</price>
+    <category>Fiction</category>
+    <description>This is a description for book 36 with some sample text.</description>
+  </book>
+  <book id="37">
+    <title>Book Title 37</title>
+    <author>Author Name 37</author>
+    <year>2013</year>
+    <price>56.99</price>
+    <category>Non-Fiction</category>
+    <description>This is a description for book 37 with some sample text.</description>
+  </book>
+  <book id="38">
+    <title>Book Title 38</title>
+    <author>Author Name 38</author>
+    <year>2014</year>
+    <price>57.99</price>
+    <category>Science</category>
+    <description>This is a description for book 38 with some sample text.</description>
+  </book>
+  <book id="39">
+    <title>Book Title 39</title>
+    <author>Author Name 39</author>
+    <year>2015</year>
+    <price>58.99</price>
+    <category>Fiction</category>
+    <description>This is a description for book 39 with some sample text.</description>
+  </book>
+  <book id="40">
+    <title>Book Title 40</title>
+    <author>Author Name 40</author>
+    <year>2016</year>
+    <price>59.99</price>
+    <category>Non-Fiction</category>
+    <description>This is a description for book 40 with some sample text.</description>
+  </book>
+  <book id="41">
+    <title>Book Title 41</title>
+    <author>Author Name 41</author>
+    <year>2017</year>
+    <price>60.99</price>
+    <category>Science</category>
+    <description>This is a description for book 41 with some sample text.</description>
+  </book>
+  <book id="42">
+    <title>Book Title 42</title>
+    <author>Author Name 42</author>
+    <year>2018</year>
+    <price>61.99</price>
+    <category>Fiction</category>
+    <description>This is a description for book 42 with some sample text.</description>
+  </book>
+  <book id="43">
+    <title>Book Title 43</title>
+    <author>Author Name 43</author>
+    <year>2019</year>
+    <price>62.99</price>
+    <category>Non-Fiction</category>
+    <description>This is a description for book 43 with some sample text.</description>
+  </book>
+  <book id="44">
+    <title>Book Title 44</title>
+    <author>Author Name 44</author>
+    <year>2020</year>
+    <price>63.99</price>
+    <category>Science</category>
+    <description>This is a description for book 44 with some sample text.</description>
+  </book>
+  <book id="45">
+    <title>Book Title 45</title>
+    <author>Author Name 45</author>
+    <year>2021</year>
+    <price>64.99</price>
+    <category>Fiction</category>
+    <description>This is a description for book 45 with some sample text.</description>
+  </book>
+  <book id="46">
+    <title>Book Title 46</title>
+    <author>Author Name 46</author>
+    <year>2022</year>
+    <price>65.99</price>
+    <category>Non-Fiction</category>
+    <description>This is a description for book 46 with some sample text.</description>
+  </book>
+  <book id="47">
+    <title>Book Title 47</title>
+    <author>Author Name 47</author>
+    <year>2023</year>
+    <price>66.99</price>
+    <category>Science</category>
+    <description>This is a description for book 47 with some sample text.</description>
+  </book>
+  <book id="48">
+    <title>Book Title 48</title>
+    <author>Author Name 48</author>
+    <year>2000</year>
+    <price>67.99</price>
+    <category>Fiction</category>
+    <description>This is a description for book 48 with some sample text.</description>
+  </book>
+  <book id="49">
+    <title>Book Title 49</title>
+    <author>Author Name 49</author>
+    <year>2001</year>
+    <price>68.99</price>
+    <category>Non-Fiction</category>
+    <description>This is a description for book 49 with some sample text.</description>
+  </book>
+  <book id="50">
+    <title>Book Title 50</title>
+    <author>Author Name 50</author>
+    <year>2002</year>
+    <price>19.99</price>
+    <category>Science</category>
+    <description>This is a description for book 50 with some sample text.</description>
+  </book>
+  <book id="51">
+    <title>Book Title 51</title>
+    <author>Author Name 51</author>
+    <year>2003</year>
+    <price>20.99</price>
+    <category>Fiction</category>
+    <description>This is a description for book 51 with some sample text.</description>
+  </book>
+  <book id="52">
+    <title>Book Title 52</title>
+    <author>Author Name 52</author>
+    <year>2004</year>
+    <price>21.99</price>
+    <category>Non-Fiction</category>
+    <description>This is a description for book 52 with some sample text.</description>
+  </book>
+  <book id="53">
+    <title>Book Title 53</title>
+    <author>Author Name 53</author>
+    <year>2005</year>
+    <price>22.99</price>
+    <category>Science</category>
+    <description>This is a description for book 53 with some sample text.</description>
+  </book>
+  <book id="54">
+    <title>Book Title 54</title>
+    <author>Author Name 54</author>
+    <year>2006</year>
+    <price>23.99</price>
+    <category>Fiction</category>
+    <description>This is a description for book 54 with some sample text.</description>
+  </book>
+  <book id="55">
+    <title>Book Title 55</title>
+    <author>Author Name 55</author>
+    <year>2007</year>
+    <price>24.99</price>
+    <category>Non-Fiction</category>
+    <description>This is a description for book 55 with some sample text.</description>
+  </book>
+  <book id="56">
+    <title>Book Title 56</title>
+    <author>Author Name 56</author>
+    <year>2008</year>
+    <price>25.99</price>
+    <category>Science</category>
+    <description>This is a description for book 56 with some sample text.</description>
+  </book>
+  <book id="57">
+    <title>Book Title 57</title>
+    <author>Author Name 57</author>
+    <year>2009</year>
+    <price>26.99</price>
+    <category>Fiction</category>
+    <description>This is a description for book 57 with some sample text.</description>
+  </book>
+  <book id="58">
+    <title>Book Title 58</title>
+    <author>Author Name 58</author>
+    <year>2010</year>
+    <price>27.99</price>
+    <category>Non-Fiction</category>
+    <description>This is a description for book 58 with some sample text.</description>
+  </book>
+  <book id="59">
+    <title>Book Title 59</title>
+    <author>Author Name 59</author>
+    <year>2011</year>
+    <price>28.99</price>
+    <category>Science</category>
+    <description>This is a description for book 59 with some sample text.</description>
+  </book>
+  <book id="60">
+    <title>Book Title 60</title>
+    <author>Author Name 60</author>
+    <year>2012</year>
+    <price>29.99</price>
+    <category>Fiction</category>
+    <description>This is a description for book 60 with some sample text.</description>
+  </book>
+  <book id="61">
+    <title>Book Title 61</title>
+    <author>Author Name 61</author>
+    <year>2013</year>
+    <price>30.99</price>
+    <category>Non-Fiction</category>
+    <description>This is a description for book 61 with some sample text.</description>
+  </book>
+  <book id="62">
+    <title>Book Title 62</title>
+    <author>Author Name 62</author>
+    <year>2014</year>
+    <price>31.99</price>
+    <category>Science</category>
+    <description>This is a description for book 62 with some sample text.</description>
+  </book>
+  <book id="63">
+    <title>Book Title 63</title>
+    <author>Author Name 63</author>
+    <year>2015</year>
+    <price>32.99</price>
+    <category>Fiction</category>
+    <description>This is a description for book 63 with some sample text.</description>
+  </book>
+  <book id="64">
+    <title>Book Title 64</title>
+    <author>Author Name 64</author>
+    <year>2016</year>
+    <price>33.99</price>
+    <category>Non-Fiction</category>
+    <description>This is a description for book 64 with some sample text.</description>
+  </book>
+  <book id="65">
+    <title>Book Title 65</title>
+    <author>Author Name 65</author>
+    <year>2017</year>
+    <price>34.99</price>
+    <category>Science</category>
+    <description>This is a description for book 65 with some sample text.</description>
+  </book>
+  <book id="66">
+    <title>Book Title 66</title>
+    <author>Author Name 66</author>
+    <year>2018</year>
+    <price>35.99</price>
+    <category>Fiction</category>
+    <description>This is a description for book 66 with some sample text.</description>
+  </book>
+  <book id="67">
+    <title>Book Title 67</title>
+    <author>Author Name 67</author>
+    <year>2019</year>
+    <price>36.99</price>
+    <category>Non-Fiction</category>
+    <description>This is a description for book 67 with some sample text.</description>
+  </book>
+  <book id="68">
+    <title>Book Title 68</title>
+    <author>Author Name 68</author>
+    <year>2020</year>
+    <price>37.99</price>
+    <category>Science</category>
+    <description>This is a description for book 68 with some sample text.</description>
+  </book>
+  <book id="69">
+    <title>Book Title 69</title>
+    <author>Author Name 69</author>
+    <year>2021</year>
+    <price>38.99</price>
+    <category>Fiction</category>
+    <description>This is a description for book 69 with some sample text.</description>
+  </book>
+  <book id="70">
+    <title>Book Title 70</title>
+    <author>Author Name 70</author>
+    <year>2022</year>
+    <price>39.99</price>
+    <category>Non-Fiction</category>
+    <description>This is a description for book 70 with some sample text.</description>
+  </book>
+  <book id="71">
+    <title>Book Title 71</title>
+    <author>Author Name 71</author>
+    <year>2023</year>
+    <price>40.99</price>
+    <category>Science</category>
+    <description>This is a description for book 71 with some sample text.</description>
+  </book>
+  <book id="72">
+    <title>Book Title 72</title>
+    <author>Author Name 72</author>
+    <year>2000</year>
+    <price>41.99</price>
+    <category>Fiction</category>
+    <description>This is a description for book 72 with some sample text.</description>
+  </book>
+  <book id="73">
+    <title>Book Title 73</title>
+    <author>Author Name 73</author>
+    <year>2001</year>
+    <price>42.99</price>
+    <category>Non-Fiction</category>
+    <description>This is a description for book 73 with some sample text.</description>
+  </book>
+  <book id="74">
+    <title>Book Title 74</title>
+    <author>Author Name 74</author>
+    <year>2002</year>
+    <price>43.99</price>
+    <category>Science</category>
+    <description>This is a description for book 74 with some sample text.</description>
+  </book>
+  <book id="75">
+    <title>Book Title 75</title>
+    <author>Author Name 75</author>
+    <year>2003</year>
+    <price>44.99</price>
+    <category>Fiction</category>
+    <description>This is a description for book 75 with some sample text.</description>
+  </book>
+  <book id="76">
+    <title>Book Title 76</title>
+    <author>Author Name 76</author>
+    <year>2004</year>
+    <price>45.99</price>
+    <category>Non-Fiction</category>
+    <description>This is a description for book 76 with some sample text.</description>
+  </book>
+  <book id="77">
+    <title>Book Title 77</title>
+    <author>Author Name 77</author>
+    <year>2005</year>
+    <price>46.99</price>
+    <category>Science</category>
+    <description>This is a description for book 77 with some sample text.</description>
+  </book>
+  <book id="78">
+    <title>Book Title 78</title>
+    <author>Author Name 78</author>
+    <year>2006</year>
+    <price>47.99</price>
+    <category>Fiction</category>
+    <description>This is a description for book 78 with some sample text.</description>
+  </book>
+  <book id="79">
+    <title>Book Title 79</title>
+    <author>Author Name 79</author>
+    <year>2007</year>
+    <price>48.99</price>
+    <category>Non-Fiction</category>
+    <description>This is a description for book 79 with some sample text.</description>
+  </book>
+  <book id="80">
+    <title>Book Title 80</title>
+    <author>Author Name 80</author>
+    <year>2008</year>
+    <price>49.99</price>
+    <category>Science</category>
+    <description>This is a description for book 80 with some sample text.</description>
+  </book>
+  <book id="81">
+    <title>Book Title 81</title>
+    <author>Author Name 81</author>
+    <year>2009</year>
+    <price>50.99</price>
+    <category>Fiction</category>
+    <description>This is a description for book 81 with some sample text.</description>
+  </book>
+  <book id="82">
+    <title>Book Title 82</title>
+    <author>Author Name 82</author>
+    <year>2010</year>
+    <price>51.99</price>
+    <category>Non-Fiction</category>
+    <description>This is a description for book 82 with some sample text.</description>
+  </book>
+  <book id="83">
+    <title>Book Title 83</title>
+    <author>Author Name 83</author>
+    <year>2011</year>
+    <price>52.99</price>
+    <category>Science</category>
+    <description>This is a description for book 83 with some sample text.</description>
+  </book>
+  <book id="84">
+    <title>Book Title 84</title>
+    <author>Author Name 84</author>
+    <year>2012</year>
+    <price>53.99</price>
+    <category>Fiction</category>
+    <description>This is a description for book 84 with some sample text.</description>
+  </book>
+  <book id="85">
+    <title>Book Title 85</title>
+    <author>Author Name 85</author>
+    <year>2013</year>
+    <price>54.99</price>
+    <category>Non-Fiction</category>
+    <description>This is a description for book 85 with some sample text.</description>
+  </book>
+  <book id="86">
+    <title>Book Title 86</title>
+    <author>Author Name 86</author>
+    <year>2014</year>
+    <price>55.99</price>
+    <category>Science</category>
+    <description>This is a description for book 86 with some sample text.</description>
+  </book>
+  <book id="87">
+    <title>Book Title 87</title>
+    <author>Author Name 87</author>
+    <year>2015</year>
+    <price>56.99</price>
+    <category>Fiction</category>
+    <description>This is a description for book 87 with some sample text.</description>
+  </book>
+  <book id="88">
+    <title>Book Title 88</title>
+    <author>Author Name 88</author>
+    <year>2016</year>
+    <price>57.99</price>
+    <category>Non-Fiction</category>
+    <description>This is a description for book 88 with some sample text.</description>
+  </book>
+  <book id="89">
+    <title>Book Title 89</title>
+    <author>Author Name 89</author>
+    <year>2017</year>
+    <price>58.99</price>
+    <category>Science</category>
+    <description>This is a description for book 89 with some sample text.</description>
+  </book>
+  <book id="90">
+    <title>Book Title 90</title>
+    <author>Author Name 90</author>
+    <year>2018</year>
+    <price>59.99</price>
+    <category>Fiction</category>
+    <description>This is a description for book 90 with some sample text.</description>
+  </book>
+  <book id="91">
+    <title>Book Title 91</title>
+    <author>Author Name 91</author>
+    <year>2019</year>
+    <price>60.99</price>
+    <category>Non-Fiction</category>
+    <description>This is a description for book 91 with some sample text.</description>
+  </book>
+  <book id="92">
+    <title>Book Title 92</title>
+    <author>Author Name 92</author>
+    <year>2020</year>
+    <price>61.99</price>
+    <category>Science</category>
+    <description>This is a description for book 92 with some sample text.</description>
+  </book>
+  <book id="93">
+    <title>Book Title 93</title>
+    <author>Author Name 93</author>
+    <year>2021</year>
+    <price>62.99</price>
+    <category>Fiction</category>
+    <description>This is a description for book 93 with some sample text.</description>
+  </book>
+  <book id="94">
+    <title>Book Title 94</title>
+    <author>Author Name 94</author>
+    <year>2022</year>
+    <price>63.99</price>
+    <category>Non-Fiction</category>
+    <description>This is a description for book 94 with some sample text.</description>
+  </book>
+  <book id="95">
+    <title>Book Title 95</title>
+    <author>Author Name 95</author>
+    <year>2023</year>
+    <price>64.99</price>
+    <category>Science</category>
+    <description>This is a description for book 95 with some sample text.</description>
+  </book>
+  <book id="96">
+    <title>Book Title 96</title>
+    <author>Author Name 96</author>
+    <year>2000</year>
+    <price>65.99</price>
+    <category>Fiction</category>
+    <description>This is a description for book 96 with some sample text.</description>
+  </book>
+  <book id="97">
+    <title>Book Title 97</title>
+    <author>Author Name 97</author>
+    <year>2001</year>
+    <price>66.99</price>
+    <category>Non-Fiction</category>
+    <description>This is a description for book 97 with some sample text.</description>
+  </book>
+  <book id="98">
+    <title>Book Title 98</title>
+    <author>Author Name 98</author>
+    <year>2002</year>
+    <price>67.99</price>
+    <category>Science</category>
+    <description>This is a description for book 98 with some sample text.</description>
+  </book>
+  <book id="99">
+    <title>Book Title 99</title>
+    <author>Author Name 99</author>
+    <year>2003</year>
+    <price>68.99</price>
+    <category>Fiction</category>
+    <description>This is a description for book 99 with some sample text.</description>
+  </book>
+  <book id="100">
+    <title>Book Title 100</title>
+    <author>Author Name 100</author>
+    <year>2004</year>
+    <price>19.99</price>
+    <category>Non-Fiction</category>
+    <description>This is a description for book 100 with some sample text.</description>
+  </book>
+  <book id="101">
+    <title>Book Title 101</title>
+    <author>Author Name 101</author>
+    <year>2005</year>
+    <price>20.99</price>
+    <category>Science</category>
+    <description>This is a description for book 101 with some sample text.</description>
+  </book>
+  <book id="102">
+    <title>Book Title 102</title>
+    <author>Author Name 102</author>
+    <year>2006</year>
+    <price>21.99</price>
+    <category>Fiction</category>
+    <description>This is a description for book 102 with some sample text.</description>
+  </book>
+  <book id="103">
+    <title>Book Title 103</title>
+    <author>Author Name 103</author>
+    <year>2007</year>
+    <price>22.99</price>
+    <category>Non-Fiction</category>
+    <description>This is a description for book 103 with some sample text.</description>
+  </book>
+  <book id="104">
+    <title>Book Title 104</title>
+    <author>Author Name 104</author>
+    <year>2008</year>
+    <price>23.99</price>
+    <category>Science</category>
+    <description>This is a description for book 104 with some sample text.</description>
+  </book>
+  <book id="105">
+    <title>Book Title 105</title>
+    <author>Author Name 105</author>
+    <year>2009</year>
+    <price>24.99</price>
+    <category>Fiction</category>
+    <description>This is a description for book 105 with some sample text.</description>
+  </book>
+  <book id="106">
+    <title>Book Title 106</title>
+    <author>Author Name 106</author>
+    <year>2010</year>
+    <price>25.99</price>
+    <category>Non-Fiction</category>
+    <description>This is a description for book 106 with some sample text.</description>
+  </book>
+  <book id="107">
+    <title>Book Title 107</title>
+    <author>Author Name 107</author>
+    <year>2011</year>
+    <price>26.99</price>
+    <category>Science</category>
+    <description>This is a description for book 107 with some sample text.</description>
+  </book>
+  <book id="108">
+    <title>Book Title 108</title>
+    <author>Author Name 108</author>
+    <year>2012</year>
+    <price>27.99</price>
+    <category>Fiction</category>
+    <description>This is a description for book 108 with some sample text.</description>
+  </book>
+  <book id="109">
+    <title>Book Title 109</title>
+    <author>Author Name 109</author>
+    <year>2013</year>
+    <price>28.99</price>
+    <category>Non-Fiction</category>
+    <description>This is a description for book 109 with some sample text.</description>
+  </book>
+  <book id="110">
+    <title>Book Title 110</title>
+    <author>Author Name 110</author>
+    <year>2014</year>
+    <price>29.99</price>
+    <category>Science</category>
+    <description>This is a description for book 110 with some sample text.</description>
+  </book>
+  <book id="111">
+    <title>Book Title 111</title>
+    <author>Author Name 111</author>
+    <year>2015</year>
+    <price>30.99</price>
+    <category>Fiction</category>
+    <description>This is a description for book 111 with some sample text.</description>
+  </book>
+  <book id="112">
+    <title>Book Title 112</title>
+    <author>Author Name 112</author>
+    <year>2016</year>
+    <price>31.99</price>
+    <category>Non-Fiction</category>
+    <description>This is a description for book 112 with some sample text.</description>
+  </book>
+  <book id="113">
+    <title>Book Title 113</title>
+    <author>Author Name 113</author>
+    <year>2017</year>
+    <price>32.99</price>
+    <category>Science</category>
+    <description>This is a description for book 113 with some sample text.</description>
+  </book>
+  <book id="114">
+    <title>Book Title 114</title>
+    <author>Author Name 114</author>
+    <year>2018</year>
+    <price>33.99</price>
+    <category>Fiction</category>
+    <description>This is a description for book 114 with some sample text.</description>
+  </book>
+  <book id="115">
+    <title>Book Title 115</title>
+    <author>Author Name 115</author>
+    <year>2019</year>
+    <price>34.99</price>
+    <category>Non-Fiction</category>
+    <description>This is a description for book 115 with some sample text.</description>
+  </book>
+  <book id="116">
+    <title>Book Title 116</title>
+    <author>Author Name 116</author>
+    <year>2020</year>
+    <price>35.99</price>
+    <category>Science</category>
+    <description>This is a description for book 116 with some sample text.</description>
+  </book>
+  <book id="117">
+    <title>Book Title 117</title>
+    <author>Author Name 117</author>
+    <year>2021</year>
+    <price>36.99</price>
+    <category>Fiction</category>
+    <description>This is a description for book 117 with some sample text.</description>
+  </book>
+  <book id="118">
+    <title>Book Title 118</title>
+    <author>Author Name 118</author>
+    <year>2022</year>
+    <price>37.99</price>
+    <category>Non-Fiction</category>
+    <description>This is a description for book 118 with some sample text.</description>
+  </book>
+  <book id="119">
+    <title>Book Title 119</title>
+    <author>Author Name 119</author>
+    <year>2023</year>
+    <price>38.99</price>
+    <category>Science</category>
+    <description>This is a description for book 119 with some sample text.</description>
+  </book>
+  <book id="120">
+    <title>Book Title 120</title>
+    <author>Author Name 120</author>
+    <year>2000</year>
+    <price>39.99</price>
+    <category>Fiction</category>
+    <description>This is a description for book 120 with some sample text.</description>
+  </book>
+  <book id="121">
+    <title>Book Title 121</title>
+    <author>Author Name 121</author>
+    <year>2001</year>
+    <price>40.99</price>
+    <category>Non-Fiction</category>
+    <description>This is a description for book 121 with some sample text.</description>
+  </book>
+  <book id="122">
+    <title>Book Title 122</title>
+    <author>Author Name 122</author>
+    <year>2002</year>
+    <price>41.99</price>
+    <category>Science</category>
+    <description>This is a description for book 122 with some sample text.</description>
+  </book>
+  <book id="123">
+    <title>Book Title 123</title>
+    <author>Author Name 123</author>
+    <year>2003</year>
+    <price>42.99</price>
+    <category>Fiction</category>
+    <description>This is a description for book 123 with some sample text.</description>
+  </book>
+  <book id="124">
+    <title>Book Title 124</title>
+    <author>Author Name 124</author>
+    <year>2004</year>
+    <price>43.99</price>
+    <category>Non-Fiction</category>
+    <description>This is a description for book 124 with some sample text.</description>
+  </book>
+  <book id="125">
+    <title>Book Title 125</title>
+    <author>Author Name 125</author>
+    <year>2005</year>
+    <price>44.99</price>
+    <category>Science</category>
+    <description>This is a description for book 125 with some sample text.</description>
+  </book>
+  <book id="126">
+    <title>Book Title 126</title>
+    <author>Author Name 126</author>
+    <year>2006</year>
+    <price>45.99</price>
+    <category>Fiction</category>
+    <description>This is a description for book 126 with some sample text.</description>
+  </book>
+  <book id="127">
+    <title>Book Title 127</title>
+    <author>Author Name 127</author>
+    <year>2007</year>
+    <price>46.99</price>
+    <category>Non-Fiction</category>
+    <description>This is a description for book 127 with some sample text.</description>
+  </book>
+  <book id="128">
+    <title>Book Title 128</title>
+    <author>Author Name 128</author>
+    <year>2008</year>
+    <price>47.99</price>
+    <category>Science</category>
+    <description>This is a description for book 128 with some sample text.</description>
+  </book>
+  <book id="129">
+    <title>Book Title 129</title>
+    <author>Author Name 129</author>
+    <year>2009</year>
+    <price>48.99</price>
+    <category>Fiction</category>
+    <description>This is a description for book 129 with some sample text.</description>
+  </book>
+  <book id="130">
+    <title>Book Title 130</title>
+    <author>Author Name 130</author>
+    <year>2010</year>
+    <price>49.99</price>
+    <category>Non-Fiction</category>
+    <description>This is a description for book 130 with some sample text.</description>
+  </book>
+  <book id="131">
+    <title>Book Title 131</title>
+    <author>Author Name 131</author>
+    <year>2011</year>
+    <price>50.99</price>
+    <category>Science</category>
+    <description>This is a description for book 131 with some sample text.</description>
+  </book>
+  <book id="132">
+    <title>Book Title 132</title>
+    <author>Author Name 132</author>
+    <year>2012</year>
+    <price>51.99</price>
+    <category>Fiction</category>
+    <description>This is a description for book 132 with some sample text.</description>
+  </book>
+  <book id="133">
+    <title>Book Title 133</title>
+    <author>Author Name 133</author>
+    <year>2013</year>
+    <price>52.99</price>
+    <category>Non-Fiction</category>
+    <description>This is a description for book 133 with some sample text.</description>
+  </book>
+  <book id="134">
+    <title>Book Title 134</title>
+    <author>Author Name 134</author>
+    <year>2014</year>
+    <price>53.99</price>
+    <category>Science</category>
+    <description>This is a description for book 134 with some sample text.</description>
+  </book>
+  <book id="135">
+    <title>Book Title 135</title>
+    <author>Author Name 135</author>
+    <year>2015</year>
+    <price>54.99</price>
+    <category>Fiction</category>
+    <description>This is a description for book 135 with some sample text.</description>
+  </book>
+  <book id="136">
+    <title>Book Title 136</title>
+    <author>Author Name 136</author>
+    <year>2016</year>
+    <price>55.99</price>
+    <category>Non-Fiction</category>
+    <description>This is a description for book 136 with some sample text.</description>
+  </book>
+  <book id="137">
+    <title>Book Title 137</title>
+    <author>Author Name 137</author>
+    <year>2017</year>
+    <price>56.99</price>
+    <category>Science</category>
+    <description>This is a description for book 137 with some sample text.</description>
+  </book>
+  <book id="138">
+    <title>Book Title 138</title>
+    <author>Author Name 138</author>
+    <year>2018</year>
+    <price>57.99</price>
+    <category>Fiction</category>
+    <description>This is a description for book 138 with some sample text.</description>
+  </book>
+  <book id="139">
+    <title>Book Title 139</title>
+    <author>Author Name 139</author>
+    <year>2019</year>
+    <price>58.99</price>
+    <category>Non-Fiction</category>
+    <description>This is a description for book 139 with some sample text.</description>
+  </book>
+  <book id="140">
+    <title>Book Title 140</title>
+    <author>Author Name 140</author>
+    <year>2020</year>
+    <price>59.99</price>
+    <category>Science</category>
+    <description>This is a description for book 140 with some sample text.</description>
+  </book>
+  <book id="141">
+    <title>Book Title 141</title>
+    <author>Author Name 141</author>
+    <year>2021</year>
+    <price>60.99</price>
+    <category>Fiction</category>
+    <description>This is a description for book 141 with some sample text.</description>
+  </book>
+  <book id="142">
+    <title>Book Title 142</title>
+    <author>Author Name 142</author>
+    <year>2022</year>
+    <price>61.99</price>
+    <category>Non-Fiction</category>
+    <description>This is a description for book 142 with some sample text.</description>
+  </book>
+  <book id="143">
+    <title>Book Title 143</title>
+    <author>Author Name 143</author>
+    <year>2023</year>
+    <price>62.99</price>
+    <category>Science</category>
+    <description>This is a description for book 143 with some sample text.</description>
+  </book>
+  <book id="144">
+    <title>Book Title 144</title>
+    <author>Author Name 144</author>
+    <year>2000</year>
+    <price>63.99</price>
+    <category>Fiction</category>
+    <description>This is a description for book 144 with some sample text.</description>
+  </book>
+  <book id="145">
+    <title>Book Title 145</title>
+    <author>Author Name 145</author>
+    <year>2001</year>
+    <price>64.99</price>
+    <category>Non-Fiction</category>
+    <description>This is a description for book 145 with some sample text.</description>
+  </book>
+  <book id="146">
+    <title>Book Title 146</title>
+    <author>Author Name 146</author>
+    <year>2002</year>
+    <price>65.99</price>
+    <category>Science</category>
+    <description>This is a description for book 146 with some sample text.</description>
+  </book>
+  <book id="147">
+    <title>Book Title 147</title>
+    <author>Author Name 147</author>
+    <year>2003</year>
+    <price>66.99</price>
+    <category>Fiction</category>
+    <description>This is a description for book 147 with some sample text.</description>
+  </book>
+  <book id="148">
+    <title>Book Title 148</title>
+    <author>Author Name 148</author>
+    <year>2004</year>
+    <price>67.99</price>
+    <category>Non-Fiction</category>
+    <description>This is a description for book 148 with some sample text.</description>
+  </book>
+  <book id="149">
+    <title>Book Title 149</title>
+    <author>Author Name 149</author>
+    <year>2005</year>
+    <price>68.99</price>
+    <category>Science</category>
+    <description>This is a description for book 149 with some sample text.</description>
+  </book>
+  <book id="150">
+    <title>Book Title 150</title>
+    <author>Author Name 150</author>
+    <year>2006</year>
+    <price>19.99</price>
+    <category>Fiction</category>
+    <description>This is a description for book 150 with some sample text.</description>
+  </book>
+  <book id="151">
+    <title>Book Title 151</title>
+    <author>Author Name 151</author>
+    <year>2007</year>
+    <price>20.99</price>
+    <category>Non-Fiction</category>
+    <description>This is a description for book 151 with some sample text.</description>
+  </book>
+  <book id="152">
+    <title>Book Title 152</title>
+    <author>Author Name 152</author>
+    <year>2008</year>
+    <price>21.99</price>
+    <category>Science</category>
+    <description>This is a description for book 152 with some sample text.</description>
+  </book>
+  <book id="153">
+    <title>Book Title 153</title>
+    <author>Author Name 153</author>
+    <year>2009</year>
+    <price>22.99</price>
+    <category>Fiction</category>
+    <description>This is a description for book 153 with some sample text.</description>
+  </book>
+  <book id="154">
+    <title>Book Title 154</title>
+    <author>Author Name 154</author>
+    <year>2010</year>
+    <price>23.99</price>
+    <category>Non-Fiction</category>
+    <description>This is a description for book 154 with some sample text.</description>
+  </book>
+  <book id="155">
+    <title>Book Title 155</title>
+    <author>Author Name 155</author>
+    <year>2011</year>
+    <price>24.99</price>
+    <category>Science</category>
+    <description>This is a description for book 155 with some sample text.</description>
+  </book>
+  <book id="156">
+    <title>Book Title 156</title>
+    <author>Author Name 156</author>
+    <year>2012</year>
+    <price>25.99</price>
+    <category>Fiction</category>
+    <description>This is a description for book 156 with some sample text.</description>
+  </book>
+  <book id="157">
+    <title>Book Title 157</title>
+    <author>Author Name 157</author>
+    <year>2013</year>
+    <price>26.99</price>
+    <category>Non-Fiction</category>
+    <description>This is a description for book 157 with some sample text.</description>
+  </book>
+  <book id="158">
+    <title>Book Title 158</title>
+    <author>Author Name 158</author>
+    <year>2014</year>
+    <price>27.99</price>
+    <category>Science</category>
+    <description>This is a description for book 158 with some sample text.</description>
+  </book>
+  <book id="159">
+    <title>Book Title 159</title>
+    <author>Author Name 159</author>
+    <year>2015</year>
+    <price>28.99</price>
+    <category>Fiction</category>
+    <description>This is a description for book 159 with some sample text.</description>
+  </book>
+  <book id="160">
+    <title>Book Title 160</title>
+    <author>Author Name 160</author>
+    <year>2016</year>
+    <price>29.99</price>
+    <category>Non-Fiction</category>
+    <description>This is a description for book 160 with some sample text.</description>
+  </book>
+  <book id="161">
+    <title>Book Title 161</title>
+    <author>Author Name 161</author>
+    <year>2017</year>
+    <price>30.99</price>
+    <category>Science</category>
+    <description>This is a description for book 161 with some sample text.</description>
+  </book>
+  <book id="162">
+    <title>Book Title 162</title>
+    <author>Author Name 162</author>
+    <year>2018</year>
+    <price>31.99</price>
+    <category>Fiction</category>
+    <description>This is a description for book 162 with some sample text.</description>
+  </book>
+  <book id="163">
+    <title>Book Title 163</title>
+    <author>Author Name 163</author>
+    <year>2019</year>
+    <price>32.99</price>
+    <category>Non-Fiction</category>
+    <description>This is a description for book 163 with some sample text.</description>
+  </book>
+  <book id="164">
+    <title>Book Title 164</title>
+    <author>Author Name 164</author>
+    <year>2020</year>
+    <price>33.99</price>
+    <category>Science</category>
+    <description>This is a description for book 164 with some sample text.</description>
+  </book>
+  <book id="165">
+    <title>Book Title 165</title>
+    <author>Author Name 165</author>
+    <year>2021</year>
+    <price>34.99</price>
+    <category>Fiction</category>
+    <description>This is a description for book 165 with some sample text.</description>
+  </book>
+  <book id="166">
+    <title>Book Title 166</title>
+    <author>Author Name 166</author>
+    <year>2022</year>
+    <price>35.99</price>
+    <category>Non-Fiction</category>
+    <description>This is a description for book 166 with some sample text.</description>
+  </book>
+  <book id="167">
+    <title>Book Title 167</title>
+    <author>Author Name 167</author>
+    <year>2023</year>
+    <price>36.99</price>
+    <category>Science</category>
+    <description>This is a description for book 167 with some sample text.</description>
+  </book>
+  <book id="168">
+    <title>Book Title 168</title>
+    <author>Author Name 168</author>
+    <year>2000</year>
+    <price>37.99</price>
+    <category>Fiction</category>
+    <description>This is a description for book 168 with some sample text.</description>
+  </book>
+  <book id="169">
+    <title>Book Title 169</title>
+    <author>Author Name 169</author>
+    <year>2001</year>
+    <price>38.99</price>
+    <category>Non-Fiction</category>
+    <description>This is a description for book 169 with some sample text.</description>
+  </book>
+  <book id="170">
+    <title>Book Title 170</title>
+    <author>Author Name 170</author>
+    <year>2002</year>
+    <price>39.99</price>
+    <category>Science</category>
+    <description>This is a description for book 170 with some sample text.</description>
+  </book>
+  <book id="171">
+    <title>Book Title 171</title>
+    <author>Author Name 171</author>
+    <year>2003</year>
+    <price>40.99</price>
+    <category>Fiction</category>
+    <description>This is a description for book 171 with some sample text.</description>
+  </book>
+  <book id="172">
+    <title>Book Title 172</title>
+    <author>Author Name 172</author>
+    <year>2004</year>
+    <price>41.99</price>
+    <category>Non-Fiction</category>
+    <description>This is a description for book 172 with some sample text.</description>
+  </book>
+  <book id="173">
+    <title>Book Title 173</title>
+    <author>Author Name 173</author>
+    <year>2005</year>
+    <price>42.99</price>
+    <category>Science</category>
+    <description>This is a description for book 173 with some sample text.</description>
+  </book>
+  <book id="174">
+    <title>Book Title 174</title>
+    <author>Author Name 174</author>
+    <year>2006</year>
+    <price>43.99</price>
+    <category>Fiction</category>
+    <description>This is a description for book 174 with some sample text.</description>
+  </book>
+  <book id="175">
+    <title>Book Title 175</title>
+    <author>Author Name 175</author>
+    <year>2007</year>
+    <price>44.99</price>
+    <category>Non-Fiction</category>
+    <description>This is a description for book 175 with some sample text.</description>
+  </book>
+  <book id="176">
+    <title>Book Title 176</title>
+    <author>Author Name 176</author>
+    <year>2008</year>
+    <price>45.99</price>
+    <category>Science</category>
+    <description>This is a description for book 176 with some sample text.</description>
+  </book>
+  <book id="177">
+    <title>Book Title 177</title>
+    <author>Author Name 177</author>
+    <year>2009</year>
+    <price>46.99</price>
+    <category>Fiction</category>
+    <description>This is a description for book 177 with some sample text.</description>
+  </book>
+  <book id="178">
+    <title>Book Title 178</title>
+    <author>Author Name 178</author>
+    <year>2010</year>
+    <price>47.99</price>
+    <category>Non-Fiction</category>
+    <description>This is a description for book 178 with some sample text.</description>
+  </book>
+  <book id="179">
+    <title>Book Title 179</title>
+    <author>Author Name 179</author>
+    <year>2011</year>
+    <price>48.99</price>
+    <category>Science</category>
+    <description>This is a description for book 179 with some sample text.</description>
+  </book>
+  <book id="180">
+    <title>Book Title 180</title>
+    <author>Author Name 180</author>
+    <year>2012</year>
+    <price>49.99</price>
+    <category>Fiction</category>
+    <description>This is a description for book 180 with some sample text.</description>
+  </book>
+  <book id="181">
+    <title>Book Title 181</title>
+    <author>Author Name 181</author>
+    <year>2013</year>
+    <price>50.99</price>
+    <category>Non-Fiction</category>
+    <description>This is a description for book 181 with some sample text.</description>
+  </book>
+  <book id="182">
+    <title>Book Title 182</title>
+    <author>Author Name 182</author>
+    <year>2014</year>
+    <price>51.99</price>
+    <category>Science</category>
+    <description>This is a description for book 182 with some sample text.</description>
+  </book>
+  <book id="183">
+    <title>Book Title 183</title>
+    <author>Author Name 183</author>
+    <year>2015</year>
+    <price>52.99</price>
+    <category>Fiction</category>
+    <description>This is a description for book 183 with some sample text.</description>
+  </book>
+  <book id="184">
+    <title>Book Title 184</title>
+    <author>Author Name 184</author>
+    <year>2016</year>
+    <price>53.99</price>
+    <category>Non-Fiction</category>
+    <description>This is a description for book 184 with some sample text.</description>
+  </book>
+  <book id="185">
+    <title>Book Title 185</title>
+    <author>Author Name 185</author>
+    <year>2017</year>
+    <price>54.99</price>
+    <category>Science</category>
+    <description>This is a description for book 185 with some sample text.</description>
+  </book>
+  <book id="186">
+    <title>Book Title 186</title>
+    <author>Author Name 186</author>
+    <year>2018</year>
+    <price>55.99</price>
+    <category>Fiction</category>
+    <description>This is a description for book 186 with some sample text.</description>
+  </book>
+  <book id="187">
+    <title>Book Title 187</title>
+    <author>Author Name 187</author>
+    <year>2019</year>
+    <price>56.99</price>
+    <category>Non-Fiction</category>
+    <description>This is a description for book 187 with some sample text.</description>
+  </book>
+  <book id="188">
+    <title>Book Title 188</title>
+    <author>Author Name 188</author>
+    <year>2020</year>
+    <price>57.99</price>
+    <category>Science</category>
+    <description>This is a description for book 188 with some sample text.</description>
+  </book>
+  <book id="189">
+    <title>Book Title 189</title>
+    <author>Author Name 189</author>
+    <year>2021</year>
+    <price>58.99</price>
+    <category>Fiction</category>
+    <description>This is a description for book 189 with some sample text.</description>
+  </book>
+  <book id="190">
+    <title>Book Title 190</title>
+    <author>Author Name 190</author>
+    <year>2022</year>
+    <price>59.99</price>
+    <category>Non-Fiction</category>
+    <description>This is a description for book 190 with some sample text.</description>
+  </book>
+  <book id="191">
+    <title>Book Title 191</title>
+    <author>Author Name 191</author>
+    <year>2023</year>
+    <price>60.99</price>
+    <category>Science</category>
+    <description>This is a description for book 191 with some sample text.</description>
+  </book>
+</catalog>

@@ -22,3 +22,5 @@ target/
 *.war
 *.ear
 *.class
+
+logs/file-compression.log

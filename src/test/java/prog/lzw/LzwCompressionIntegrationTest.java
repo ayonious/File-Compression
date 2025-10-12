@@ -3,6 +3,7 @@ package prog.lzw;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.io.TempDir;
+import prog.util.Constants;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -34,7 +35,8 @@ class LzwCompressionIntegrationTest {
         long originalSize = Files.size(originalFile.toPath());
 
         // Compress using LZW
-        Lzipping.beginLzipping(originalFile.getAbsolutePath());
+        LzwCompressor compressor = new LzwCompressor(originalFile.getAbsolutePath());
+        compressor.compress();
         assertTrue(compressedFile.exists(), "Compressed file should exist");
 
         // Store original file content
@@ -45,7 +47,8 @@ class LzwCompressionIntegrationTest {
         assertFalse(originalFile.exists(), "Original file should be deleted");
 
         // Decompress using LZW
-        Lunzipping.beginLunzipping(compressedFile.getAbsolutePath());
+        LzwDecompressor decompressor = new LzwDecompressor(compressedFile.getAbsolutePath());
+        decompressor.decompress();
         assertTrue(decompressedFile.exists(), "Decompressed file should exist");
 
         // Compare contents
@@ -56,7 +59,16 @@ class LzwCompressionIntegrationTest {
 
     @Test
     void testEmptyFile() throws IOException {
-        testLzwCompressionCycle("");
+        // Write empty content
+        try (FileWriter writer = new FileWriter(originalFile)) {
+            writer.write("");
+        }
+
+        // Should throw exception for empty file
+        assertThrows(IllegalArgumentException.class, () ->
+            new LzwCompressor(originalFile.getAbsolutePath()),
+            "Should throw IllegalArgumentException for empty file"
+        );
     }
 
     @Test
@@ -95,7 +107,7 @@ class LzwCompressionIntegrationTest {
     @Test
     void testBinaryContent() throws IOException {
         StringBuilder content = new StringBuilder();
-        for (int i = 0; i < 256; i++) {
+        for (int i = 0; i < Constants.BYTE_VALUES_COUNT; i++) {
             content.append((char) i);
         }
         testLzwCompressionCycle(content.toString());
