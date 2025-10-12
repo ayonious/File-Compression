@@ -47,7 +47,7 @@ mvn -version
 ### Directly Run the jar file
 I have included the already build jar file. You can run it simply if you dont want to build
 ```bash
-java -jar file-compression-2.0-SNAPSHOT.jar
+java -jar file-compression-2.0-SNAPSHOT-jar-with-dependencies.jar
 ```
 
 
@@ -61,7 +61,7 @@ mvn exec:java
 ### Using JAR directly
 After building with Maven, you can run the JAR:
 ```bash
-java -jar file-compression-2.0-SNAPSHOT-jar-with-dependencies.jar
+java -jar target/file-compression-2.0-SNAPSHOT-jar-with-dependencies.jar
 ```
 
 ![Outlook](/git_resource/readmeScreenshot.png?raw=true "File Compression GUI")
