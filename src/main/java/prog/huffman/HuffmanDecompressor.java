@@ -47,6 +47,11 @@ public class HuffmanDecompressor implements Decompressor {
 	private ByteWriter byteWriter;
 
 	/**
+	 * Root node of the Huffman tree
+	 */
+	private HuffmanNode huffmanTreeRoot;
+
+	/**
 	 * Constructor that takes a compressed file path and generates the Huffman code mapping
 	 * @param compressedFilePath The path to the compressed file to be decompressed
 	 */
@@ -86,8 +91,8 @@ public class HuffmanDecompressor implements Decompressor {
 		} catch (IOException e) {
 			throw new RuntimeException("Failed to read frequency table from compressed file: " + compressedFilePath, e);
 		}
-		HuffmanNode root = HuffmanUtils.buildHuffmanTree(frequency);
-		String[] huffmanCodes = HuffmanUtils.generateHuffmanCodes(root);
+		huffmanTreeRoot = HuffmanUtils.buildHuffmanTree(frequency);
+		String[] huffmanCodes = HuffmanUtils.generateHuffmanCodes(huffmanTreeRoot);
 		for(i = 0; i < Constants.BYTE_VALUES_COUNT; i++) {
 			if(huffmanCodes[i] != null && huffmanCodes[i].length() > 0) {
 				huffmancodeToByteMap.put(huffmanCodes[i], i);
@@ -136,6 +141,7 @@ public class HuffmanDecompressor implements Decompressor {
 	 */
 	private void processCompressedBytes(BitReader bitReader) throws IOException {
 		String[] byteToBinaryStrings = HuffmanUtils.createBinaryStringsForBytes();
+		HuffmanNode currentNode = huffmanTreeRoot;
 		while (true) {
 			Byte currentByte = this.byteReader.readNextByte();
 			if (currentByte == null) break;
