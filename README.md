@@ -4,7 +4,7 @@
 [![codecov](https://codecov.io/gh/ayonious/File-Compression/branch/master/graph/badge.svg)](https://codecov.io/gh/ayonious/File-Compression)
 [![GitHub stars](https://img.shields.io/github/stars/ayonious/File-Compression?style=social)](https://github.com/ayonious/File-Compression/stargazers)
 
-A File Compression software that helps zip/Unzip files using these 2 algorihtms:
+A File Compression software that helps zip/Unzip files using these 2 algorithms:
 
 1. Huffmans Code
 2. Lempel-Ziv-Wells algorithm

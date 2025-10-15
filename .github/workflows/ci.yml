@@ -26,8 +26,15 @@ jobs:
         key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
         restore-keys: ${{ runner.os }}-m2
     
-    - name: Run tests
-      run: mvn test
-    
+    - name: Run tests with coverage
+      run: mvn test jacoco:report
+
     - name: Build project
       run: mvn clean package
+
+    - name: Upload coverage to Codecov
+      uses: codecov/codecov-action@v5
+      with:
+        file: target/site/jacoco/jacoco.xml
+        fail_ci_if_error: true
+        token: ${{ secrets.CODECOV_TOKEN }}
