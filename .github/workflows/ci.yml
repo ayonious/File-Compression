@@ -33,8 +33,10 @@ jobs:
       run: mvn clean package
 
     - name: Upload coverage to Codecov
+      # Dependabot runs can't read secrets; coverage is uploaded after merge
+      if: github.actor != 'dependabot[bot]'
       uses: codecov/codecov-action@v7
       with:
-        file: target/site/jacoco/jacoco.xml
+        files: target/site/jacoco/jacoco.xml
         fail_ci_if_error: true
         token: ${{ secrets.CODECOV_TOKEN }}
